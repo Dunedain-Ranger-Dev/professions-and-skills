@@ -1,14 +1,18 @@
 {
-  "type": "ddprofessions:starred_shapeless",
+  "type": "ddprofessions:starred_shaped",
   "category": "equipment",
-  "ingredients": [
-    {
+  "pattern": [
+    "I",
+    "F"
+  ],
+  "key": {
+    "I": {
       "item": "ddprofessions:tempered_iron_ingot"
     },
-    {
+    "F": {
       "tag": "ddprofessions:flux"
     }
-  ],
+  },
   "result": {
     "id": "ddprofessions:armor_plate",
     "count": 1

@@ -51,12 +51,15 @@ public class ForgedGearTests {
     @GameTest(template = ANY_TEMPLATE)
     public static void partsTakeTheWorstStarCappedByTheFlux(GameTestHelper helper) {
         ServerLevel level = helper.getLevel();
-        ItemStack plate = craft(level, tempered(3), new ItemStack(Forging.SAND_FLUX.get()));
+        ItemStack plate = craft(level, tempered(3), ItemStack.EMPTY, ItemStack.EMPTY, new ItemStack(Forging.SAND_FLUX.get()));
         helper.assertTrue(plate.is(Forging.ARMOR_PLATE.get()) && Forging.stars(plate) == 3, "an ingot and flux make a ★3 plate, got " + Forging.stars(plate));
-        ItemStack capped = craft(level, tempered(5), new ItemStack(Forging.SAND_FLUX.get()));
+        ItemStack capped = craft(level, tempered(5), ItemStack.EMPTY, ItemStack.EMPTY, new ItemStack(Forging.SAND_FLUX.get()));
         helper.assertTrue(Forging.stars(capped) == 3, "sand flux caps a plate at ★3, got " + Forging.stars(capped));
-        ItemStack borax = craft(level, tempered(5), new ItemStack(Forging.BORAX_FLUX.get()));
+        ItemStack borax = craft(level, tempered(5), ItemStack.EMPTY, ItemStack.EMPTY, new ItemStack(Forging.BORAX_FLUX.get()));
         helper.assertTrue(Forging.stars(borax) == 5, "borax flux allows ★5, got " + Forging.stars(borax));
+        // The same ingot and flux side by side make a blade instead (they were once the same recipe, and one always won).
+        ItemStack blade = craft(level, tempered(4), new ItemStack(Forging.SAND_FLUX.get()));
+        helper.assertTrue(blade.is(Forging.BLADE.get()) && Forging.stars(blade) == 3, "an ingot with flux beside it makes a blade, capped at ★3: " + blade);
         ItemStack rivets = craft(level, tempered(2), new ItemStack(Forging.SAND_FLUX.get()), new ItemStack(Items.IRON_NUGGET));
         helper.assertTrue(rivets.is(Forging.RIVETS.get()) && rivets.getCount() == 4 && Forging.stars(rivets) == 2,
                 "an ingot, flux and a nugget make 4 ★2 rivets");

@@ -12,7 +12,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "ddprofessions:armor_plate",
-      "text": "An ingot and flux make an Armor Plate."
+      "text": "An ingot with flux under it makes an Armor Plate."
     },
     {
       "type": "patchouli:crafting",
@@ -28,7 +28,7 @@
       "type": "patchouli:crafting",
       "recipe": "ddprofessions:blade",
       "recipe2": "ddprofessions:axe_head",
-      "text": "Weapon parts: an ingot and flux make a Blade; two ingots side by side with flux under the second, an Axe Head."
+      "text": "Weapon parts: an ingot with flux beside it makes a Blade; two ingots side by side with flux under the second, an Axe Head."
     }
   ]
 }

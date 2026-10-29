@@ -1,14 +1,17 @@
 {
-  "type": "ddprofessions:starred_shapeless",
+  "type": "ddprofessions:starred_shaped",
   "category": "equipment",
-  "ingredients": [
-    {
+  "pattern": [
+    "IF"
+  ],
+  "key": {
+    "I": {
       "item": "ddprofessions:tempered_iron_ingot"
     },
-    {
+    "F": {
       "tag": "ddprofessions:flux"
     }
-  ],
+  },
   "result": {
     "id": "ddprofessions:blade",
     "count": 1
