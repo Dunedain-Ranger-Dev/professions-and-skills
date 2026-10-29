@@ -16,7 +16,7 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
 
 /**
- * Iron's Spells training the magic school trees (DD-81). Only loaded when Iron's Spells is installed. Each spell
+ * Iron's Spells training the magic school trees (PROF-11). Only loaded when Iron's Spells is installed. Each spell
  * trains its school by what it actually does:
  * <ul>
  * <li>damage spells by the damage they deal, less against mobs well below the school's level;</li>

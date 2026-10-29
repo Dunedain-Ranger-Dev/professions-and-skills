@@ -28,7 +28,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /**
- * Goldsmithing's crucible (DD-91): a brick furnace on a brick hearth. It works like a furnace: gold ingots on top, a
+ * Goldsmithing's crucible (PROF-20): a brick furnace on a brick hearth. It works like a furnace: gold ingots on top, a
  * refining salt as its fuel, fine gold out ({@link CrucibleBlockEntity}). It glows while it's refining. The Great
  * Crucible is the same, a quarter faster.
  */

@@ -10,7 +10,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 
 /**
- * The classes (DD-83): Fighter, Archer, Rogue and Mage. Each has its own skill tree, split from the RPG Series' class
+ * The classes (PROF-5): Fighter, Archer, Rogue and Mage. Each has its own skill tree, split from the RPG Series' class
  * tree (Fighter: Warrior and Paladin; Archer; Rogue; Mage: Arcane, Fire, Frost and Priest), locked until the class
  * is picked, plus a small passive bonus. Magic schools stay open to every class (anyone can cast from a spell book or
  * staff); the Mage is simply better at it. Picked, or changed, with a Tome of Calling.

@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Optional;
 
 /**
- * The magic schools (DD-81), each its own skill tree that levels from casting its spells, so a player can master frost
+ * The magic schools (PROF-11), each its own skill tree that levels from casting its spells, so a player can master frost
  * and still be a fire apprentice. Spell Engine (the RPG Series) and Iron's Spells both feed them, by their own school
  * ids.
  */

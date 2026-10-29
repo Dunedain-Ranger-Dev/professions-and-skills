@@ -35,7 +35,7 @@ public class ProfessionsAndSkills {
             PufferfishSkills.register();
         }
         if (ModList.get().isLoaded("irons_spellbooks")) {
-            IronsMagic.register(); // Casting trains the spell's magic school tree (DD-81).
+            IronsMagic.register(); // Casting trains the spell's magic school tree (PROF-11).
         }
         if (ModList.get().isLoaded("spell_engine")) {
             SpellEngineMagic.register();

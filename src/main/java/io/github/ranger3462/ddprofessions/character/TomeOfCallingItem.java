@@ -15,8 +15,8 @@ import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.network.PacketDistributor;
 
 /**
- * A Tome of Calling: read it (use it) to choose your class, or change it (DD-83). It's used up only when a class is
- * chosen. For now it comes from the creative tab; a class tutor NPC will hand them out (DD-84).
+ * A Tome of Calling: read it (use it) to choose your class, or change it (PROF-5). It's used up only when a class is
+ * chosen. For now it comes from the creative tab; a class tutor NPC will hand them out (KING-7).
  */
 public class TomeOfCallingItem extends Item {
     public TomeOfCallingItem(Properties properties) {

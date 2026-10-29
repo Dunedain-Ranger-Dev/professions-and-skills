@@ -35,18 +35,18 @@ public final class ProfessionsRegistries {
             ProfessionsAndSkills.MODID);
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ProfessionsAndSkills.MODID);
 
-    /** Marks a guild workshop for every crafting profession (DD-88). */
+    /** Marks a guild workshop for every crafting profession (PROF-10). */
     public static final DeferredBlock<GuildLedgerBlock> GUILD_LEDGER = BLOCKS.registerBlock("guild_ledger", GuildLedgerBlock::new,
             BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).strength(2.5f).sound(SoundType.WOOD).noOcclusion());
     public static final DeferredItem<BlockItem> GUILD_LEDGER_ITEM = ITEMS.registerSimpleBlockItem(GUILD_LEDGER);
 
-    /** A Tome of Calling: read it to choose (or change) your class (DD-83). */
+    /** A Tome of Calling: read it to choose (or change) your class (PROF-5). */
     public static final DeferredItem<TomeOfCallingItem> TOME_OF_CALLING = ITEMS.registerItem("tome_of_calling", TomeOfCallingItem::new,
             new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
-    /** An Elixir of Rebirth: drink it to choose your race again (DD-82). */
+    /** An Elixir of Rebirth: drink it to choose your race again (PROF-12). */
     public static final DeferredItem<ElixirOfRebirthItem> ELIXIR_OF_REBIRTH = ITEMS.registerItem("elixir_of_rebirth", ElixirOfRebirthItem::new,
             new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
-    /** A Tome of Insight: read it for a bonus ability point (DD-80). */
+    /** A Tome of Insight: read it for a bonus ability point (PROF-14). */
     public static final DeferredItem<TomeOfInsightItem> TOME_OF_INSIGHT = ITEMS.registerItem("tome_of_insight", TomeOfInsightItem::new,
             new Item.Properties().stacksTo(16).rarity(Rarity.EPIC));
 

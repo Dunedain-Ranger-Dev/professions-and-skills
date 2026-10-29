@@ -12,7 +12,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
-/** The class screen's packets (DD-83). */
+/** The class screen's packets (PROF-5). */
 public final class ClassPayloads {
     private ClassPayloads() {}
 

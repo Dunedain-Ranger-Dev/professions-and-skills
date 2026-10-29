@@ -44,7 +44,7 @@ public final class CraftingXp {
     }
 
     /**
-     * The skill whose level caps a crafted piece's ★ (DD-89), if any: forged gear by {@link #skillFor}, armor parts by
+     * The skill whose level caps a crafted piece's ★ (PROF-8), if any: forged gear by {@link #skillFor}, armor parts by
      * Armorsmithing, weapon parts by Weaponsmithing. The forge work's own cap is the better of the two smithing skills.
      */
     public static Optional<CraftSkill> capSkill(ItemStack crafted) {

@@ -13,7 +13,7 @@ are fine. **Farmer's Delight** joins the pack for its bark, straw, canvas, knive
 - **Phase 1:** the Guild Ledger (replacing the Forge Hearth) and Farmer's Delight.
 - **Phases 2–4, the core:** Leatherworking, Weaving and Woodworking, with their stations, workshop levels and upgrades;
   the Woodworking skill and tree; bows and crossbows from parts. RPG and vanilla gear keep their own recipes
-  (DD-89): Dungeon Delving's forged gear is the one forged set for now.
+  (PROF-8): Dungeon Delving's forged gear is the one forged set for now.
 - **Reworked after the first playtest (2026-10-25):** every craft now follows Forging's pattern (below). The scraping,
   spinning, sewing and carving minigames, fulling, bending and the Chopping Block are gone.
 - **Not yet:** sources for the dungeon materials (Barrowmoss, Emberroot, spider silk, Arcane Dust; phase 6) and the
@@ -62,7 +62,7 @@ Checked against Farmer's Delight 1.21.1-1.3.4 (`farmersdelight:tree_bark`, `stra
 | Woodworking | Logs, planks, scaffolding, stripped logs, bookshelves |
 
 - **Hearths:** the Forge Hearth goes; any already placed turn into Guild Ledgers.
-- **DD-84 tie-in:** a capital's guild hall starts with a ledger, so new players have a workshop to learn in.
+- **KING-7 tie-in:** a capital's guild hall starts with a ledger, so new players have a workshop to learn in.
 
 ## Quality, the same rules everywhere
 
@@ -141,7 +141,7 @@ Spin → size → weave → craft.
   Works** (a sizing vat for 8, 25% faster; dyeing later).
 - **XP:** a spin 1, sizing 1 × ★ per yarn, a weave 5 × ★.
 
-## Goldsmithing (first pass, DD-89)
+## Goldsmithing (first pass, PROF-8)
 
 Smelt → refine → chase → craft.
 
@@ -157,9 +157,9 @@ Smelt → refine → chase → craft.
   piglins take it for gold. Repaired with fine gold.
 - **Workshop levels:** 1: furnace, Crucible, Jeweler's Bench. 2: a **Great Crucible** (8, 25% faster). 3: a **Jeweler's
   Loupe** (a wider sweet spot at the bench).
-- **Later (DD-91):** cut gems and settings, staff foci, more jewelry.
+- **Later (PROF-20):** cut gems and settings, staff foci, more jewelry.
 
-## Weaponsmithing and Armorsmithing (DD-89)
+## Weaponsmithing and Armorsmithing (PROF-8)
 
 Forging is two skills now, so a smith can be good at both by learning both. The forge work (heat, strike, quench,
 grind) trains both and goes as high as the better of the two. Blades (an ingot and flux) and axe heads (two ingots and

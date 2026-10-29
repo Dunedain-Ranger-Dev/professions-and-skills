@@ -29,7 +29,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 /**
- * The Guild Ledger (DD-88): marks a guild workshop for every crafting profession, in place of the old Forge Hearth.
+ * The Guild Ledger (PROF-10): marks a guild workshop for every crafting profession, in place of the old Forge Hearth.
  * Stations within {@link ForgeWorkshop#RADIUS} blocks across and {@link ForgeWorkshop#HEIGHT} up or down count
  * towards it. Right-click it to see each profession's stations, what's missing and its workshop level. Shaped like a
  * lectern (and drawn as one, for now).

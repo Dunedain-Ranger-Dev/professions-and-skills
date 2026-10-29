@@ -21,7 +21,7 @@ import net.minecraft.world.item.crafting.SmithingRecipeInput;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 
-/** Checks forging quality on other mods' gear (DD-81): stats and durability from the ★, kept through smithing. */
+/** Checks forging quality on other mods' gear (PROF-11): stats and durability from the ★, kept through smithing. */
 @GameTestHolder(ProfessionsAndSkills.MODID)
 @PrefixGameTestTemplate(false)
 public class QualityTests {
@@ -84,7 +84,7 @@ public class QualityTests {
         helper.succeed();
     }
 
-    /** RPG Series gear keeps its own recipes (DD-89): Dungeon Delving's forged gear is the one forged set, for now. */
+    /** RPG Series gear keeps its own recipes (PROF-8): Dungeon Delving's forged gear is the one forged set, for now. */
     @GameTest(template = ANY_TEMPLATE)
     public static void rpgGearKeepsItsOwnRecipes(GameTestHelper helper) {
         var recipes = helper.getLevel().getRecipeManager();

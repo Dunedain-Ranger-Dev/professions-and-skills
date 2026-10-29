@@ -40,7 +40,7 @@ import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 
 /**
- * Checks the rebuilt crafting professions (DD-88, docs/design/professions.md): the minigames, the vats' timing, the
+ * Checks the rebuilt crafting professions (PROF-10, docs/design/professions.md): the minigames, the vats' timing, the
  * workshops around a Guild Ledger, and each profession's steps from raw material to part, ★ and all. Each follows
  * Forging's pattern: prepare, soak in a vat (which sets the ★), work at the bench, craft.
  */
@@ -285,7 +285,7 @@ public class ProfessionTests {
         helper.succeed();
     }
 
-    /** Goldsmithing from a gold ingot to jewelry and gilded gear: refine (the salt sets the ★), chase, craft (DD-89). */
+    /** Goldsmithing from a gold ingot to jewelry and gilded gear: refine (the salt sets the ★), chase, craft (PROF-8). */
     @GameTest(template = ANY_TEMPLATE)
     public static void goldIsRefinedChasedAndCrafted(GameTestHelper helper) {
         ServerLevel level = helper.getLevel();

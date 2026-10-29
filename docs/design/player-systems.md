@@ -32,7 +32,7 @@ The dev build is done. What's left:
 
 ## 2. Keeping forging relevant
 
-**Where it landed (DD-89, 2026-10-25), replacing the plans below:** one set of forged gear, Dungeon Delving's own
+**Where it landed (PROF-8, 2026-10-25), replacing the plans below:** one set of forged gear, Dungeon Delving's own
 (forged sword and axe; brigandine, hauberk and plate armor), each made like its iron counterpart but from forged parts,
 its ★ from those parts. RPG and vanilla gear keep their own recipes and stay unstarred. Later: forged gear for more
 weapon and armor classes, and variant recipes for specific looks. Until forged gear has its own art, a cosmetic mod can
@@ -95,7 +95,7 @@ Recommendation: B, built in that order, so step 1 can be tested on a few items b
   piece with Thailite. The gold tier is off; wood, stone and flint stay.
 - Witcher: steel and silver armor forged like iron (silver trim is Thraggite), the other swords are upgrades of the
   steel sword, diagram tiers take tier 1–4 ingots, and its metals elsewhere map to dungeon ingots.
-- Bows, staves, wands, robes and leather gear stay unstarred until DD-86 (woodworking, leather and cloth quality).
+- Bows, staves, wands, robes and leather gear stay unstarred until PROF-4 (woodworking, leather and cloth quality).
 - Jewelry is untouched for now.
 
 ## 3. Ability scores
@@ -164,7 +164,7 @@ come after the player systems themselves; races and class picking can work from 
 experience, a level gives a point, and points buy nodes. All trees run on Pufferfish's Skills. The RPG Series' own
 radial class tree and weapon tree are retired in favour of these (switched off by the pack's data).
 
-**Professions** (DD-80, built):
+**Professions** (PROF-14, built):
 - **Mining**, **Woodcutting**, **Excavation**, **Farming**, **Fishing**: from mining, chopping, digging,
   harvesting and fishing. Later nodes: double drops, vein mining, tree felling.
 - **Forging**, **Leatherworking**, **Weaving**: from our crafting; nodes for success rate, quality and yield.
@@ -204,7 +204,7 @@ in game. If the add-on won't take our mobs, we drive Better Combat's animations 
 
 ## Suggested order
 
-Done: Better Combat mob swings (DD-79), the character core (DD-80: professions, character level, ability scores).
+Done: Better Combat mob swings (DD-79), the character core (PROF-14: professions, character level, ability scores).
 
 1. Combat style, armor and magic school trees, plus Beastmastery's first XP (the rest of the skill breakdown).
 2. Races, with a first-join race screen.

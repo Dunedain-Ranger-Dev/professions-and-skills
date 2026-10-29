@@ -9,7 +9,7 @@ import net.puffish.skillsmod.api.Experience;
 import net.puffish.skillsmod.api.SkillsAPI;
 
 /**
- * Pufferfish's Skills, which runs the skill trees (DD-80): each skill is one of its categories, with its own
+ * Pufferfish's Skills, which runs the skill trees (PROF-14): each skill is one of its categories, with its own
  * experience, levels and points. Only loaded when Pufferfish's Skills is installed, so nothing outside this package
  * may refer to its classes; go through {@link io.github.ranger3462.ddprofessions.character.SkillLevels}.
  */

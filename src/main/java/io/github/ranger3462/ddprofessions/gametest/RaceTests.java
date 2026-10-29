@@ -24,7 +24,7 @@ import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 
-/** Checks the races (DD-82): their score bonuses, sizes and traits. */
+/** Checks the races (PROF-12): their score bonuses, sizes and traits. */
 @GameTestHolder(ProfessionsAndSkills.MODID)
 @PrefixGameTestTemplate(false)
 public class RaceTests {

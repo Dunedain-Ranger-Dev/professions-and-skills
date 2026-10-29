@@ -20,7 +20,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
- * The blocks and items of the crafting professions other than Forging (DD-88): Leatherworking and Weaving rebuilt, and
+ * The blocks and items of the crafting professions other than Forging (PROF-10): Leatherworking and Weaving rebuilt, and
  * Woodworking. Each follows Forging's pattern: a vanilla material is prepared, gets its ★ in a timed vat (the liquid's
  * tier), is worked at a bench, then crafted into parts. See docs/design/professions.md. Forging's own, and the leather and cloth items gear is assembled from, are
  * in {@link Forging}.
@@ -57,7 +57,7 @@ public final class Crafts {
     public static final DeferredItem<LiquorItem> BARK_LIQUOR = liquor("bark_liquor", 3, Profession.LEATHERWORKING);
     public static final DeferredItem<LiquorItem> TANNIN_LIQUOR = liquor("tannin_liquor", 5, Profession.LEATHERWORKING);
     public static final DeferredItem<LiquorItem> ELDER_LIQUOR = liquor("elder_liquor", 7, Profession.LEATHERWORKING);
-    /** Dungeon herbs for the better liquors. Found in dungeons (DD-88 phase 6). */
+    /** Dungeon herbs for the better liquors. Found in dungeons (PROF-10 phase 6). */
     public static final DeferredItem<Item> BARROWMOSS = ProfessionsRegistries.ITEMS.registerSimpleItem("barrowmoss", new Item.Properties());
     public static final DeferredItem<Item> EMBERROOT = ProfessionsRegistries.ITEMS.registerSimpleItem("emberroot", new Item.Properties());
 
@@ -84,9 +84,9 @@ public final class Crafts {
     public static final DeferredItem<LiquorItem> WHEAT_SIZING = liquor("wheat_sizing", 3, Profession.WEAVING);
     public static final DeferredItem<LiquorItem> SILK_SIZING = liquor("silk_sizing", 5, Profession.WEAVING);
     public static final DeferredItem<LiquorItem> ARCANE_SIZING = liquor("arcane_sizing", 7, Profession.WEAVING);
-    /** Raw silk from dungeon spiders (DD-88 phase 6), for Silk Sizing. */
+    /** Raw silk from dungeon spiders (PROF-10 phase 6), for Silk Sizing. */
     public static final DeferredItem<Item> SPIDER_SILK = ProfessionsRegistries.ITEMS.registerSimpleItem("spider_silk", new Item.Properties());
-    /** Dust from dungeon casters (DD-88 phase 6), for Arcane Sizing. */
+    /** Dust from dungeon casters (PROF-10 phase 6), for Arcane Sizing. */
     public static final DeferredItem<Item> ARCANE_DUST = ProfessionsRegistries.ITEMS.registerSimpleItem("arcane_dust", new Item.Properties());
     /** Woven cloth: what cloth gear is assembled from. */
     public static final DeferredItem<StarredItem> CLOTH_PANEL = starred("cloth_panel");
@@ -120,11 +120,11 @@ public final class Crafts {
     public static final DeferredItem<StarredItem> WAND_CORE = starred("wand_core");
     public static final DeferredItem<StarredItem> BOW_LIMBS = starred("bow_limbs");
     public static final DeferredItem<LiquorItem> LINSEED_OIL = liquor("linseed_oil", 3, Profession.WOODWORKING);
-    /** Dryad finishes (DD-88 phase 7). */
+    /** Dryad finishes (PROF-10 phase 7). */
     public static final DeferredItem<LiquorItem> HEARTWOOD_RESIN = liquor("heartwood_resin", 5, Profession.WOODWORKING);
     public static final DeferredItem<LiquorItem> SYLVAN_SAP = liquor("sylvan_sap", 7, Profession.WOODWORKING);
 
-    // --- Goldsmithing (DD-89) ---
+    // --- Goldsmithing (PROF-8) ---
 
     /** A brick furnace for refining gold, worked like a furnace: gold ingots in, a refining salt as fuel, fine gold out. */
     public static final DeferredBlock<CrucibleBlock> CRUCIBLE = ProfessionsRegistries.BLOCKS.registerBlock("crucible", CrucibleBlock::new,
@@ -149,7 +149,7 @@ public final class Crafts {
     public static final DeferredItem<StarredItem> FINE_GOLD = starred("fine_gold");
     /** Fine gold chased into shape: what gilded gear and jewelry are made from. */
     public static final DeferredItem<StarredItem> GOLD_FITTINGS = starred("gold_fittings");
-    /** Goldsmithing's part for forged staves and wands (DD-92): gold fittings set with amethyst. */
+    /** Goldsmithing's part for forged staves and wands (PROF-18): gold fittings set with amethyst. */
     public static final DeferredItem<StarredItem> ARCANE_FOCUS = starred("arcane_focus");
     public static final DeferredItem<JewelryItem> GOLD_RING = ProfessionsRegistries.ITEMS.registerItem("gold_ring",
             properties -> new JewelryItem(properties, JewelryItem.Kind.RING), new Item.Properties());
@@ -171,7 +171,7 @@ public final class Crafts {
             MENUS.register("crucible", () -> new net.minecraft.world.inventory.MenuType<>(CrucibleMenu::new, net.minecraft.world.flag.FeatureFlags.VANILLA_SET));
 
     static {
-        // Retired in the DD-88 rework: bending, sewing and the chopping block are gone.
+        // Retired in the PROF-10 rework: bending, sewing and the chopping block are gone.
         ProfessionsRegistries.ITEMS.addAlias(ProfessionsAndSkills.id("bent_limbs"), ProfessionsAndSkills.id("bow_limbs"));
         ProfessionsRegistries.ITEMS.addAlias(ProfessionsAndSkills.id("silk_thread"), ProfessionsAndSkills.id("yarn"));
         ProfessionsRegistries.ITEMS.addAlias(ProfessionsAndSkills.id("spellsilk"), ProfessionsAndSkills.id("yarn"));

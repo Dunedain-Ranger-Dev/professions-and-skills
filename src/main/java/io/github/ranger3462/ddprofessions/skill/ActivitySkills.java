@@ -41,7 +41,7 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
 
 /**
- * The skills that level from what a player does in a fight or with animals (DD-81), each its own Pufferfish's Skills
+ * The skills that level from what a player does in a fight or with animals (PROF-11), each its own Pufferfish's Skills
  * tree: a combat style per kind of weapon, Dual Wielding, Blocking, a tree per armor weight, and Beastmastery. Magic
  * schools level from spellcasting, in the Iron's Spells and Spell Engine integrations ({@link MagicSchool}).
  * Without Pufferfish's Skills these do nothing.

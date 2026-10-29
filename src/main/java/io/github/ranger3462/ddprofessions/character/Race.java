@@ -9,7 +9,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 
 /**
- * The races (DD-82), D&D-flavoured: each gives ability score bonuses, a size, and a trait or two. Picked on first
+ * The races (PROF-12), D&D-flavoured: each gives ability score bonuses, a size, and a trait or two. Picked on first
  * join; changing later takes an Elixir of Rebirth. Passive traits are attribute changes ({@link #traits}); the rest
  * (a dwarf's mining, a half-orc's last stand, a dragonborn's breath) are handled in {@link RaceTraits}.
  */

@@ -9,8 +9,8 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 /**
  * What's saved on each player for their character: the points they've put into each ability score, bonus points
- * from items, the highest character level they've been told about (so a level-up is only announced once) (DD-80),
- * their race, empty until they pick one (DD-82), and their class, likewise (DD-83). Points earned aren't saved:
+ * from items, the highest character level they've been told about (so a level-up is only announced once) (PROF-14),
+ * their race, empty until they pick one (PROF-12), and their class, likewise (PROF-5). Points earned aren't saved:
  * they're worked out from the character level, so they can't drift.
  */
 public record CharacterData(Map<String, Integer> allocated, int bonusPoints, int announcedLevel, String race, String playerClass) {
@@ -20,9 +20,9 @@ public record CharacterData(Map<String, Integer> allocated, int bonusPoints, int
             Codec.unboundedMap(Codec.STRING, Codec.INT).fieldOf("allocated").forGetter(CharacterData::allocated),
             Codec.INT.fieldOf("bonus_points").forGetter(CharacterData::bonusPoints),
             Codec.INT.fieldOf("announced_level").forGetter(CharacterData::announcedLevel),
-            // Characters saved before races (DD-82) have none.
+            // Characters saved before races (PROF-12) have none.
             Codec.STRING.optionalFieldOf("race", "").forGetter(CharacterData::race),
-            // And before classes (DD-83).
+            // And before classes (PROF-5).
             Codec.STRING.optionalFieldOf("class", "").forGetter(CharacterData::playerClass)).apply(instance, CharacterData::new));
 
     public int allocated(AbilityScore score) {

@@ -21,7 +21,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 /**
- * A crucible's contents and its refining, like a furnace's (DD-91): gold ingots in the top slot, a refining salt in the
+ * A crucible's contents and its refining, like a furnace's (PROF-20): gold ingots in the top slot, a refining salt in the
  * fuel slot, fine gold out. Each salt refines {@link #INGOTS_PER_SALT} ingots, at the salt's ★; the better the salt, the
  * longer each ingot takes ({@link #ticksFor}). A complete goldsmithy must be around it, and good enough for the salt.
  */

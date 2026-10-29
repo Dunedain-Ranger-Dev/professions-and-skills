@@ -17,7 +17,7 @@ import net.neoforged.neoforge.event.LootTableLoadEvent;
 
 /**
  * Where the character items come from in survival. The Tome of Calling: one free when a new character picks a race
- * (until class tutors exist, DD-84), then crafted. The Elixir of Rebirth: crafted (tier 3 ingots). The Tome of Insight:
+ * (until class tutors exist, KING-7), then crafted. The Elixir of Rebirth: crafted (tier 3 ingots). The Tome of Insight:
  * only found, a small chance from each dungeon boss and objective chest, rising by tier (Dungeon Delving's loot tables,
  * matched by name, so nothing here depends on it).
  */

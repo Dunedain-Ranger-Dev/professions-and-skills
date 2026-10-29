@@ -6,7 +6,7 @@ import io.github.ranger3462.ddprofessions.skill.Perk;
 import net.minecraft.world.entity.player.Player;
 
 /**
- * What the smithing skills do (DD-89: Forging split into Weaponsmithing and Armorsmithing). The forge work itself
+ * What the smithing skills do (PROF-8: Forging split into Weaponsmithing and Armorsmithing). The forge work itself
  * (striking, quenching, grinding) trains both, and its ★ is capped by the better of the two. Weapon parts and weapons
  * are capped by Weaponsmithing, armor parts and armor by Armorsmithing ({@link CraftingXp}). Everything else is a perk
  * in the two trees, bought with the points levels give: the anvil's (Steady Hand, Sure Strikes) in Weaponsmithing's,

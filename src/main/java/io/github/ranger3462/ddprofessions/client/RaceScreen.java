@@ -27,7 +27,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import org.lwjgl.glfw.GLFW;
 
 /**
- * The race screen (DD-82): shown on first join (and after an Elixir of Rebirth) until a race is picked. Races on the
+ * The race screen (PROF-12): shown on first join (and after an Elixir of Rebirth) until a race is picked. Races on the
  * left; the selected one's ability bonuses and traits on the right; Choose to confirm. It can't be closed without
  * picking. Also holds the racial ability key (H by default).
  */

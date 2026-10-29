@@ -47,7 +47,7 @@ public final class Forging {
     /** A tempered piece's ★, or on hot and quenched metal, the ★ it's being worked towards. */
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> STARS = ProfessionsRegistries.COMPONENTS.registerComponentType("stars",
             builder -> builder.persistent(Codec.intRange(1, MAX_STARS)).networkSynchronized(ByteBufCodecs.VAR_INT));
-    /** A forged weapon's strapped grip (DD-92): the ★ of the straps fitted to it, for a little attack speed. */
+    /** A forged weapon's strapped grip (PROF-18): the ★ of the straps fitted to it, for a little attack speed. */
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> GRIP = ProfessionsRegistries.COMPONENTS.registerComponentType("grip",
             builder -> builder.persistent(Codec.intRange(1, MAX_STARS)).networkSynchronized(ByteBufCodecs.VAR_INT));
     /** The game time hot metal started cooling. Missing until it first leaves the furnace. */
@@ -125,9 +125,9 @@ public final class Forging {
     public static final DeferredItem<StarredItem> RIVETS = ProfessionsRegistries.ITEMS.registerItem("rivets", StarredItem::new, new Item.Properties());
     /** Chain links, four from an ingot: medium armor. */
     public static final DeferredItem<StarredItem> CHAIN_LINKS = ProfessionsRegistries.ITEMS.registerItem("chain_links", StarredItem::new, new Item.Properties());
-    /** A sword blade, from an ingot and flux: Weaponsmithing's part (DD-89). Two make a forged sword. */
+    /** A sword blade, from an ingot and flux: Weaponsmithing's part (PROF-8). Two make a forged sword. */
     public static final DeferredItem<StarredItem> BLADE = ProfessionsRegistries.ITEMS.registerItem("blade", StarredItem::new, new Item.Properties());
-    /** An axe head, from two ingots and flux: Weaponsmithing's part (DD-89). */
+    /** An axe head, from two ingots and flux: Weaponsmithing's part (PROF-8). */
     public static final DeferredItem<StarredItem> AXE_HEAD = ProfessionsRegistries.ITEMS.registerItem("axe_head", StarredItem::new, new Item.Properties());
 
     /** Weaponsmithing's parts, and Armorsmithing's. */
@@ -148,7 +148,7 @@ public final class Forging {
     /** What's left of a hide torn while scraping. Four make a leather again. */
     public static final DeferredItem<Item> LEATHER_SCRAPS = ProfessionsRegistries.ITEMS.registerSimpleItem("leather_scraps", new Item.Properties());
     /**
-     * Tanned leather (its id is from when it was called refined leather): a scraped hide tanned in liquor (DD-88). Cut on
+     * Tanned leather (its id is from when it was called refined leather): a scraped hide tanned in liquor (PROF-10). Cut on
      * a Shaping Rack into leather panels. Boiled leather, which tanning replaced, loads as this.
      */
     public static final DeferredItem<StarredItem> REFINED_LEATHER = ProfessionsRegistries.ITEMS.registerItem("refined_leather", StarredItem::new, new Item.Properties());
@@ -175,7 +175,7 @@ public final class Forging {
     /** Goldsmithing's sword: gold fittings over a stick. */
     public static final DeferredItem<ForgedGear.Sword> GILDED_SWORD = ProfessionsRegistries.ITEMS.registerItem("gilded_sword",
             properties -> new ForgedGear.Sword(net.minecraft.world.item.Tiers.GOLD, properties), new Item.Properties());
-    /** Woodworking's caster gear (DD-92): a staff (shaft, wrap, focus) and a wand (core, focus). */
+    /** Woodworking's caster gear (PROF-18): a staff (shaft, wrap, focus) and a wand (core, focus). */
     public static final DeferredItem<ForgedGear.Staff> FORGED_STAFF = ProfessionsRegistries.ITEMS.registerItem("forged_staff", ForgedGear.Staff::new,
             new Item.Properties());
     public static final DeferredItem<ForgedGear.Wand> FORGED_WAND = ProfessionsRegistries.ITEMS.registerItem("forged_wand", ForgedGear.Wand::new,

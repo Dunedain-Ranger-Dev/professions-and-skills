@@ -32,7 +32,7 @@ import net.neoforged.neoforge.event.level.BlockEvent;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
 
 /**
- * The gathering skills' perks (DD-56), from their trees ({@link Perk}).
+ * The gathering skills' perks (PROF-15), from their trees ({@link Perk}).
  * <ul>
  *   <li>Vein Miner (Mining): sneak and mine an ore to mine the rest of the vein, up to 8, 16 or 32 more blocks.</li>
  *   <li>Tree Feller (Woodcutting): sneak and chop a log to fell the tree, up to 32, 64 or 160 more logs. Only trees: the logs

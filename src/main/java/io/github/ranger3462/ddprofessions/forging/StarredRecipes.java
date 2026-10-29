@@ -44,7 +44,7 @@ public final class StarredRecipes {
             return result;
         }
         int earned = Math.max(1, Math.min(stars, fluxCap));
-        // The crafter's skill caps it too (DD-89): Armorsmithing for armor and its parts, Weaponsmithing for weapons and theirs.
+        // The crafter's skill caps it too (PROF-8): Armorsmithing for armor and its parts, Weaponsmithing for weapons and theirs.
         net.minecraft.world.entity.player.Player crafter = net.neoforged.neoforge.common.CommonHooks.getCraftingPlayer();
         if (crafter != null) {
             int capped = earned;
@@ -56,7 +56,7 @@ public final class StarredRecipes {
     }
 
     /**
-     * Fits straps to a forged sword or axe as a grip (DD-92): the weapon keeps everything (its ★, wear and enchantments)
+     * Fits straps to a forged sword or axe as a grip (PROF-18): the weapon keeps everything (its ★, wear and enchantments)
      * and gains {@link Forging#GRIP} at the straps' ★. One grip per weapon.
      */
     public static class Grip extends net.minecraft.world.item.crafting.CustomRecipe {

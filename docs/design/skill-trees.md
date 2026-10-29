@@ -1,4 +1,4 @@
-# Skill trees: first pass (DD-70, DD-56, DD-81)
+# Skill trees: first pass (PROF-1, PROF-15, PROF-11)
 
 A draft for review: how every skill tree should look and play. Nothing here is built yet.
 
@@ -169,7 +169,7 @@ Frost: Shatter on frozen targets; Holy: overheal turns into a shield). Mastery: 
 
 ## Beastmastery
 
-Waits for companions (DD-61). Same shape when it comes.
+Waits for companions (PROF-6). Same shape when it comes.
 
 ## Questions for review
 

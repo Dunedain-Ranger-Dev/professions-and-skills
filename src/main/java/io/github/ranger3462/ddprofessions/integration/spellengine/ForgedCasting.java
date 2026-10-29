@@ -17,7 +17,7 @@ import net.spell_engine.api.spell.container.SpellContainer;
 import net.spell_engine.api.spell.container.SpellContainers;
 
 /**
- * Forged staves and wands as RPG Series casters (DD-92), when Spell Engine is installed. Like the Wizards mod's Wizard
+ * Forged staves and wands as RPG Series casters (PROF-18), when Spell Engine is installed. Like the Wizards mod's Wizard
  * Staff, each is a magic weapon with a choice of spells to bind (its pool, {@code data/dungeondelving/tags/spell/weapon/}):
  * the first use offers the choice, and the spell chosen is the one it casts. It gives flat spell power by its ★
  * ({@link ForgedGear#STAFF_SPELL_POWER}, {@link ForgedGear#WAND_SPELL_POWER}) to its bound spell's school, or before a
