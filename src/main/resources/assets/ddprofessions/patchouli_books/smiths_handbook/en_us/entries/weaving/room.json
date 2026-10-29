@@ -1,0 +1,22 @@
+{
+  "name": "The Weaving Room",
+  "icon": "ddprofessions:spinning_wheel",
+  "category": "ddprofessions:weaving",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(li)a $(item)Spinning Wheel$(), to spin$(li)a cauldron, for the vat$(li)a loom, to weave$(br2)Upgrades: a $(item)Great Loom$() (a wider needle eye) and the $(item)Dye Works$() (a vat for eight, a quarter faster).",
+      "title": "Stations"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:spinning_wheel",
+      "recipe2": "ddprofessions:great_loom"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:dye_works"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    " L ",
+    "H S",
+    " L "
+  ],
+  "key": {
+    "L": {
+      "item": "ddprofessions:bow_limbs"
+    },
+    "H": {
+      "item": "ddprofessions:haft"
+    },
+    "S": {
+      "item": "ddprofessions:bowstring"
+    }
+  },
+  "result": {
+    "id": "minecraft:bow",
+    "count": 1
+  }
+}

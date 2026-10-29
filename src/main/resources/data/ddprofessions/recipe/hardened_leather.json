@@ -1,0 +1,22 @@
+{
+  "type": "ddprofessions:starred_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "ddprofessions:leather_panel"
+    },
+    {
+      "item": "ddprofessions:leather_panel"
+    },
+    {
+      "item": "ddprofessions:leather_panel"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:hardened_leather",
+    "count": 3
+  }
+}

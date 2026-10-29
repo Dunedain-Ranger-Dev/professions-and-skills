@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ddprofessions:brigandine_helmet",
+    "ddprofessions:hauberk_helmet",
+    "ddprofessions:plate_helmet",
+    "ddprofessions:gilded_helmet"
+  ]
+}

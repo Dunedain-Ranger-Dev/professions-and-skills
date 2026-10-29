@@ -1,0 +1,34 @@
+{
+  "name": "Parts",
+  "icon": "ddprofessions:armor_plate",
+  "category": "ddprofessions:parts",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Parts are made at a crafting table from tempered ingots and flux. A part takes the worst star among its ingots.",
+      "title": "Parts"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:armor_plate",
+      "text": "An ingot and flux make an Armor Plate."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:rivets",
+      "text": "An ingot, flux and a nugget make four Rivets."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:chain_links",
+      "text": "Two ingots with flux between them, in a row, make eight Chain Links."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:blade",
+      "recipe2": "ddprofessions:axe_head",
+      "text": "Weapon parts: an ingot and flux make a Blade; two ingots side by side with flux under the second, an Axe Head."
+    }
+  ]
+}

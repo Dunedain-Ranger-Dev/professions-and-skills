@@ -1,0 +1,27 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "LIL",
+    " K ",
+    " S "
+  ],
+  "key": {
+    "L": {
+      "item": "ddprofessions:bow_limbs"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "K": {
+      "item": "ddprofessions:stock"
+    },
+    "S": {
+      "item": "ddprofessions:bowstring"
+    }
+  },
+  "result": {
+    "id": "minecraft:crossbow",
+    "count": 1
+  }
+}

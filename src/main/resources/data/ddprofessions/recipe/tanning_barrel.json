@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W W",
+    " B "
+  ],
+  "key": {
+    "W": {
+      "tag": "ddprofessions:tier_metals/tier_2"
+    },
+    "B": {
+      "item": "minecraft:barrel"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:tanning_barrel",
+    "count": 1
+  }
+}

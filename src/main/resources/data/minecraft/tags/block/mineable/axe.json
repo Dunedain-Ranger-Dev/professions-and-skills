@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "ddprofessions:bellows",
+    "ddprofessions:tanning_rack",
+    "ddprofessions:guild_ledger",
+    "ddprofessions:shaping_rack",
+    "ddprofessions:tanning_barrel",
+    "ddprofessions:fleshing_beam",
+    "ddprofessions:spinning_wheel",
+    "ddprofessions:great_loom",
+    "ddprofessions:dye_works",
+    "ddprofessions:wood_lathe",
+    "ddprofessions:treadle_lathe",
+    "ddprofessions:bowyers_bench",
+    "ddprofessions:jewelers_bench"
+  ]
+}

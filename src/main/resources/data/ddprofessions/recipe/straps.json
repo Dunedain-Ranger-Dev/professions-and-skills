@@ -1,0 +1,16 @@
+{
+  "type": "ddprofessions:starred_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "ddprofessions:leather_panel"
+    },
+    {
+      "item": "minecraft:string"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:straps",
+    "count": 4
+  }
+}

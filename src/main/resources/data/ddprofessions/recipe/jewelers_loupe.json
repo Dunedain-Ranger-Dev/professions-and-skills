@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "G",
+    "E",
+    "N"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "E": {
+      "tag": "ddprofessions:tier_metals/tier_3"
+    },
+    "N": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:jewelers_loupe",
+    "count": 1
+  }
+}

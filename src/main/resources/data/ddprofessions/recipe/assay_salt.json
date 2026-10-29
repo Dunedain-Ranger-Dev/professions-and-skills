@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ddprofessions:borax"
+    },
+    {
+      "item": "ddprofessions:bone_ash"
+    },
+    {
+      "item": "ddprofessions:bone_ash"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:assay_salt",
+    "count": 2
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ddprofessions:brigandine_chestplate",
+    "ddprofessions:hauberk_chestplate",
+    "ddprofessions:plate_chestplate",
+    "ddprofessions:gilded_chestplate"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ddprofessions:block/jewelers_bench",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "ddprofessions:block/jewelers_bench",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ddprofessions:block/jewelers_bench",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ddprofessions:block/jewelers_bench",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "F",
+    "W",
+    "S"
+  ],
+  "key": {
+    "F": {
+      "item": "ddprofessions:arcane_focus"
+    },
+    "W": {
+      "item": "ddprofessions:staff_wrap"
+    },
+    "S": {
+      "item": "ddprofessions:staff_shaft"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:forged_staff",
+    "count": 1
+  }
+}

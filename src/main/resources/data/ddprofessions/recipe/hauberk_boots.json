@@ -1,0 +1,20 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "MBM",
+    "M M"
+  ],
+  "key": {
+    "M": {
+      "item": "ddprofessions:chain_links"
+    },
+    "B": {
+      "item": "ddprofessions:leather_base"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:hauberk_boots",
+    "count": 1
+  }
+}

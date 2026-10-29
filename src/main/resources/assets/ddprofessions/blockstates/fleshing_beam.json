@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ddprofessions:block/fleshing_beam",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "ddprofessions:block/fleshing_beam",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ddprofessions:block/fleshing_beam",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ddprofessions:block/fleshing_beam",
+      "y": 270
+    }
+  }
+}

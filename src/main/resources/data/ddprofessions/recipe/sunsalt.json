@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ddprofessions:assay_salt"
+    },
+    {
+      "item": "ddprofessions:assay_salt"
+    },
+    {
+      "item": "ddprofessions:arcane_dust"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:sunsalt",
+    "count": 2
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "F F",
+    "F F"
+  ],
+  "key": {
+    "F": {
+      "item": "ddprofessions:gold_fittings"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:gilded_boots",
+    "count": 1
+  }
+}

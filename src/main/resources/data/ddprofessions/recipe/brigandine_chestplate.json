@@ -1,0 +1,24 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "HBH",
+    "RHR",
+    "HHH"
+  ],
+  "key": {
+    "H": {
+      "item": "ddprofessions:hardened_leather"
+    },
+    "R": {
+      "item": "ddprofessions:rivets"
+    },
+    "B": {
+      "item": "ddprofessions:gambeson_base"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:brigandine_chestplate",
+    "count": 1
+  }
+}

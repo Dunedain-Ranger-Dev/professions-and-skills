@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "WWW",
+    " A ",
+    "DDD"
+  ],
+  "key": {
+    "W": {
+      "tag": "ddprofessions:tier_metals/tier_2"
+    },
+    "A": {
+      "item": "minecraft:anvil"
+    },
+    "D": {
+      "item": "minecraft:polished_deepslate"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:master_anvil",
+    "count": 1
+  }
+}

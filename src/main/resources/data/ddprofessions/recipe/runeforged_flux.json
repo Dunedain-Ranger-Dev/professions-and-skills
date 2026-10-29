@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ddprofessions:runic_flux"
+    },
+    {
+      "item": "ddprofessions:runic_flux"
+    },
+    {
+      "tag": "ddprofessions:tier_metals/tier_4"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:runeforged_flux",
+    "count": 2
+  }
+}

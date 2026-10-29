@@ -1,0 +1,594 @@
+{
+  "digger": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.digger"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.digger.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:player.block_break_speed",
+          "operation": "multiply_base",
+          "value": 0.05
+        }
+      }
+    ],
+    "cost": 1
+  },
+  "treasure_sense": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.treasure_sense"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.treasure_sense.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.treasure_sense"
+        }
+      }
+    ],
+    "cost": 2,
+    "required_points": 4
+  },
+  "swift_shovel": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.swift_shovel"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.swift_shovel.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.swift_shovel"
+        }
+      }
+    ],
+    "cost": 2,
+    "required_points": 4
+  },
+  "earthmover_1": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.earthmover_1"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.earthmover_1.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.earthmover_1"
+        }
+      }
+    ],
+    "cost": 3,
+    "required_points": 9
+  },
+  "earthmover_2": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.earthmover_2"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.earthmover_2.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.earthmover_2"
+        }
+      }
+    ],
+    "cost": 5,
+    "required_points": 19
+  },
+  "earthmover_3": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.earthmover_3"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.earthmover_3.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.earthmover_3"
+        }
+      }
+    ],
+    "cost": 8,
+    "required_points": 34
+  },
+  "sturdy_shovel": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.sturdy_shovel"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.sturdy_shovel.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.sturdy_shovel"
+        }
+      }
+    ],
+    "cost": 4,
+    "required_points": 24
+  },
+  "sifter": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.sifter"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.sifter.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.sifter"
+        }
+      }
+    ],
+    "cost": 4,
+    "required_points": 24
+  },
+  "buried_riches": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.buried_riches"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.buried_riches.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "challenge"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.buried_riches"
+        }
+      }
+    ],
+    "cost": 10,
+    "required_points": 49,
+    "required_spent_points": 30
+  },
+  "quick_dig_1": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_1"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_1.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:player.block_break_speed",
+          "operation": "multiply_base",
+          "value": 0.02
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 1
+  },
+  "quick_dig_2": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_2"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_2.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:player.block_break_speed",
+          "operation": "multiply_base",
+          "value": 0.02
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 7
+  },
+  "quick_dig_3": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_3"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_3.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:player.block_break_speed",
+          "operation": "multiply_base",
+          "value": 0.02
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 14
+  },
+  "quick_dig_4": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_4"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_4.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:player.block_break_speed",
+          "operation": "multiply_base",
+          "value": 0.02
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 29
+  },
+  "quick_dig_5": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_5"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.quick_dig_5.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:player.block_break_speed",
+          "operation": "multiply_base",
+          "value": 0.02
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 44
+  },
+  "keen_eye_1": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_1"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_1.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "operation": "addition",
+          "value": 0.1
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 1
+  },
+  "keen_eye_2": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_2"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_2.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "operation": "addition",
+          "value": 0.1
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 7
+  },
+  "keen_eye_3": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_3"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_3.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "operation": "addition",
+          "value": 0.1
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 14
+  },
+  "keen_eye_4": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_4"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_4.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "operation": "addition",
+          "value": 0.1
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 29
+  },
+  "keen_eye_5": {
+    "title": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_5"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.excavation.keen_eye_5.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_shovel"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "operation": "addition",
+          "value": 0.1
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 44
+  }
+}

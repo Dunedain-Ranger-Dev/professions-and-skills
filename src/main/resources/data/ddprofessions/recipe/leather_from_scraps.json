@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ddprofessions:leather_scraps"
+    },
+    {
+      "item": "ddprofessions:leather_scraps"
+    },
+    {
+      "item": "ddprofessions:leather_scraps"
+    },
+    {
+      "item": "ddprofessions:leather_scraps"
+    }
+  ],
+  "result": {
+    "id": "minecraft:leather",
+    "count": 1
+  }
+}

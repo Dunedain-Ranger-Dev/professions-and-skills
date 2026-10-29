@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ddprofessions:borax_flux"
+    },
+    {
+      "item": "ddprofessions:borax_flux"
+    },
+    {
+      "tag": "ddprofessions:runic_shards"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:runic_flux",
+    "count": 2
+  }
+}

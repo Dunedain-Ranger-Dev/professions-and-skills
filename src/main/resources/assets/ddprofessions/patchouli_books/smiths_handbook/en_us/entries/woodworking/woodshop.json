@@ -1,0 +1,22 @@
+{
+  "name": "The Woodshop",
+  "icon": "ddprofessions:wood_lathe",
+  "category": "ddprofessions:woodworking",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(li)a smoker, to season$(li)a cauldron, for the vat$(li)a $(item)Wood Lathe$(), to turn$(br2)Upgrades: a $(item)Treadle Lathe$() and a $(item)Bowyer's Bench$(). Each widens the lathe's green.",
+      "title": "Stations"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:wood_lathe",
+      "recipe2": "ddprofessions:treadle_lathe"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:bowyers_bench"
+    }
+  ]
+}

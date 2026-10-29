@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "LEL",
+    "S S"
+  ],
+  "key": {
+    "L": {
+      "item": "minecraft:stripped_oak_log"
+    },
+    "E": {
+      "tag": "ddprofessions:tier_metals/tier_3"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:fleshing_beam",
+    "count": 1
+  }
+}

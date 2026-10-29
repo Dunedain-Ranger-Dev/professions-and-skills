@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    },
+    {
+      "item": "minecraft:nether_wart"
+    },
+    {
+      "tag": "ddprofessions:tier_metals/tier_3"
+    },
+    {
+      "tag": "ddprofessions:tier_metals/tier_3"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:elixir_of_rebirth",
+    "count": 1
+  }
+}

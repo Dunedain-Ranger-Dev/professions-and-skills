@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "ddprofessions:master_anvil",
+    "ddprofessions:grinding_wheel",
+    "ddprofessions:oil_cauldron",
+    "ddprofessions:borax_deposit",
+    "ddprofessions:tanning_vat",
+    "ddprofessions:sizing_vat",
+    "ddprofessions:finishing_vat",
+    "ddprofessions:crucible",
+    "ddprofessions:great_crucible",
+    "ddprofessions:jewelers_loupe"
+  ]
+}

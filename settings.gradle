@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+rootProject.name = 'professions-and-skills'
+
+// Professions and Skills depends on none of our other mods: Dungeon Delving and Kingdom Sim link to it.

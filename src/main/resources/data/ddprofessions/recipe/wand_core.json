@@ -1,0 +1,16 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "H"
+  ],
+  "key": {
+    "H": {
+      "item": "ddprofessions:haft"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:wand_core",
+    "count": 1
+  }
+}

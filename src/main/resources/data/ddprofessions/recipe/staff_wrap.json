@@ -1,0 +1,16 @@
+{
+  "type": "ddprofessions:starred_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "ddprofessions:cloth_panel"
+    },
+    {
+      "item": "minecraft:string"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:staff_wrap",
+    "count": 2
+  }
+}

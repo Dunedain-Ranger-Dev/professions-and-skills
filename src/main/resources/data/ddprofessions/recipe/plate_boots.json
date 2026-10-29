@@ -1,0 +1,20 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "MBM",
+    "M M"
+  ],
+  "key": {
+    "M": {
+      "item": "ddprofessions:armor_plate"
+    },
+    "B": {
+      "item": "ddprofessions:leather_base"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:plate_boots",
+    "count": 1
+  }
+}

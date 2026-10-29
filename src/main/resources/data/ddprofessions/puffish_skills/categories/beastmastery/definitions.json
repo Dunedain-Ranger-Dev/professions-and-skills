@@ -1,0 +1,24 @@
+{
+  "animal_friend": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.animal_friend"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.animal_friend.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [],
+    "cost": 1
+  }
+}

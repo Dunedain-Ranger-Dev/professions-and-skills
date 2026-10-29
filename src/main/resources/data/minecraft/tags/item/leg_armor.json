@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ddprofessions:brigandine_leggings",
+    "ddprofessions:hauberk_leggings",
+    "ddprofessions:plate_leggings",
+    "ddprofessions:gilded_leggings"
+  ]
+}

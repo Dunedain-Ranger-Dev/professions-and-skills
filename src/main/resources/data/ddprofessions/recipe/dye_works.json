@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CEC",
+    "PPP"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:cauldron"
+    },
+    "E": {
+      "tag": "ddprofessions:tier_metals/tier_3"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:dye_works",
+    "count": 1
+  }
+}

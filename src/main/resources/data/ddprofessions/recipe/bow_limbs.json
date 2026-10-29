@@ -1,0 +1,17 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    " S",
+    "S "
+  ],
+  "key": {
+    "S": {
+      "item": "ddprofessions:stave"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:bow_limbs",
+    "count": 2
+  }
+}

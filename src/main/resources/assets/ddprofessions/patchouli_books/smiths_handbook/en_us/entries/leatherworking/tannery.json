@@ -1,0 +1,23 @@
+{
+  "name": "The Tannery",
+  "icon": "ddprofessions:tanning_rack",
+  "category": "ddprofessions:leatherworking",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(li)a $(item)Tanning Rack$(), to scrape$(li)a cauldron, for the vat$(li)a $(item)Shaping Rack$(), to cut$(br2)Upgrades: a $(item)Tanning Barrel$() (a vat for eight, a quarter faster) and a $(item)Fleshing Beam$() (a wider cutting mark).",
+      "title": "Stations"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:shaping_rack",
+      "recipe2": "ddprofessions:tanning_barrel"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ddprofessions:fleshing_beam",
+      "recipe2": "ddprofessions:leather_from_scraps"
+    }
+  ]
+}

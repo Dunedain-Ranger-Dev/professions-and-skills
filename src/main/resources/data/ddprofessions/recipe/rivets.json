@@ -1,0 +1,19 @@
+{
+  "type": "ddprofessions:starred_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "ddprofessions:tempered_iron_ingot"
+    },
+    {
+      "tag": "ddprofessions:flux"
+    },
+    {
+      "item": "minecraft:iron_nugget"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:rivets",
+    "count": 4
+  }
+}

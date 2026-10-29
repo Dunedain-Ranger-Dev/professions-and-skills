@@ -1,0 +1,19 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "IFI"
+  ],
+  "key": {
+    "I": {
+      "item": "ddprofessions:tempered_iron_ingot"
+    },
+    "F": {
+      "tag": "ddprofessions:flux"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:chain_links",
+    "count": 8
+  }
+}

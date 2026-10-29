@@ -1,0 +1,19 @@
+{
+  "type": "ddprofessions:starred_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "ddprofessions:sized_yarn"
+    },
+    {
+      "item": "ddprofessions:sized_yarn"
+    },
+    {
+      "item": "ddprofessions:sized_yarn"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:bowstring",
+    "count": 1
+  }
+}

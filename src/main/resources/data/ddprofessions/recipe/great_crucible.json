@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W W",
+    " C "
+  ],
+  "key": {
+    "W": {
+      "tag": "ddprofessions:tier_metals/tier_2"
+    },
+    "C": {
+      "item": "ddprofessions:crucible"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:great_crucible",
+    "count": 1
+  }
+}

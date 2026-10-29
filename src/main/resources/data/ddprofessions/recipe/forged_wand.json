@@ -1,0 +1,20 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "F",
+    "C"
+  ],
+  "key": {
+    "F": {
+      "item": "ddprofessions:arcane_focus"
+    },
+    "C": {
+      "item": "ddprofessions:wand_core"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:forged_wand",
+    "count": 1
+  }
+}

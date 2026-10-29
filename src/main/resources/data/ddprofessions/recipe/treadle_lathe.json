@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W W",
+    " L "
+  ],
+  "key": {
+    "W": {
+      "tag": "ddprofessions:tier_metals/tier_2"
+    },
+    "L": {
+      "item": "ddprofessions:wood_lathe"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:treadle_lathe",
+    "count": 1
+  }
+}

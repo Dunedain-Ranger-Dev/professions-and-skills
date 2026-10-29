@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "ddprofessions:item/forged_staff",
+    "layer1": "ddprofessions:item/forged_mark"
+  }
+}

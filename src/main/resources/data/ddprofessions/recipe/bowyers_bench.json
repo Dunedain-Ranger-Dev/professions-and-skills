@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "E E",
+    " B "
+  ],
+  "key": {
+    "E": {
+      "tag": "ddprofessions:tier_metals/tier_3"
+    },
+    "B": {
+      "item": "minecraft:fletching_table"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:bowyers_bench",
+    "count": 1
+  }
+}

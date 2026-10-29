@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "W W",
+    " L "
+  ],
+  "key": {
+    "W": {
+      "tag": "ddprofessions:tier_metals/tier_2"
+    },
+    "L": {
+      "item": "minecraft:loom"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:great_loom",
+    "count": 1
+  }
+}

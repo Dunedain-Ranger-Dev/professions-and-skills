@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "ddprofessions:sand_flux",
+    "ddprofessions:borax_flux",
+    "ddprofessions:runic_flux",
+    "ddprofessions:runeforged_flux"
+  ]
+}

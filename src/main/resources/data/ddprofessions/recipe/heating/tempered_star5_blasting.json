@@ -1,0 +1,18 @@
+{
+  "type": "ddprofessions:heating_blasting",
+  "category": "misc",
+  "ingredient": {
+    "type": "neoforge:components",
+    "items": "ddprofessions:tempered_iron_ingot",
+    "components": {
+      "ddprofessions:stars": 5
+    },
+    "strict": false
+  },
+  "result": {
+    "id": "ddprofessions:heated_ingot",
+    "count": 1
+  },
+  "experience": 0.0,
+  "cookingtime": 1550
+}
