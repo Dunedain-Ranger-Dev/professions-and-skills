@@ -6,6 +6,7 @@ import com.mojang.logging.LogUtils;
 
 import io.github.ranger3462.ddprofessions.forging.GoldCurios;
 import io.github.ranger3462.ddprofessions.integration.apotheosis.ApotheosisForging;
+import io.github.ranger3462.ddprofessions.integration.irons.IronsMagic;
 import io.github.ranger3462.ddprofessions.integration.skills.PufferfishSkills;
 import io.github.ranger3462.ddprofessions.integration.spellengine.ForgedCasting;
 import io.github.ranger3462.ddprofessions.integration.spellengine.SpellEngineMagic;
@@ -32,6 +33,9 @@ public class ProfessionsAndSkills {
         modContainer.registerConfig(ModConfig.Type.COMMON, ProfessionsConfig.SPEC);
         if (ModList.get().isLoaded("puffish_skills")) {
             PufferfishSkills.register();
+        }
+        if (ModList.get().isLoaded("irons_spellbooks")) {
+            IronsMagic.register(); // Casting trains the spell's magic school tree (DD-81).
         }
         if (ModList.get().isLoaded("spell_engine")) {
             SpellEngineMagic.register();
