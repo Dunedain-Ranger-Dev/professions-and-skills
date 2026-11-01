@@ -211,6 +211,8 @@
   "message.ddprofessions.scrape.done": "Hide scraped clean. Tan it in a vat of liquor.",
   "message.ddprofessions.skill_level_up": "%s is now level %s!",
   "message.ddprofessions.spin.done": "Spun into yarn. Size it in a vat before weaving.",
+  "message.ddprofessions.spin_silk.done": "Spun into spider silk. Brew it into Silk Sizing.",
+  "message.ddprofessions.spin_silk.no_eye": "Spinning silk takes a spider eye as well as the sized yarn.",
   "message.ddprofessions.starter_tome": "You were given a Tome of Calling. Read it to choose your class.",
   "message.ddprofessions.tome_read": "You learn something new. You have %s ability points to spend.",
   "message.ddprofessions.turn.done": "Turned into staves %s.",

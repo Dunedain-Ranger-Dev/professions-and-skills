@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Hold wool and right-click the $(item)Spinning Wheel$() for three $(item)Yarn$().",
+      "text": "Hold wool and right-click the $(item)Spinning Wheel$() for three $(item)Yarn$().$(br2)Hold $(item)Sized Yarn$() instead, with a spider eye in your pack, to spin a $(item)Spider Silk$() for Silk Sizing.",
       "title": "Spinning"
     },
     {
