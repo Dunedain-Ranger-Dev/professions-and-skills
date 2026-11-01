@@ -16,7 +16,10 @@ are fine. **Farmer's Delight** joins the pack for its bark, straw, canvas, knive
   (PROF-8): Dungeon Delving's forged gear is the one forged set for now.
 - **Reworked after the first playtest (2026-10-25):** every craft now follows Forging's pattern (below). The scraping,
   spinning, sewing and carving minigames, fulling, bending and the Chopping Block are gone.
-- **Not yet:** sources for the dungeon materials (Barrowmoss, Emberroot, spider silk, Arcane Dust; phase 6) and the
+- **Spider Silk** is spun, not found: Sized Yarn and a spider eye at the Spinning Wheel.
+- **Not yet:** sources for the dungeon materials (Dungeon Delving's drops: Barrowmoss from undead dungeons' overgrown
+  rooms; Emberroot from kobold dungeons and Arcane Dust from elemental dungeons, tier 2 and up, as mob drops or chest
+  loot; phase 6) and the
   dryads' woods and finishes (phase 7); dyeing at the Dye Works; real art for the new blocks and items (placeholders and
   vanilla models for now); RPG staves, wands and shields from parts (phase 5); the Woodworking tree's Seasoner, Fine
   Split and Master Bowyer perks; forged gear for more weapon and armor classes, and variant recipes for specific looks.

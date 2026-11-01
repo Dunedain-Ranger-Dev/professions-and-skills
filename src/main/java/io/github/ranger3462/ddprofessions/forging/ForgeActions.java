@@ -237,13 +237,14 @@ public final class ForgeActions {
                         SoundEvents.ARMOR_EQUIP_LEATHER.value(), "message.ddprofessions.scrape.done");
                 case SPIN -> prepare(serverPlayer, serverLevel, pos, held, Profession.WEAVING, Crafts.YARN, YARN_PER_WOOL, SoundEvents.WOOL_PLACE,
                         "message.ddprofessions.spin.done");
+                case SPIN_SILK -> spinSilk(serverPlayer, serverLevel, pos, held);
                 case SALVAGE -> salvage(serverPlayer, serverLevel, pos, held);
             }
         }
     }
 
     private enum Action {
-        STRIKE, QUENCH, GRIND, WEAVE, SCRAPE, SPIN, TURN, CHASE, SALVAGE
+        STRIKE, QUENCH, GRIND, WEAVE, SCRAPE, SPIN, SPIN_SILK, TURN, CHASE, SALVAGE
     }
 
     private static Action actionFor(Player player, ItemStack held, BlockState state) {
@@ -263,6 +264,8 @@ public final class ForgeActions {
             return Action.SCRAPE;
         } else if (held.is(net.minecraft.tags.ItemTags.WOOL) && state.is(Crafts.SPINNING_WHEEL.get())) {
             return Action.SPIN;
+        } else if (held.is(Crafts.SIZED_YARN.get()) && state.is(Crafts.SPINNING_WHEEL.get())) {
+            return Action.SPIN_SILK;
         } else if (held.is(Crafts.CURED_BILLET.get()) && (state.is(Crafts.WOOD_LATHE.get()) || state.is(Crafts.TREADLE_LATHE.get()))) {
             return Action.TURN;
         } else if (held.is(Crafts.FINE_GOLD.get()) && state.is(Crafts.JEWELERS_BENCH.get())) {
@@ -458,6 +461,33 @@ public final class ForgeActions {
         CraftingSkills.addXp(player, profession.skill, 1);
         level.playSound(null, pos, sound, SoundSource.BLOCKS, 0.8f, 1.0f);
         tell(player, Component.translatable(message).withStyle(ChatFormatting.GOLD));
+    }
+
+    /**
+     * Spins a sized yarn (★3 or better, the lowest sizing there is) with a spider eye from the inventory into Spider Silk, for
+     * the ★5 Silk Sizing.
+     */
+    public static void spinSilk(ServerPlayer player, ServerLevel level, BlockPos pos, ItemStack held) {
+        if (CraftWorkshop.around(level, pos, Profession.WEAVING).isEmpty()) {
+            tell(player, Component.translatable("message.ddprofessions.craft.no_workshop", Profession.WEAVING.displayName()).withStyle(ChatFormatting.RED));
+            return;
+        }
+        ItemStack eye = ItemStack.EMPTY;
+        for (ItemStack stack : player.getInventory().items) {
+            if (stack.is(Items.SPIDER_EYE)) {
+                eye = stack;
+                break;
+            }
+        }
+        if (eye.isEmpty() && player.getOffhandItem().is(Items.SPIDER_EYE)) {
+            eye = player.getOffhandItem();
+        }
+        if (eye.isEmpty()) {
+            tell(player, Component.translatable("message.ddprofessions.spin_silk.no_eye").withStyle(ChatFormatting.RED));
+            return;
+        }
+        eye.shrink(1);
+        prepare(player, level, pos, held, Profession.WEAVING, Crafts.SPIDER_SILK, 1, SoundEvents.WOOL_PLACE, "message.ddprofessions.spin_silk.done");
     }
 
     /** Sets up the next cut or turning pass: a new mark to let go on, somewhere after {@code from} along the line, and a fresh hold. */

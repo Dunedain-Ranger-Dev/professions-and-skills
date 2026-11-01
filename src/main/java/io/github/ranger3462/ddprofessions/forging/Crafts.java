@@ -84,7 +84,7 @@ public final class Crafts {
     public static final DeferredItem<LiquorItem> WHEAT_SIZING = liquor("wheat_sizing", 3, Profession.WEAVING);
     public static final DeferredItem<LiquorItem> SILK_SIZING = liquor("silk_sizing", 5, Profession.WEAVING);
     public static final DeferredItem<LiquorItem> ARCANE_SIZING = liquor("arcane_sizing", 7, Profession.WEAVING);
-    /** Raw silk from dungeon spiders (PROF-10 phase 6), for Silk Sizing. */
+    /** Sized yarn spun with a spider eye at the Spinning Wheel, for Silk Sizing. */
     public static final DeferredItem<Item> SPIDER_SILK = ProfessionsRegistries.ITEMS.registerSimpleItem("spider_silk", new Item.Properties());
     /** Dust from dungeon casters (PROF-10 phase 6), for Arcane Sizing. */
     public static final DeferredItem<Item> ARCANE_DUST = ProfessionsRegistries.ITEMS.registerSimpleItem("arcane_dust", new Item.Properties());

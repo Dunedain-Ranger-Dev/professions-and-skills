@@ -227,6 +227,17 @@ public class ProfessionTests {
             landAll(player, level, ledger.offset(-2, 0, 0), TimingBar.Kind.WEAVE, TimingBar.Hit.GOLD);
             ItemStack panels = find(player, Crafts.CLOTH_PANEL.get());
             helper.assertTrue(panels.getCount() == 2 && Forging.stars(panels) == 3, "weaving makes two ★3 cloth panels, got " + panels);
+
+            // Spin silk: a sized yarn needs a spider eye with it, then spins into Spider Silk.
+            player.getInventory().clearContent();
+            player.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(Crafts.SIZED_YARN.get()));
+            ForgeActions.spinSilk(player, level, ledger.offset(2, 0, 0), player.getMainHandItem());
+            helper.assertTrue(find(player, Crafts.SPIDER_SILK.get()).isEmpty() && player.getMainHandItem().is(Crafts.SIZED_YARN.get()),
+                    "no silk, and the yarn kept, without a spider eye");
+            player.setItemInHand(InteractionHand.OFF_HAND, new ItemStack(Items.SPIDER_EYE));
+            ForgeActions.spinSilk(player, level, ledger.offset(2, 0, 0), player.getMainHandItem());
+            helper.assertTrue(find(player, Crafts.SPIDER_SILK.get()).getCount() == 1 && player.getOffhandItem().isEmpty(),
+                    "a sized yarn and a spider eye spin into a Spider Silk");
         } finally {
             clear(level, ledger);
         }
