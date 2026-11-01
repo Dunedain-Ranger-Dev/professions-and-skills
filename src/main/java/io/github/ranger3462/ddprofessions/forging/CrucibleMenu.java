@@ -12,7 +12,7 @@ import net.minecraft.world.inventory.SimpleContainerData;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 
-/** A crucible's screen: the furnace's layout, with gold ingots on top, the salt as fuel and fine gold out (DD-91). */
+/** A crucible's screen: the furnace's layout, with gold ingots on top, the salt as fuel and fine gold out (PROF-20). */
 public class CrucibleMenu extends AbstractContainerMenu {
     private final Container crucible;
     private final ContainerData data;

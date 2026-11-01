@@ -94,7 +94,7 @@ public class ForgedGearTests {
         helper.succeed();
     }
 
-    /** Forging split in two (DD-89): weapon parts and weapons are Weaponsmithing's, armor parts and armor Armorsmithing's. */
+    /** Forging split in two (PROF-8): weapon parts and weapons are Weaponsmithing's, armor parts and armor Armorsmithing's. */
     @GameTest(template = ANY_TEMPLATE)
     public static void eachSmithingSkillCapsItsOwnGear(GameTestHelper helper) {
         ServerLevel level = helper.getLevel();
@@ -194,7 +194,7 @@ public class ForgedGearTests {
         return stack;
     }
 
-    /** DD-92: staves and wands from their parts (★ the lowest part's), bound spells and spell power by ★, and straps fitted as a grip. */
+    /** PROF-18: staves and wands from their parts (★ the lowest part's), bound spells and spell power by ★, and straps fitted as a grip. */
     @GameTest(template = ANY_TEMPLATE)
     public static void stavesWandsAndGripsAreMadeFromTheirParts(GameTestHelper helper) {
         ServerLevel level = helper.getLevel();

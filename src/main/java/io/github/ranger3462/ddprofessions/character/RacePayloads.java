@@ -8,7 +8,7 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 
-/** The race screen's and racial ability's packets (DD-82). */
+/** The race screen's and racial ability's packets (PROF-12). */
 public final class RacePayloads {
     private RacePayloads() {}
 

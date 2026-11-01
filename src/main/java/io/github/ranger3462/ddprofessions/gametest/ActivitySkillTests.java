@@ -29,7 +29,7 @@ import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 
-/** Checks the activity skills (DD-81): which tree a weapon, armor or spell school trains, and that hits give experience. */
+/** Checks the activity skills (PROF-11): which tree a weapon, armor or spell school trains, and that hits give experience. */
 @GameTestHolder(ProfessionsAndSkills.MODID)
 @PrefixGameTestTemplate(false)
 public class ActivitySkillTests {

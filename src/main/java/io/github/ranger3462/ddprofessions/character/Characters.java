@@ -32,7 +32,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 /**
- * A player's character (DD-80): their character level, worked out from their skill levels ({@link SkillLevels}), and
+ * A player's character (PROF-14): their character level, worked out from their skill levels ({@link SkillLevels}), and
  * their ability scores ({@link AbilityScore}). Each character level past 1 earns an ability point, and some items
  * give bonus points; players spend them on the stats screen. Points put into a score raise its attribute, and each
  * score's effects are kept up to date with its value, so gear and races that change a score count too.

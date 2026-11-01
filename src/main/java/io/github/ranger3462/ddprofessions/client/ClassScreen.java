@@ -13,7 +13,7 @@ import net.minecraft.util.FormattedCharSequence;
 import net.neoforged.neoforge.network.PacketDistributor;
 
 /**
- * The class screen (DD-83), opened by reading a Tome of Calling: classes on the left, the selected one's tree and
+ * The class screen (PROF-5), opened by reading a Tome of Calling: classes on the left, the selected one's tree and
  * passive bonus on the right, and a button to become it (which uses up the tome). Closes with Esc, keeping the tome.
  */
 public class ClassScreen extends Screen {

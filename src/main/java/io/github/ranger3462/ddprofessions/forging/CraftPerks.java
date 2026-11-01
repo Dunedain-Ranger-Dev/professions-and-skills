@@ -6,7 +6,7 @@ import net.minecraft.world.entity.player.Player;
 
 /**
  * What the Leatherworking, Weaving and Woodworking perks do (see {@link ForgingPerks} for Forging). Each is a node in that skill's
- * tree (DD-70): a level gives a point to spend, rather than a bonus by itself.
+ * tree (PROF-1): a level gives a point to spend, rather than a bonus by itself.
  */
 public final class CraftPerks {
     private CraftPerks() {}

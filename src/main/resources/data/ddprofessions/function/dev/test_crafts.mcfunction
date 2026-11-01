@@ -1,5 +1,5 @@
 # Builds a test crafts hall south of the test forge: a level 3 tannery, weaving room, woodshop and goldsmithy around one Guild
-# Ledger (DD-88), and gives a kit for every step. Run with /function ddprofessions:dev/test_crafts.
+# Ledger (PROF-10), and gives a kit for every step. Run with /function ddprofessions:dev/test_crafts.
 function ddprofessions:dev/clear_test_crafts
 
 # Plank floor

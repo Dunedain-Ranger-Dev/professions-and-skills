@@ -26,10 +26,10 @@ import net.neoforged.neoforge.registries.NeoForgeRegistries;
 /**
  * Each player's XP in the crafting skills (Forging, Leatherworking, Weaving). Reaching level L takes
  * {@code 20 * (L - 1)^2} XP in total. XP is kept through death. Levels are uncapped in play: {@link #MAX_LEVEL} is only
- * a ceiling that keeps the XP within an int. Each level gives a point for the skill's tree (DD-70).
+ * a ceiling that keeps the XP within an int. Each level gives a point for the skill's tree (PROF-1).
  */
 public final class CraftingSkills {
-    /** Effectively no cap (DD-70): far beyond play, while 20 * (MAX_LEVEL - 1)^2 still fits in an int. */
+    /** Effectively no cap (PROF-1): far beyond play, while 20 * (MAX_LEVEL - 1)^2 still fits in an int. */
     public static final int MAX_LEVEL = 1000;
     private static final int XP_SCALE = 20;
 

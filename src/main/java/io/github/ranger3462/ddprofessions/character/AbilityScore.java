@@ -18,7 +18,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
- * The six ability scores (DD-80), D&D-style: real attributes, so gear, races and skill trees can raise them the usual
+ * The six ability scores (PROF-14), D&D-style: real attributes, so gear, races and skill trees can raise them the usual
  * way. Everyone starts at {@link #BASE}; each point above it (or below) adds to other attributes through
  * {@link Effect}s, so the RPG Series, Better Combat and Iron's Spells all feel it. Attributes from mods that aren't
  * installed are skipped.

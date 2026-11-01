@@ -1,6 +1,6 @@
 # Forging, leatherworking and weaving
 
-Jira: DD-62 (sub-tasks DD-63 to DD-69; talent tree DD-70).
+Jira: PROF-7 (sub-tasks PROF-21 to PROF-27; talent tree PROF-1).
 
 Hands-on crafting for custom armor and weapons, modeled on the World of Maria "Forge 2.0" plugin, but less grindy. The
 two main differences are timing instead of pure luck, and scrap instead of lost metal. Numbers here are starting
@@ -8,7 +8,7 @@ points, and balancing waits for playtesters.
 
 ## The forge
 
-A **Guild Ledger** is the center (it replaced the Forge Hearth in DD-88; see professions.md). Within 7 blocks across and 4 up or down, it looks for these stations, which
+A **Guild Ledger** is the center (it replaced the Forge Hearth in PROF-10; see professions.md). Within 7 blocks across and 4 up or down, it looks for these stations, which
 can be arranged any way:
 
 | Station | Basic | Upgrade (raises the forge level) |
@@ -94,7 +94,7 @@ flux: ★5 ingots with Sand Flux make a ★3 part.
 
 ## Leather and weaving
 
-Rebuilt as their own professions in DD-88: see professions.md. Gear here still uses their parts: the **Leather Backing**
+Rebuilt as their own professions in PROF-10: see professions.md. Gear here still uses their parts: the **Leather Backing**
 (two leather panels) under medium and heavy armor, the **Gambeson Backing** (two cloth panels) under light armor, and
 **hardened leather** (three leather panels and a honeycomb) for brigandine. All three carry the ★ of how well they were made.
 
@@ -146,7 +146,7 @@ affixes add; other affix effects are untouched.
 ## Skills
 
 Forging, Leatherworking and Weaving each have levels 1 to 30, from XP. Each level gives a point to spend in that skill's
-tree (Pufferfish's Skills, DD-70). The Forging level still sets the highest ★ you can forge; the rest is perks you pick.
+tree (Pufferfish's Skills, PROF-1). The Forging level still sets the highest ★ you can forge; the rest is perks you pick.
 
 **Forging XP:**
 
@@ -181,7 +181,7 @@ snapping).
 
 ## Later
 
-- The talent tree (DD-70).
+- The talent tree (PROF-1).
 - JEI pages for the in-world steps (the Smith's Handbook, a Patchouli book, covers them for now).
 - More metals: gold, then dungeon ores.
 - Weapon types beyond the sword and axe, and a forged shield.

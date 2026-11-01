@@ -3,7 +3,7 @@ package io.github.ranger3462.ddprofessions.skill;
 import net.minecraft.world.entity.player.Player;
 
 /**
- * Skill tree perks our own code acts on (DD-70, DD-56). Each rank is a node in a Pufferfish's Skills tree whose
+ * Skill tree perks our own code acts on (PROF-1, PROF-15). Each rank is a node in a Pufferfish's Skills tree whose
  * reward is a player tag ({@link #tag}), so unlocking the node turns the perk on and a respec turns it off. The trees
  * are written by tools/skill_trees.py, which uses the same tag names.
  */

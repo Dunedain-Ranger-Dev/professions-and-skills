@@ -14,7 +14,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.fml.ModList;
 
 /**
- * A player's skill levels, for the character level (DD-80). With Pufferfish's Skills these are its categories (our
+ * A player's skill levels, for the character level (PROF-14). With Pufferfish's Skills these are its categories (our
  * professions, combat styles, armor, magic schools and Beastmastery, and the RPG Series' class tree), counting from
  * 0; the crafting skills are mirrored into their categories. Without it, only the crafting skills count. The character level averages the best few skills,
  * RuneScape-style, so a crafter levels as well as a fighter.
@@ -22,18 +22,18 @@ import net.neoforged.fml.ModList;
 public final class SkillLevels {
     /** Skills that count toward the character level by default: all of ours, and the RPG Series' class tree for now. */
     public static final List<String> DEFAULT_SKILLS = List.of(
-            // Professions (DD-80)
+            // Professions (PROF-14)
             "ddprofessions:mining", "ddprofessions:woodcutting", "ddprofessions:excavation", "ddprofessions:farming", "ddprofessions:fishing",
             "ddprofessions:weaponsmithing", "ddprofessions:armorsmithing", "ddprofessions:leatherworking", "ddprofessions:weaving",
             "ddprofessions:woodworking", "ddprofessions:goldsmithing",
-            // Combat styles, armor, magic schools and Beastmastery (DD-81)
+            // Combat styles, armor, magic schools and Beastmastery (PROF-11)
             "ddprofessions:one_handed", "ddprofessions:two_handed", "ddprofessions:polearms", "ddprofessions:daggers", "ddprofessions:unarmed",
             "ddprofessions:archery", "ddprofessions:crossbows", "ddprofessions:dual_wielding", "ddprofessions:blocking",
             "ddprofessions:light_armor", "ddprofessions:medium_armor", "ddprofessions:heavy_armor", "ddprofessions:mage_armor",
             "ddprofessions:fire_magic", "ddprofessions:frost_magic", "ddprofessions:lightning_magic", "ddprofessions:arcane_magic",
             "ddprofessions:holy_magic", "ddprofessions:earth_magic", "ddprofessions:water_magic", "ddprofessions:air_magic",
             "ddprofessions:necromancy", "ddprofessions:beastmastery",
-            // Class trees (DD-83): only the player's own class is unlocked, so only it can level.
+            // Class trees (PROF-5): only the player's own class is unlocked, so only it can level.
             "ddprofessions:fighter", "ddprofessions:archer", "ddprofessions:rogue", "ddprofessions:mage");
 
     private SkillLevels() {}

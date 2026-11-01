@@ -25,7 +25,7 @@ import net.neoforged.neoforge.network.PacketDistributor;
 import org.lwjgl.glfw.GLFW;
 
 /**
- * The stats screen (DD-80): the character level, unspent ability points, and each ability score with a button to
+ * The stats screen (PROF-14): the character level, unspent ability points, and each ability score with a button to
  * put a point into it. Opened with its key (J by default). Scores come straight from the player's synced attributes;
  * the level and points come from the server ({@link CharacterSyncPayload}).
  */

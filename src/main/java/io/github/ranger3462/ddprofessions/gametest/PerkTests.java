@@ -25,7 +25,7 @@ import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 
-/** Checks the skill tree perks (DD-70, DD-56): the trees give the tags, and the gathering perks do their jobs. */
+/** Checks the skill tree perks (PROF-1, PROF-15): the trees give the tags, and the gathering perks do their jobs. */
 @GameTestHolder(ProfessionsAndSkills.MODID)
 @PrefixGameTestTemplate(false)
 public class PerkTests {

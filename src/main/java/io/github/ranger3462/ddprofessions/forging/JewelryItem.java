@@ -11,7 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 
 /**
- * Goldsmithing's jewelry (DD-89), worn in a Curios slot: a ring (more health) or an amulet (more armor), better by its
+ * Goldsmithing's jewelry (PROF-8), worn in a Curios slot: a ring (more health) or an amulet (more armor), better by its
  * ★. Without Curios it's just an ornament. The bonus is worked out here; {@link GoldCurios} hands it to Curios.
  */
 public class JewelryItem extends StarredItem {

@@ -15,7 +15,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 
-/** A crucible's screen, drawn as a furnace: the flame is what's left of the salt, the arrow the ingot's progress (DD-91). */
+/** A crucible's screen, drawn as a furnace: the flame is what's left of the salt, the arrow the ingot's progress (PROF-20). */
 public class CrucibleScreen extends AbstractContainerScreen<CrucibleMenu> {
     private static final ResourceLocation BACKGROUND = ResourceLocation.withDefaultNamespace("textures/gui/container/furnace.png");
     private static final ResourceLocation FLAME = ResourceLocation.withDefaultNamespace("container/furnace/lit_progress");

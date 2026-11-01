@@ -24,7 +24,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 
 /**
- * The race traits that aren't plain attribute changes (DD-82): a dwarf's darkvision and quick hands on ore, a
+ * The race traits that aren't plain attribute changes (PROF-12): a dwarf's darkvision and quick hands on ore, a
  * half-orc's last stand, a dragonborn's breath (the racial ability key), and a gnome's knack for crafting (in
  * CraftingSkills).
  */

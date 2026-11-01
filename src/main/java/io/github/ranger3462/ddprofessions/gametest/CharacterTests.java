@@ -22,7 +22,7 @@ import net.neoforged.neoforge.common.util.FakePlayerFactory;
 import net.neoforged.neoforge.gametest.GameTestHolder;
 import net.neoforged.neoforge.gametest.PrefixGameTestTemplate;
 
-/** Checks the character core (DD-80): the character level from skill levels, ability points, and the scores' effects. */
+/** Checks the character core (PROF-14): the character level from skill levels, ability points, and the scores' effects. */
 @GameTestHolder(ProfessionsAndSkills.MODID)
 @PrefixGameTestTemplate(false)
 public class CharacterTests {

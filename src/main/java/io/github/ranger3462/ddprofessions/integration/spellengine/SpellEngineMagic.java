@@ -11,7 +11,7 @@ import net.spell_engine.internals.casting.SpellCast;
 import net.spell_power.api.SpellSchools;
 
 /**
- * Spell Engine (the RPG Series' spells) training the magic school trees (DD-81). Only loaded when Spell Engine is
+ * Spell Engine (the RPG Series' spells) training the magic school trees (PROF-11). Only loaded when Spell Engine is
  * installed. Each spell trains its school by what it actually does:
  * <ul>
  * <li>damage spells by the damage they deal, less against mobs well below the school's level;</li>
