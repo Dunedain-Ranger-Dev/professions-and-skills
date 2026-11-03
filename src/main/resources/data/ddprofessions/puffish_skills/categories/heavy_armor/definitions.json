@@ -3,9 +3,22 @@
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.iron_skin"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.iron_skin.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.iron_skin.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -34,9 +47,46 @@
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.immovable"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.immovable.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.immovable.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.iron_skin"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -60,15 +110,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "plated": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.plated"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.plated.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.plated.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.iron_skin"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -90,15 +177,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "juggernaut_1": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.juggernaut_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.juggernaut_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.juggernaut_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "3"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.iron_skin"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -120,15 +244,52 @@
       }
     ],
     "cost": 3,
-    "required_points": 9
+    "required_spent_points": 6
   },
   "juggernaut_2": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.juggernaut_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.juggernaut_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.juggernaut_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "5"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "14"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.juggernaut_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -150,15 +311,52 @@
       }
     ],
     "cost": 5,
-    "required_points": 19
+    "required_spent_points": 14
   },
   "juggernaut_3": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.juggernaut_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.juggernaut_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.juggernaut_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "8"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "26"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.juggernaut_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -180,15 +378,52 @@
       }
     ],
     "cost": 8,
-    "required_points": 34
+    "required_spent_points": 26
   },
   "unshaken": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.unshaken"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.unshaken.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.unshaken.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.juggernaut_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -210,15 +445,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "heavy_bulwark": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_bulwark"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_bulwark.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_bulwark.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.juggernaut_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -240,15 +512,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "fortress": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.fortress"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.fortress.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.fortress.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "10"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "39"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.juggernaut_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -270,16 +579,40 @@
       }
     ],
     "cost": 10,
-    "required_points": 49,
-    "required_spent_points": 30
+    "required_spent_points": 39
   },
   "heavy_hardening_1": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.iron_skin"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -302,16 +635,50 @@
         }
       }
     ],
-    "cost": 1,
-    "required_points": 1
+    "cost": 1
   },
   "heavy_hardening_2": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -335,15 +702,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 7
+    "required_spent_points": 6
   },
   "heavy_hardening_3": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -367,15 +769,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 14
+    "required_spent_points": 12
   },
   "heavy_hardening_4": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -399,15 +836,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 29
+    "required_spent_points": 27
   },
   "heavy_hardening_5": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.heavy_hardening_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -431,15 +903,40 @@
       }
     ],
     "cost": 1,
-    "required_points": 44
+    "required_spent_points": 37
   },
   "heavy_vigor_1": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.iron_skin"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -462,16 +959,50 @@
         }
       }
     ],
-    "cost": 1,
-    "required_points": 1
+    "cost": 1
   },
   "heavy_vigor_2": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -495,15 +1026,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 7
+    "required_spent_points": 6
   },
   "heavy_vigor_3": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -527,15 +1093,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 14
+    "required_spent_points": 12
   },
   "heavy_vigor_4": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -559,15 +1160,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 29
+    "required_spent_points": 27
   },
   "heavy_vigor_5": {
     "title": {
       "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.heavy_armor.heavy_vigor_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -591,6 +1227,6 @@
       }
     ],
     "cost": 1,
-    "required_points": 44
+    "required_spent_points": 37
   }
 }

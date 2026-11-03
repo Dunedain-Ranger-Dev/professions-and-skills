@@ -3,9 +3,22 @@
     "title": {
       "translate": "skill.ddprofessions.farming.green_thumb"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.green_thumb.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.green_thumb.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -34,9 +47,46 @@
     "title": {
       "translate": "skill.ddprofessions.farming.replanter"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.replanter.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.replanter.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.green_thumb"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -58,15 +108,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "bountiful": {
     "title": {
       "translate": "skill.ddprofessions.farming.bountiful"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.bountiful.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.bountiful.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.green_thumb"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -88,15 +175,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "harvest_moon_1": {
     "title": {
       "translate": "skill.ddprofessions.farming.harvest_moon_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.harvest_moon_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.harvest_moon_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "3"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.green_thumb"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -118,15 +242,52 @@
       }
     ],
     "cost": 3,
-    "required_points": 9
+    "required_spent_points": 6
   },
   "harvest_moon_2": {
     "title": {
       "translate": "skill.ddprofessions.farming.harvest_moon_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.harvest_moon_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.harvest_moon_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "5"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "14"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.harvest_moon_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -148,15 +309,52 @@
       }
     ],
     "cost": 5,
-    "required_points": 19
+    "required_spent_points": 14
   },
   "harvest_moon_3": {
     "title": {
       "translate": "skill.ddprofessions.farming.harvest_moon_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.harvest_moon_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.harvest_moon_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "8"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "26"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.harvest_moon_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -178,15 +376,52 @@
       }
     ],
     "cost": 8,
-    "required_points": 34
+    "required_spent_points": 26
   },
   "fertile_ground": {
     "title": {
       "translate": "skill.ddprofessions.farming.fertile_ground"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.fertile_ground.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.fertile_ground.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.harvest_moon_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -208,15 +443,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "hardy": {
     "title": {
       "translate": "skill.ddprofessions.farming.hardy"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.hardy.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.hardy.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.harvest_moon_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -240,15 +512,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "golden_harvest": {
     "title": {
       "translate": "skill.ddprofessions.farming.golden_harvest"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.golden_harvest.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.golden_harvest.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "10"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "39"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.harvest_moon_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -270,16 +579,40 @@
       }
     ],
     "cost": 10,
-    "required_points": 49,
-    "required_spent_points": 30
+    "required_spent_points": 39
   },
   "green_fingers_1": {
     "title": {
       "translate": "skill.ddprofessions.farming.green_fingers_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.green_fingers_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.green_fingers_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.green_thumb"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -302,16 +635,50 @@
         }
       }
     ],
-    "cost": 1,
-    "required_points": 1
+    "cost": 1
   },
   "green_fingers_2": {
     "title": {
       "translate": "skill.ddprofessions.farming.green_fingers_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.green_fingers_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.green_fingers_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.green_fingers_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -335,15 +702,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 7
+    "required_spent_points": 6
   },
   "green_fingers_3": {
     "title": {
       "translate": "skill.ddprofessions.farming.green_fingers_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.green_fingers_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.green_fingers_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.green_fingers_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -367,15 +769,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 14
+    "required_spent_points": 12
   },
   "green_fingers_4": {
     "title": {
       "translate": "skill.ddprofessions.farming.green_fingers_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.green_fingers_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.green_fingers_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.green_fingers_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -399,15 +836,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 29
+    "required_spent_points": 27
   },
   "green_fingers_5": {
     "title": {
       "translate": "skill.ddprofessions.farming.green_fingers_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.green_fingers_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.green_fingers_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.green_fingers_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -431,15 +903,40 @@
       }
     ],
     "cost": 1,
-    "required_points": 44
+    "required_spent_points": 37
   },
   "farmhand_1": {
     "title": {
       "translate": "skill.ddprofessions.farming.farmhand_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.farmhand_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.farmhand_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.green_thumb"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -462,16 +959,50 @@
         }
       }
     ],
-    "cost": 1,
-    "required_points": 1
+    "cost": 1
   },
   "farmhand_2": {
     "title": {
       "translate": "skill.ddprofessions.farming.farmhand_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.farmhand_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.farmhand_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.farmhand_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -495,15 +1026,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 7
+    "required_spent_points": 6
   },
   "farmhand_3": {
     "title": {
       "translate": "skill.ddprofessions.farming.farmhand_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.farmhand_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.farmhand_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.farmhand_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -527,15 +1093,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 14
+    "required_spent_points": 12
   },
   "farmhand_4": {
     "title": {
       "translate": "skill.ddprofessions.farming.farmhand_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.farmhand_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.farmhand_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.farmhand_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -559,15 +1160,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 29
+    "required_spent_points": 27
   },
   "farmhand_5": {
     "title": {
       "translate": "skill.ddprofessions.farming.farmhand_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.farming.farmhand_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.farming.farmhand_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.farming.farmhand_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -591,6 +1227,6 @@
       }
     ],
     "cost": 1,
-    "required_points": 44
+    "required_spent_points": 37
   }
 }

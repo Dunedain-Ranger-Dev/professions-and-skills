@@ -8,6 +8,10 @@ cache), plus their names in `assets/ddprofessions/lang/en_us.json`. Change a tre
 `python tools/skill_trees.py` from the project root (after a Gradle build, so the jar is cached). A hand edit to the
 JSON is lost on the next run.
 
+**Hovering a node shows what it takes**, under its description: its cost, the points it needs spent in the tree, and
+the node it hangs from. Pufferfish's screen shows none of these, so a click that did nothing gave no reason. The class
+trees keep the Skill Tree mod's own descriptions.
+
 ## Goals
 
 - **Getting better at something.** Each tree is a short climb: a root bonus, a few choices, one signature ability, a
@@ -15,8 +19,10 @@ JSON is lost on the next run.
   two upgrades.
 - **Vertical and condensed.** One spine running down the screen, with side nodes one step left or right of it. About
   10–14 nodes a tree instead of today's flat rows.
-- **Level gates.** Every node beyond the root needs a level in that skill as well as the node above it, so
-  upgrades (Tree Feller II, III) can't be rushed.
+- **Level gates, as points spent.** Every node beyond the root needs the node above it and some points already spent
+  in the tree, so upgrades (Tree Feller II, III) can't be rushed. A node at level L costing C needs L − 1 − C spent:
+  with that spent and C to spend, the player has earned a point a level up to L. (Decided 2026-11-03, after the first
+  gates turned out to ask for unspent points; see below.)
 - **Uncapped levels.** Skills level forever. Once a tree is full, leftover points go into Mastery (below), so a
   point is never wasted.
 - **Big block-clearing is timed, not capped.** Tree Feller, Vein Miner and similar become mcMMO-style abilities:
@@ -24,9 +30,11 @@ JSON is lost on the next run.
 
 ## What Pufferfish's Skills can and can't do
 
-- **Can:** gate a node by points earned in that skill (`required_points`). One point comes per level, so this is a
-  level gate. It can also gate by points already spent in the tree (`required_spent_points`), and by how many of the
-  nodes it connects to are taken.
+- **Can:** gate a node by points already spent in the tree (`required_spent_points`), and by how many of the nodes it
+  connects to are taken.
+- **Can't gate by level.** `required_points` looks like it, but it's points left *unspent*: a node can be bought when
+  the player has at least the larger of it and the node's cost unspent. Used as a level gate, it made players hoard.
+  So the trees gate on points spent instead (above), never asking for more than the nodes below that level cost.
 - **Can't:** put several points into one node. Every node is bought once.
 - **So ranks are stacked nodes.** "Tree Feller, up to 3 points" is three nodes stacked tightly in one column (I, II,
   III), each needing the one above and a higher level. It reads as one perk with three pips. A true multi-point node

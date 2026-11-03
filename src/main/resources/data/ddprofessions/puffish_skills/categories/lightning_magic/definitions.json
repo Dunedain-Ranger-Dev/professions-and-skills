@@ -3,9 +3,22 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_initiate"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_initiate.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_initiate.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -37,9 +50,46 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_quick_casting"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_quick_casting.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_quick_casting.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_initiate"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -61,15 +111,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "lightning_lore": {
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_lore"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_lore.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_lore.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_initiate"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -93,7 +180,7 @@
       }
     ],
     "cost": 2,
-    "required_points": 4,
+    "required_spent_points": 2,
     "required_mods": [
       "irons_spellbooks"
     ]
@@ -102,9 +189,46 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_adept_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_adept_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_adept_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "3"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_initiate"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -128,7 +252,7 @@
       }
     ],
     "cost": 3,
-    "required_points": 9,
+    "required_spent_points": 6,
     "required_mods": [
       "spell_power"
     ]
@@ -137,9 +261,46 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_adept_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_adept_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_adept_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "5"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "14"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_adept_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -163,7 +324,7 @@
       }
     ],
     "cost": 5,
-    "required_points": 19,
+    "required_spent_points": 14,
     "required_mods": [
       "spell_power"
     ]
@@ -172,9 +333,46 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_adept_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_adept_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_adept_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "8"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "26"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_adept_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -198,7 +396,7 @@
       }
     ],
     "cost": 8,
-    "required_points": 34,
+    "required_spent_points": 26,
     "required_mods": [
       "spell_power"
     ]
@@ -207,9 +405,46 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_effect"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_effect.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_effect.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_adept_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -231,15 +466,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "lightning_reserves": {
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_reserves"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_reserves.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_reserves.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_adept_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -263,7 +535,7 @@
       }
     ],
     "cost": 4,
-    "required_points": 24,
+    "required_spent_points": 19,
     "required_mods": [
       "irons_spellbooks"
     ]
@@ -272,9 +544,46 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_capstone"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_capstone.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_capstone.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "10"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "39"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_adept_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -296,16 +605,40 @@
       }
     ],
     "cost": 10,
-    "required_points": 49,
-    "required_spent_points": 30
+    "required_spent_points": 39
   },
   "lightning_attunement_1": {
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_initiate"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -329,7 +662,6 @@
       }
     ],
     "cost": 1,
-    "required_points": 1,
     "required_mods": [
       "spell_power"
     ]
@@ -338,9 +670,44 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -364,7 +731,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 7,
+    "required_spent_points": 6,
     "required_mods": [
       "spell_power"
     ]
@@ -373,9 +740,44 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -399,7 +801,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 14,
+    "required_spent_points": 12,
     "required_mods": [
       "spell_power"
     ]
@@ -408,9 +810,44 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -434,7 +871,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 29,
+    "required_spent_points": 27,
     "required_mods": [
       "spell_power"
     ]
@@ -443,9 +880,44 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_attunement_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -469,7 +941,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 44,
+    "required_spent_points": 37,
     "required_mods": [
       "spell_power"
     ]
@@ -478,9 +950,34 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_initiate"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -504,7 +1001,6 @@
       }
     ],
     "cost": 1,
-    "required_points": 1,
     "required_mods": [
       "irons_spellbooks"
     ]
@@ -513,9 +1009,44 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -539,7 +1070,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 7,
+    "required_spent_points": 6,
     "required_mods": [
       "irons_spellbooks"
     ]
@@ -548,9 +1079,44 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -574,7 +1140,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 14,
+    "required_spent_points": 12,
     "required_mods": [
       "irons_spellbooks"
     ]
@@ -583,9 +1149,44 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -609,7 +1210,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 29,
+    "required_spent_points": 27,
     "required_mods": [
       "irons_spellbooks"
     ]
@@ -618,9 +1219,44 @@
     "title": {
       "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.lightning_magic.lightning_wellspring_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -644,7 +1280,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 44,
+    "required_spent_points": 37,
     "required_mods": [
       "irons_spellbooks"
     ]
