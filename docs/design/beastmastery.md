@@ -9,7 +9,6 @@ The review answers are at the end.
   collars; the companion, with bonding, saving on death, calling back and fetching; Ice and Fire's tames in the tags;
   and the following-tames list for Dungeon Delving (DD-118). Code in the `beast` package, tests in `BeastmasteryTests`.
 - **Not yet:**
-  - Call Companion as an Iron's Spells spell: for now the Bonding Charm does the calling.
   - The paw icon by a companion's nameplate, and listing it on the character screen.
   - Real art: barding, collars and the charm use vanilla textures, and collars don't show on the tame.
   - Ice and Fire isn't in the dev pack, so its tames are untested.
@@ -136,8 +135,10 @@ says companion.
 | Companion Bond II | 5 min | Three-quarters health |
 | Companion Bond III | 2 min | Full health |
 
-- **The spell:** for now, hold right-click with the Bonding Charm for 3 s. Still to come: an Iron's Spells spell in the
-  Nature school, so it uses mana and sits on the spell bar, with the charm kept for when Iron's Spells isn't installed.
+- **The spell (PROF-28):** with Iron's Spells, Call Companion is a Nature spell: 40 mana and a 3 s channel, refused
+  while there's no companion or the bond is cooling down. Taking Companion Bond I gives one scroll free (once per
+  player, so a respec can't farm them) and unlocks its recipe: paper, a lead, a bone and an ink sac, which makes
+  nothing for a player without the node. Without Iron's Spells, hold right-click with the Bonding Charm for 3 s.
 - **Other tames that die stay dead,** as in vanilla. The companion is the one you don't lose.
 - **It also fetches a living companion.** If it's alive, Call Companion teleports it to you, on the same cooldown. We
   keep its last known position and dimension, so it can be fetched from an unloaded chunk or another dimension: the

@@ -67,6 +67,10 @@ public final class Beastmastery {
     public static final DeferredHolder<AttachmentType<?>, AttachmentType<Boolean>> TAMING_CREDITED = ATTACHMENTS.register("taming_credited",
             () -> AttachmentType.builder(() -> false).serialize(Codec.BOOL).build());
 
+    /** Set on a player once they've had their free Call Companion scroll (PROF-28), so a respec can't farm them. */
+    public static final DeferredHolder<AttachmentType<?>, AttachmentType<Boolean>> COMPANION_SCROLL_GIVEN = ATTACHMENTS.register("companion_scroll_given",
+            () -> AttachmentType.builder(() -> false).serialize(Codec.BOOL).copyOnDeath().build());
+
     public static final TagKey<EntityType<?>> PETS = tag("beastmastery_pets");
     /** Taming experience by tier, from entity tags so the pack can move a mob between them; the first tag that has it wins. */
     public static final List<TamingTier> TAMING_TIERS = List.of(new TamingTier(tag("taming_xp/dragon"), 400), new TamingTier(tag("taming_xp/great"), 150),

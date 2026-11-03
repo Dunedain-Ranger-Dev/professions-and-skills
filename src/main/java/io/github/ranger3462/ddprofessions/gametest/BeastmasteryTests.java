@@ -267,6 +267,46 @@ public class BeastmasteryTests {
         helper.succeed();
     }
 
+    /** Call Companion with Iron's Spells (PROF-28): the spell, its scroll recipe gated on Companion Bond I, and the free scroll. */
+    @GameTest(template = ANY_TEMPLATE)
+    public static void callCompanionComesWithTheBond(GameTestHelper helper) {
+        if (!net.neoforged.fml.ModList.get().isLoaded("irons_spellbooks") || !SkillLevels.pufferfish()) {
+            helper.succeed();
+            return;
+        }
+        var spell = io.redspace.ironsspellbooks.api.registry.SpellRegistry.REGISTRY.get(
+                io.github.ranger3462.ddprofessions.integration.irons.CallCompanionSpell.ID);
+        helper.assertTrue(spell instanceof io.github.ranger3462.ddprofessions.integration.irons.CallCompanionSpell
+                && spell.getSchoolType().getId().equals(io.redspace.ironsspellbooks.api.registry.SchoolRegistry.NATURE_RESOURCE),
+                "Call Companion is a Nature spell, got " + (spell == null ? null : spell.getSchoolType().getId()));
+        ServerPlayer player = player(helper, "summoner");
+        var recipe = (net.minecraft.world.item.crafting.CraftingRecipe) helper.getLevel().getRecipeManager()
+                .byKey(ProfessionsAndSkills.id("companion_scroll")).orElseThrow().value();
+        var input = net.minecraft.world.item.crafting.CraftingInput.of(2, 2, java.util.List.of(new ItemStack(net.minecraft.world.item.Items.PAPER),
+                new ItemStack(net.minecraft.world.item.Items.LEAD), new ItemStack(net.minecraft.world.item.Items.BONE),
+                new ItemStack(net.minecraft.world.item.Items.INK_SAC)));
+        net.neoforged.neoforge.common.CommonHooks.setCraftingPlayer(player);
+        try {
+            helper.assertTrue(recipe.matches(input, helper.getLevel()), "paper, a lead, a bone and an ink sac match");
+            helper.assertTrue(recipe.assemble(input, helper.getLevel().registryAccess()).isEmpty()
+                    && !io.github.ranger3462.ddprofessions.integration.irons.IronsCompanion.giveFreeScroll(player),
+                    "no scroll, crafted or free, without Companion Bond I");
+            helper.assertTrue(!spell.checkPreCastConditions(helper.getLevel(), 1, player, null), "no casting it without a companion");
+            player.addTag(Perk.COMPANION_BOND.tag(1));
+            ItemStack crafted = recipe.assemble(input, helper.getLevel().registryAccess());
+            helper.assertTrue(crafted.is(io.redspace.ironsspellbooks.registries.ItemRegistry.SCROLL.get())
+                    && io.redspace.ironsspellbooks.api.spells.ISpellContainer.get(crafted).getSpellAtIndex(0).getSpell() == spell,
+                    "with it, the recipe makes a Call Companion scroll");
+            helper.assertTrue(io.github.ranger3462.ddprofessions.integration.irons.IronsCompanion.giveFreeScroll(player)
+                    && !io.github.ranger3462.ddprofessions.integration.irons.IronsCompanion.giveFreeScroll(player)
+                    && player.getInventory().items.stream().anyMatch(stack -> stack.is(io.redspace.ironsspellbooks.registries.ItemRegistry.SCROLL.get())),
+                    "and taking it gives one scroll free, once");
+        } finally {
+            net.neoforged.neoforge.common.CommonHooks.setCraftingPlayer(null);
+        }
+        helper.succeed();
+    }
+
     /** Silk Sizing takes Critters and Companions' Silk (it's only there with that mod and Farmer's Delight). */
     @GameTest(template = ANY_TEMPLATE)
     public static void silkSizingTakesCrittersSilk(GameTestHelper helper) {
