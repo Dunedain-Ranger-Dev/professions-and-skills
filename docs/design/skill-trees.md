@@ -2,6 +2,12 @@
 
 A draft for review: how every skill tree should look and play. Nothing here is built yet.
 
+**The trees are generated.** `tools/skill_trees.py` writes every tree under
+`src/main/resources/data/ddprofessions/puffish_skills/` (and the class trees, from the Skill Tree jar in Gradle's
+cache), plus their names in `assets/ddprofessions/lang/en_us.json`. Change a tree there, not in its JSON, then run
+`python tools/skill_trees.py` from the project root (after a Gradle build, so the jar is cached). A hand edit to the
+JSON is lost on the next run.
+
 ## Goals
 
 - **Getting better at something.** Each tree is a short climb: a root bonus, a few choices, one signature ability, a
@@ -169,7 +175,7 @@ Frost: Shatter on frozen targets; Holy: overheal turns into a shield). Mastery: 
 
 ## Beastmastery
 
-Waits for companions (PROF-6). Same shape when it comes.
+See [beastmastery.md](beastmastery.md) (PROF-6): tame bonuses, starred barding, and a companion you can recall.
 
 ## Questions for review
 
