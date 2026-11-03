@@ -79,6 +79,12 @@ public final class CraftingXp {
             CraftingSkills.addXp(event.getEntity(), CraftSkill.WOODWORKING, GEAR_XP_PER_STAR * stars);
         } else if (crafted.is(Crafts.ARCANE_FOCUS.get())) {
             CraftingSkills.addXp(event.getEntity(), CraftSkill.GOLDSMITHING, PART_XP_PER_STAR * stars);
+        } else if (crafted.getItem() instanceof io.github.ranger3462.ddprofessions.beast.BardingItem barding) {
+            // Barding (PROF-6): leather trains Leatherworking, mail and plate Armorsmithing.
+            CraftingSkills.addXp(event.getEntity(), barding.kind == io.github.ranger3462.ddprofessions.beast.BardingItem.Kind.LEATHER
+                    ? CraftSkill.LEATHERWORKING : CraftSkill.ARMORSMITHING, GEAR_XP_PER_STAR * stars);
+        } else if (crafted.is(io.github.ranger3462.ddprofessions.beast.BeastItems.COLLAR.get())) {
+            CraftingSkills.addXp(event.getEntity(), CraftSkill.LEATHERWORKING, PART_XP_PER_STAR * stars);
         } else if (crafted.is(Crafts.STOCK.get())) {
             CraftingSkills.addXp(event.getEntity(), CraftSkill.WOODWORKING, MATERIAL_XP);
         }

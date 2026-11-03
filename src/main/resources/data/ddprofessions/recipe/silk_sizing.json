@@ -14,7 +14,7 @@
       "item": "minecraft:wheat"
     },
     {
-      "item": "ddprofessions:spider_silk"
+      "tag": "ddprofessions:silk"
     }
   ],
   "result": {
@@ -25,6 +25,10 @@
     {
       "type": "neoforge:mod_loaded",
       "modid": "farmersdelight"
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "crittersandcompanions"
     }
   ]
 }

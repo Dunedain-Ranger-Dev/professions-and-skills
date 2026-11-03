@@ -1,6 +1,8 @@
 package io.github.ranger3462.ddprofessions.client;
 
 import io.github.ranger3462.ddprofessions.ProfessionsAndSkills;
+import io.github.ranger3462.ddprofessions.beast.BardingItem;
+import io.github.ranger3462.ddprofessions.beast.BeastItems;
 import io.github.ranger3462.ddprofessions.forging.ForgedGear;
 import io.github.ranger3462.ddprofessions.forging.Forging;
 import io.github.ranger3462.ddprofessions.forging.HotMetalItem;
@@ -37,6 +39,9 @@ public final class ForgingItemColors {
         // Brigandine is dyeable, like leather armor (and brown like it until dyed).
         event.register((stack, tintIndex) -> tintIndex == 0 ? DyedItemColor.getOrDefault(stack, DyedItemColor.LEATHER_COLOR) : -1,
                 Forging.ARMOR.get(ForgedGear.Weight.LIGHT).values().stream().map(item -> item.get()).toArray(net.minecraft.world.item.Item[]::new));
+        // So is a horse's leather barding (PROF-6), like leather horse armor.
+        event.register((stack, tintIndex) -> tintIndex == 0 ? DyedItemColor.getOrDefault(stack, DyedItemColor.LEATHER_COLOR) : -1,
+                BeastItems.HORSE_BARDING.get(BardingItem.Kind.LEATHER).get());
     }
 
     private static int heatColor(ItemStack stack) {

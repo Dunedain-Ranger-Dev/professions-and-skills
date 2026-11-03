@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.ranger3462.ddprofessions.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MobAccessor",
+    "WolfMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

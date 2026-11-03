@@ -16,7 +16,8 @@ are fine. **Farmer's Delight** joins the pack for its bark, straw, canvas, knive
   (PROF-8): Dungeon Delving's forged gear is the one forged set for now.
 - **Reworked after the first playtest (2026-10-25):** every craft now follows Forging's pattern (below). The scraping,
   spinning, sewing and carving minigames, fulling, bending and the Chopping Block are gone.
-- **Spider Silk** is spun, not found: Sized Yarn and a spider eye at the Spinning Wheel.
+- **Silk** for Silk Sizing is Critters and Companions' (`ddprofessions:silk` tag): from silk cocoons and jumping spiders.
+  Without Critters and Companions there's no Silk Sizing, and cloth tops out at ★3 until Arcane Sizing.
 - **Not yet:** sources for the dungeon materials (Dungeon Delving's drops: Barrowmoss from undead dungeons' overgrown
   rooms; Emberroot from kobold dungeons and Arcane Dust from elemental dungeons, tier 2 and up, as mob drops or chest
   loot; phase 6) and the

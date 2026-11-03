@@ -125,7 +125,9 @@ public final class ForgedGear {
     /** Sets a freshly crafted piece's durability for its ★; other mods' starred gear goes by {@link Quality}. */
     public static void applyStats(ItemStack stack) {
         int stars = Forging.stars(stack);
-        if (stack.getItem() instanceof Armor armor) {
+        if (stack.getItem() instanceof io.github.ranger3462.ddprofessions.beast.BardingItem barding) {
+            barding.applyStats(stack);
+        } else if (stack.getItem() instanceof Armor armor) {
             stack.set(DataComponents.MAX_DAMAGE, armorDurability(armor.getType(), stars));
         } else if (stack.getItem() instanceof Sword || stack.getItem() instanceof Axe || stack.getItem() instanceof Staff) {
             stack.set(DataComponents.MAX_DAMAGE, WEAPON_DURABILITY[index(stars)]);

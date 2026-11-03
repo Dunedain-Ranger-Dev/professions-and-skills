@@ -35,16 +35,14 @@ import net.minecraft.world.item.TridentItem;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.BabyEntitySpawnEvent;
-import net.neoforged.neoforge.event.entity.living.AnimalTameEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingShieldBlockEvent;
 
 /**
- * The skills that level from what a player does in a fight or with animals (PROF-11), each its own Pufferfish's Skills
- * tree: a combat style per kind of weapon, Dual Wielding, Blocking, a tree per armor weight, and Beastmastery. Magic
- * schools level from spellcasting, in the Iron's Spells and Spell Engine integrations ({@link MagicSchool}).
- * Without Pufferfish's Skills these do nothing.
+ * The skills that level from what a player does in a fight (PROF-11), each its own Pufferfish's Skills tree: a combat
+ * style per kind of weapon, Dual Wielding, Blocking, and a tree per armor weight. Magic schools level from spellcasting,
+ * in the Iron's Spells and Spell Engine integrations ({@link MagicSchool}); Beastmastery from taming and from your tames'
+ * fighting ({@link io.github.ranger3462.ddprofessions.beast.Beastmastery}). Without Pufferfish's Skills these do nothing.
  */
 @EventBusSubscriber(modid = ProfessionsAndSkills.MODID)
 public final class ActivitySkills {
@@ -60,8 +58,6 @@ public final class ActivitySkills {
     public static final String BEASTMASTERY = "beastmastery";
     /** Most experience one hit (dealt, blocked or taken) can give. */
     public static final int MAX_PER_HIT = 20;
-    public static final int TAME_XP = 40;
-    public static final int BREED_XP = 10;
 
     /** Armor weights, each with its own tree. */
     public enum ArmorWeight {
@@ -235,20 +231,6 @@ public final class ActivitySkills {
     public static void onBlock(LivingShieldBlockEvent event) {
         if (event.getBlocked() && event.getEntity() instanceof ServerPlayer player && event.getBlockedDamage() > 0) {
             awardAgainst(player, BLOCKING, perHit(event.getBlockedDamage()), event.getDamageSource().getEntity());
-        }
-    }
-
-    @SubscribeEvent
-    public static void onTame(AnimalTameEvent event) {
-        if (event.getTamer() instanceof ServerPlayer player) {
-            award(player, BEASTMASTERY, TAME_XP);
-        }
-    }
-
-    @SubscribeEvent
-    public static void onBreed(BabyEntitySpawnEvent event) {
-        if (event.getCausedByPlayer() instanceof ServerPlayer player) {
-            award(player, BEASTMASTERY, BREED_XP);
         }
     }
 }

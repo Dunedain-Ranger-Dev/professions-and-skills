@@ -1,0 +1,22 @@
+{
+  "type": "ddprofessions:starred_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "ddprofessions:wolf_leather_barding"
+    },
+    {
+      "item": "ddprofessions:chain_links"
+    },
+    {
+      "item": "ddprofessions:chain_links"
+    },
+    {
+      "item": "ddprofessions:chain_links"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:wolf_mail_barding",
+    "count": 1
+  }
+}

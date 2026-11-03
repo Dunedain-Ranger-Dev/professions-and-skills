@@ -1,0 +1,21 @@
+{
+  "type": "ddprofessions:starred_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S  ",
+    "PPP",
+    "P P"
+  ],
+  "key": {
+    "S": {
+      "item": "ddprofessions:straps"
+    },
+    "P": {
+      "item": "ddprofessions:leather_panel"
+    }
+  },
+  "result": {
+    "id": "ddprofessions:wolf_leather_barding",
+    "count": 1
+  }
+}

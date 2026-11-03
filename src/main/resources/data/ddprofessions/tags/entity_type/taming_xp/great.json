@@ -1,0 +1,6 @@
+{
+  "values": [
+    {"id": "iceandfire:hippogryph", "required": false},
+    {"id": "iceandfire:amphithere", "required": false}
+  ]
+}

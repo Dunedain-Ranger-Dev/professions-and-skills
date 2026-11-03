@@ -84,8 +84,6 @@ public final class Crafts {
     public static final DeferredItem<LiquorItem> WHEAT_SIZING = liquor("wheat_sizing", 3, Profession.WEAVING);
     public static final DeferredItem<LiquorItem> SILK_SIZING = liquor("silk_sizing", 5, Profession.WEAVING);
     public static final DeferredItem<LiquorItem> ARCANE_SIZING = liquor("arcane_sizing", 7, Profession.WEAVING);
-    /** Sized yarn spun with a spider eye at the Spinning Wheel, for Silk Sizing. */
-    public static final DeferredItem<Item> SPIDER_SILK = ProfessionsRegistries.ITEMS.registerSimpleItem("spider_silk", new Item.Properties());
     /** Dust from dungeon casters (PROF-10 phase 6), for Arcane Sizing. */
     public static final DeferredItem<Item> ARCANE_DUST = ProfessionsRegistries.ITEMS.registerSimpleItem("arcane_dust", new Item.Properties());
     /** Woven cloth: what cloth gear is assembled from. */
@@ -213,7 +211,7 @@ public final class Crafts {
     public static java.util.List<DeferredItem<? extends Item>> creativeItems() {
         return java.util.List.of(SHAPING_RACK_ITEM, TANNING_BARREL_ITEM, FLESHING_BEAM_ITEM, SCRAPED_HIDE, LEATHER_PANEL, STRAPS, BARK_LIQUOR,
                 TANNIN_LIQUOR, ELDER_LIQUOR, BARROWMOSS, EMBERROOT, SPINNING_WHEEL_ITEM, GREAT_LOOM_ITEM, DYE_WORKS_ITEM, YARN, SIZED_YARN,
-                WHEAT_SIZING, SILK_SIZING, ARCANE_SIZING, SPIDER_SILK, ARCANE_DUST, CLOTH_PANEL, BOWSTRING, STAFF_WRAP, WOOD_LATHE_ITEM,
+                WHEAT_SIZING, SILK_SIZING, ARCANE_SIZING, ARCANE_DUST, CLOTH_PANEL, BOWSTRING, STAFF_WRAP, WOOD_LATHE_ITEM,
                 TREADLE_LATHE_ITEM, BOWYERS_BENCH_ITEM, SEASONED_BILLET, CURED_BILLET, STAVE, STOCK, HAFT, STAFF_SHAFT, WAND_CORE, BOW_LIMBS,
                 LINSEED_OIL, HEARTWOOD_RESIN, SYLVAN_SAP, CRUCIBLE_ITEM, GREAT_CRUCIBLE_ITEM, JEWELERS_BENCH_ITEM, JEWELERS_LOUPE_ITEM, BONE_ASH,
                 ASSAY_SALT, SUNSALT, FINE_GOLD, GOLD_FITTINGS, ARCANE_FOCUS, GOLD_RING, GOLD_AMULET);

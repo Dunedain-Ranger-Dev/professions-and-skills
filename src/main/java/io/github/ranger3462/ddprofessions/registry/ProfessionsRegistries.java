@@ -3,6 +3,7 @@ package io.github.ranger3462.ddprofessions.registry;
 import java.util.List;
 
 import io.github.ranger3462.ddprofessions.ProfessionsAndSkills;
+import io.github.ranger3462.ddprofessions.beast.BeastItems;
 import io.github.ranger3462.ddprofessions.character.Characters;
 import io.github.ranger3462.ddprofessions.character.ElixirOfRebirthItem;
 import io.github.ranger3462.ddprofessions.character.TomeOfCallingItem;
@@ -66,6 +67,7 @@ public final class ProfessionsRegistries {
                 }
                 Forging.gear().forEach(output::accept);
                 Crafts.creativeItems().forEach(item -> output.accept(item.get()));
+                BeastItems.creativeItems().forEach(output::accept);
                 output.accept(TOME_OF_INSIGHT.get());
                 output.accept(ELIXIR_OF_REBIRTH.get());
                 output.accept(TOME_OF_CALLING.get());
@@ -79,6 +81,8 @@ public final class ProfessionsRegistries {
         Forging.register(modEventBus);
         Crafts.init();
         Crafts.register(modEventBus);
+        BeastItems.init();
+        BeastItems.register(modEventBus);
         CraftingSkills.register(modEventBus);
         Characters.register(modEventBus);
         BLOCKS.register(modEventBus);

@@ -49,6 +49,10 @@ public final class StarredRecipes {
         if (crafter != null) {
             int capped = earned;
             earned = CraftingXp.capSkill(result).map(skill -> Math.min(capped, ForgeActions.skillStars(crafter, skill))).orElse(capped);
+            // Barding and collars: Beastmastery (PROF-6).
+            if (io.github.ranger3462.ddprofessions.beast.Beastmastery.capsStars(result)) {
+                earned = Math.min(earned, io.github.ranger3462.ddprofessions.beast.Beastmastery.starCap(crafter));
+            }
         }
         result.set(Forging.STARS.get(), earned);
         ForgedGear.applyStats(result);

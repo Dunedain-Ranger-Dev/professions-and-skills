@@ -1,0 +1,16 @@
+{
+  "type": "ddprofessions:starred_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "ddprofessions:straps"
+    },
+    {
+      "item": "ddprofessions:gold_fittings"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:collar",
+    "count": 1
+  }
+}
