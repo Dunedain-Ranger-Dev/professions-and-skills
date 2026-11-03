@@ -6,12 +6,12 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Hold wool and right-click the $(item)Spinning Wheel$() for three $(item)Yarn$().$(br2)Hold $(item)Sized Yarn$() instead, with a spider eye in your pack, to spin a $(item)Spider Silk$() for Silk Sizing.",
+      "text": "Hold wool and right-click the $(item)Spinning Wheel$() for three $(item)Yarn$().",
       "title": "Spinning"
     },
     {
       "type": "patchouli:text",
-      "text": "Brew a sizing in a cooking pot and pour it into an empty cauldron to make a $(item)Sizing Vat$().$(li)$(item)Wheat Sizing$(): four wheat. \u26053$(li)$(item)Silk Sizing$(): wheat and Spider Silk. \u26055$(li)$(item)Arcane Sizing$(): wheat and Arcane Dust. \u26057$(br2)Yarn (or string) comes out as $(item)Sized Yarn$() of the sizing's \u2605.",
+      "text": "Brew a sizing in a cooking pot and pour it into an empty cauldron to make a $(item)Sizing Vat$().$(li)$(item)Wheat Sizing$(): four wheat. \u26053$(li)$(item)Silk Sizing$(): wheat and $(item)Silk$(), from silk cocoons and jumping spiders. \u26055$(li)$(item)Arcane Sizing$(): wheat and Arcane Dust. \u26057$(br2)Yarn (or string) comes out as $(item)Sized Yarn$() of the sizing's \u2605.",
       "title": "Sizing"
     },
     {

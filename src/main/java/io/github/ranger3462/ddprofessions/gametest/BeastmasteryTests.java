@@ -9,6 +9,7 @@ import io.github.ranger3462.ddprofessions.beast.BeastItems;
 import io.github.ranger3462.ddprofessions.beast.Beastmastery;
 import io.github.ranger3462.ddprofessions.beast.Collars;
 import io.github.ranger3462.ddprofessions.beast.Companions;
+import io.github.ranger3462.ddprofessions.beast.TameFighters;
 import io.github.ranger3462.ddprofessions.character.SkillLevels;
 import io.github.ranger3462.ddprofessions.forging.Forging;
 import io.github.ranger3462.ddprofessions.integration.skills.PufferfishSkills;
@@ -24,7 +25,13 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
+import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.animal.Cat;
+import net.minecraft.world.entity.animal.Parrot;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -224,6 +231,55 @@ public class BeastmasteryTests {
         } finally {
             wolf.discard();
         }
+        helper.succeed();
+    }
+
+    @GameTest(template = ANY_TEMPLATE)
+    @SuppressWarnings("unchecked")
+    public static void passiveTamesFightForTheirOwner(GameTestHelper helper) {
+        ServerPlayer player = player(helper, "menagerie");
+        Cat cat = tame(helper, EntityType.CAT, player, 0);
+        Parrot parrot = tame(helper, EntityType.PARROT, player, 1);
+        java.util.List<TamableAnimal> made = new java.util.ArrayList<>(java.util.List.of(cat, parrot));
+        try {
+            for (TamableAnimal tame : java.util.List.of(cat, parrot)) {
+                helper.assertTrue(TameFighters.hasGoal(tame, OwnerHurtByTargetGoal.class) && TameFighters.hasGoal(tame, OwnerHurtTargetGoal.class)
+                        && TameFighters.hasGoal(tame, MeleeAttackGoal.class), "a tame " + tame.getType().getDescriptionId() + " defends its owner");
+            }
+            helper.assertTrue(parrot.getAttributeValue(Attributes.ATTACK_DAMAGE) > 0, "a parrot can peck");
+            // Critters and Companions, when it's installed: a passive red panda gets an attack, and a stag beetle keeps its own goals.
+            var panda = BuiltInRegistries.ENTITY_TYPE.getOptional(ResourceLocation.fromNamespaceAndPath("crittersandcompanions", "red_panda"));
+            var beetle = BuiltInRegistries.ENTITY_TYPE.getOptional(ResourceLocation.fromNamespaceAndPath("crittersandcompanions", "stag_beetle"));
+            if (panda.isPresent() && beetle.isPresent()) {
+                TamableAnimal redPanda = tame(helper, (EntityType<TamableAnimal>) panda.get(), player, 2);
+                TamableAnimal stagBeetle = tame(helper, (EntityType<TamableAnimal>) beetle.get(), player, 3);
+                made.add(redPanda);
+                made.add(stagBeetle);
+                helper.assertTrue(Beastmastery.isTameOf(redPanda, player) && redPanda.getAttributeBaseValue(Attributes.ATTACK_DAMAGE) == 3.0
+                        && TameFighters.hasGoal(redPanda, MeleeAttackGoal.class), "a tame red panda counts and fights");
+                long ownerGoals = ((io.github.ranger3462.ddprofessions.mixin.MobAccessor) stagBeetle).ddprofessions$targetSelector().getAvailableGoals()
+                        .stream().filter(goal -> goal.getGoal() instanceof OwnerHurtByTargetGoal).count();
+                helper.assertTrue(ownerGoals == 1, "a stag beetle's own owner goal isn't doubled, got " + ownerGoals);
+            }
+        } finally {
+            made.forEach(Entity::discard);
+        }
+        helper.succeed();
+    }
+
+    /** Silk Sizing takes Critters and Companions' Silk (it's only there with that mod and Farmer's Delight). */
+    @GameTest(template = ANY_TEMPLATE)
+    public static void silkSizingTakesCrittersSilk(GameTestHelper helper) {
+        var silk = BuiltInRegistries.ITEM.getOptional(ResourceLocation.fromNamespaceAndPath("crittersandcompanions", "silk"));
+        if (silk.isEmpty() || !net.neoforged.fml.ModList.get().isLoaded("farmersdelight")) {
+            helper.succeed();
+            return;
+        }
+        helper.assertTrue(new ItemStack(silk.get()).is(net.minecraft.tags.TagKey.create(net.minecraft.core.registries.Registries.ITEM,
+                ProfessionsAndSkills.id("silk"))), "Critters and Companions' Silk is in the silk tag");
+        var recipe = helper.getLevel().getRecipeManager().byKey(ProfessionsAndSkills.id("silk_sizing"));
+        helper.assertTrue(recipe.isPresent() && recipe.get().value().getIngredients().stream().anyMatch(ingredient -> ingredient.test(new ItemStack(silk.get()))),
+                "Silk Sizing loads and takes the silk");
         helper.succeed();
     }
 
