@@ -4,5 +4,113 @@
     "x": 0,
     "y": 0,
     "root": true
+  },
+  "pack_leader": {
+    "definition": "pack_leader",
+    "x": -34,
+    "y": 34,
+    "root": false
+  },
+  "thick_hide": {
+    "definition": "thick_hide",
+    "x": 34,
+    "y": 34,
+    "root": false
+  },
+  "companion_bond_1": {
+    "definition": "companion_bond_1",
+    "x": 0,
+    "y": 68,
+    "root": false
+  },
+  "companion_bond_2": {
+    "definition": "companion_bond_2",
+    "x": 0,
+    "y": 102,
+    "root": false
+  },
+  "companion_bond_3": {
+    "definition": "companion_bond_3",
+    "x": 0,
+    "y": 170,
+    "root": false
+  },
+  "mender": {
+    "definition": "mender",
+    "x": -34,
+    "y": 136,
+    "root": false
+  },
+  "rally": {
+    "definition": "rally",
+    "x": 34,
+    "y": 136,
+    "root": false
+  },
+  "alpha": {
+    "definition": "alpha",
+    "x": 0,
+    "y": 204,
+    "root": false
+  },
+  "pet_vitality_1": {
+    "definition": "pet_vitality_1",
+    "x": -68,
+    "y": 34,
+    "root": false
+  },
+  "pet_vitality_2": {
+    "definition": "pet_vitality_2",
+    "x": -68,
+    "y": 68,
+    "root": false
+  },
+  "pet_vitality_3": {
+    "definition": "pet_vitality_3",
+    "x": -68,
+    "y": 102,
+    "root": false
+  },
+  "pet_vitality_4": {
+    "definition": "pet_vitality_4",
+    "x": -68,
+    "y": 136,
+    "root": false
+  },
+  "pet_vitality_5": {
+    "definition": "pet_vitality_5",
+    "x": -68,
+    "y": 170,
+    "root": false
+  },
+  "pet_ferocity_1": {
+    "definition": "pet_ferocity_1",
+    "x": 68,
+    "y": 34,
+    "root": false
+  },
+  "pet_ferocity_2": {
+    "definition": "pet_ferocity_2",
+    "x": 68,
+    "y": 68,
+    "root": false
+  },
+  "pet_ferocity_3": {
+    "definition": "pet_ferocity_3",
+    "x": 68,
+    "y": 102,
+    "root": false
+  },
+  "pet_ferocity_4": {
+    "definition": "pet_ferocity_4",
+    "x": 68,
+    "y": 136,
+    "root": false
+  },
+  "pet_ferocity_5": {
+    "definition": "pet_ferocity_5",
+    "x": 68,
+    "y": 170,
+    "root": false
   }
 }

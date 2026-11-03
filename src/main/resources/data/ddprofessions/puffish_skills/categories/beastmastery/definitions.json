@@ -18,7 +18,555 @@
         "frame": "task"
       }
     },
-    "rewards": [],
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.animal_friend"
+        }
+      }
+    ],
     "cost": 1
+  },
+  "pack_leader": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pack_leader"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pack_leader.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pack_leader"
+        }
+      }
+    ],
+    "cost": 2,
+    "required_points": 4
+  },
+  "thick_hide": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.thick_hide"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.thick_hide.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.thick_hide"
+        }
+      }
+    ],
+    "cost": 2,
+    "required_points": 4
+  },
+  "companion_bond_1": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.companion_bond_1"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.companion_bond_1.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.companion_bond_1"
+        }
+      }
+    ],
+    "cost": 3,
+    "required_points": 9
+  },
+  "companion_bond_2": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.companion_bond_2"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.companion_bond_2.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.companion_bond_2"
+        }
+      }
+    ],
+    "cost": 5,
+    "required_points": 19
+  },
+  "companion_bond_3": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.companion_bond_3"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.companion_bond_3.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.companion_bond_3"
+        }
+      }
+    ],
+    "cost": 8,
+    "required_points": 34
+  },
+  "mender": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.mender"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.mender.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.mender"
+        }
+      }
+    ],
+    "cost": 4,
+    "required_points": 24
+  },
+  "rally": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.rally"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.rally.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.rally"
+        }
+      }
+    ],
+    "cost": 4,
+    "required_points": 24
+  },
+  "alpha": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.alpha"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.alpha.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "challenge"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.alpha"
+        }
+      }
+    ],
+    "cost": 10,
+    "required_points": 49,
+    "required_spent_points": 30
+  },
+  "pet_vitality_1": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_1"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_1.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_vitality_1"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 1
+  },
+  "pet_vitality_2": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_2"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_2.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_vitality_2"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 7
+  },
+  "pet_vitality_3": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_3"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_3.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_vitality_3"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 14
+  },
+  "pet_vitality_4": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_4"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_4.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_vitality_4"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 29
+  },
+  "pet_vitality_5": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_5"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_vitality_5.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_vitality_5"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 44
+  },
+  "pet_ferocity_1": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_1"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_1.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_ferocity_1"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 1
+  },
+  "pet_ferocity_2": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_2"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_2.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_ferocity_2"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 7
+  },
+  "pet_ferocity_3": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_3"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_3.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_ferocity_3"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 14
+  },
+  "pet_ferocity_4": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_4"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_4.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_ferocity_4"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 29
+  },
+  "pet_ferocity_5": {
+    "title": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_5"
+    },
+    "description": {
+      "translate": "skill.ddprofessions.beastmastery.pet_ferocity_5.description"
+    },
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lead"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:tag",
+        "data": {
+          "tag": "ddprofessions.perk.pet_ferocity_5"
+        }
+      }
+    ],
+    "cost": 1,
+    "required_points": 44
   }
 }

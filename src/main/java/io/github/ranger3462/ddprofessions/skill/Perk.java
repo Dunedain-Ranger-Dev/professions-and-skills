@@ -36,7 +36,17 @@ public enum Perk {
     FORESTER("forester", 1),
     // Farming
     BOUNTIFUL("bountiful", 1),
-    REPLANTER("replanter", 1);
+    REPLANTER("replanter", 1),
+    // Beastmastery (PROF-6): bonuses for the player's tames, and the companion
+    ANIMAL_FRIEND("animal_friend", 1),
+    PACK_LEADER("pack_leader", 1),
+    THICK_HIDE("thick_hide", 1),
+    COMPANION_BOND("companion_bond", 3),
+    MENDER("mender", 1),
+    RALLY("rally", 1),
+    ALPHA("alpha", 1),
+    PET_VITALITY("pet_vitality", 5),
+    PET_FEROCITY("pet_ferocity", 5);
 
     public final String key;
     public final int ranks;

@@ -1,0 +1,18 @@
+{
+  "name": "Gear for Tames",
+  "icon": "ddprofessions:horse_mail_barding",
+  "category": "ddprofessions:gear",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Wolves and horses wear $(item)Barding$(). Its star comes from its parts.$(li)$(item)Leather$(): leather panels and straps.$(li)$(item)Mail$(): leather barding and chain links.$(li)$(item)Plate$(): mail barding and armor plates.$(br2)Right-click your wolf to put it on; a horse takes it in its armor slot. A wolf's barding takes its hits, like wolf armor.",
+      "title": "Barding"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Cats and parrots wear a $(item)Collar$() (straps and gold fittings): +1 max health per star, and +1 armor from four stars. Right-click your cat or parrot to put it on; sneak and right-click it with an empty hand to take it off.$(br2)Your Beastmastery sets the best star you can make: two to start, three at level 10, then one more every 10 levels.",
+      "title": "Collars"
+    }
+  ]
+}

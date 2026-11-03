@@ -1,0 +1,22 @@
+{
+  "type": "ddprofessions:starred_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "ddprofessions:wolf_mail_barding"
+    },
+    {
+      "item": "ddprofessions:armor_plate"
+    },
+    {
+      "item": "ddprofessions:armor_plate"
+    },
+    {
+      "item": "ddprofessions:armor_plate"
+    }
+  ],
+  "result": {
+    "id": "ddprofessions:wolf_plate_barding",
+    "count": 1
+  }
+}
