@@ -63,6 +63,7 @@ public final class BeastItems {
         MATERIALS.register(modEventBus);
         Beastmastery.register(modEventBus);
         Collars.register(modEventBus);
+        modEventBus.addListener(TameFighters::addAttackDamage);
     }
 
     /** For the creative tab. */

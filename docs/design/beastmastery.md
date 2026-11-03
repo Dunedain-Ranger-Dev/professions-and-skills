@@ -29,7 +29,18 @@ The review answers are at the end.
   dragons, hippogryphs and amphitheres when it's installed.
 - **Ice and Fire's mounts count fully.** They're far stronger than a wolf already, so a dragon is the end of the climb:
   the tree's bonuses are percentages, and they wear Ice and Fire's own armor rather than our barding.
+- **Critters and Companions' tames count too:** the dragonfly, ferret, jumping spider, ladybug, red panda, roly poly,
+  shima enaga, snail, stag beetle, stick bug and weevil. They pay small-tame XP and wear collars.
 - **Not counted:** summons from Iron's Spells and Ars Nouveau. They're temporary and belong to the magic schools.
+
+## Every tame fights
+
+So it isn't only wolves that pull their weight (decided after the first playtest, 2026-11-03), every tame in
+`ddprofessions:tame_fighters` attacks what hurts its owner and what its owner attacks, like a wolf: cats, parrots and
+Critters and Companions' tames. Goals a tame already has are kept, so the stag beetle and jumping spider fight as their
+mod made them, and the weevil keeps spitting. The ones with no attack get a small one: red panda 3, roly poly and stick
+bug 1.5, ladybug, shima enaga and snail 1 (a wolf's is 4; cats and parrots already have 3). Beastmastery's damage
+bonuses raise them like a wolf's, and their hits train it.
 
 ## Gaining XP
 

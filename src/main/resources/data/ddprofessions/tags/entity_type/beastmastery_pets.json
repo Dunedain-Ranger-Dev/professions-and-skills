@@ -9,10 +9,69 @@
     "minecraft:llama",
     "minecraft:trader_llama",
     "minecraft:camel",
-    {"id": "iceandfire:fire_dragon", "required": false},
-    {"id": "iceandfire:ice_dragon", "required": false},
-    {"id": "iceandfire:lightning_dragon", "required": false},
-    {"id": "iceandfire:hippogryph", "required": false},
-    {"id": "iceandfire:amphithere", "required": false}
+    {
+      "id": "iceandfire:fire_dragon",
+      "required": false
+    },
+    {
+      "id": "iceandfire:ice_dragon",
+      "required": false
+    },
+    {
+      "id": "iceandfire:lightning_dragon",
+      "required": false
+    },
+    {
+      "id": "iceandfire:hippogryph",
+      "required": false
+    },
+    {
+      "id": "iceandfire:amphithere",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:dragonfly",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:ferret",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:jumping_spider",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:ladybug",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:red_panda",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:roly_poly",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:shima_enaga",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:snail",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:stag_beetle",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:stick_bug",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:weevil",
+      "required": false
+    }
   ]
 }

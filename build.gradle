@@ -191,6 +191,10 @@ dependencies {
         // The extra spell schools (earth, water, air) the magic trees reward
         localRuntime "curse.maven:more-rpg-library-923030:9129315"            // 2.8.0+1.21.1-neoforge
         localRuntime "curse.maven:elemental-wizards-rpg-class-1006892:9129748" // 3.2.0+1.21.1-neoforge
+        // Critters and Companions: small tames for Beastmastery (PROF-6); GeckoLib (above), Architectury and YACL are its libraries
+        localRuntime "curse.maven:critters-and-companions-574913:8646976"      // 2.7.0
+        localRuntime "curse.maven:architectury-api-419699:8492726"             // 13.0.11
+        localRuntime "curse.maven:yacl-667299:7437845"                         // 3.8.2: its mixins load it on servers too
     }
 }
 

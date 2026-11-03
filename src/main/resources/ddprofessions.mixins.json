@@ -4,6 +4,7 @@
   "package": "io.github.ranger3462.ddprofessions.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "MobAccessor",
     "WolfMixin"
   ],
   "injectors": {
