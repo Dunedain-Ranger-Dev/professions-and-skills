@@ -497,8 +497,10 @@ add("Other", "beastmastery", "Beastmastery", "minecraft:lead", [],
           [perk("pack_leader", "Pack Leader", "Your tames deal +10% damage."),
            perk("thick_hide", "Thick Hide", "Your tames get +2 armor.")],
           ranks("companion_bond", "Companion Bond", [
-              "Right-click one of your tames with a Bonding Charm to make it your companion. Hold the charm to call it: "
-              "a fallen companion comes back at half health, a living one comes to you. 10 minute cooldown.",
+              "Right-click one of your tames with a Bonding Charm to make it your companion. Hold the charm, or cast Call "
+              "Companion, to call it: a fallen companion comes back at half health, a living one comes to you. 10 minute "
+              "cooldown. With Iron's Spells, you get a Call Companion scroll and can craft more (paper, a lead, a bone and "
+              "an ink sac).",
               "Calling your companion has a 5 minute cooldown, and a fallen one comes back at three-quarters health.",
               "Calling your companion has a 2 minute cooldown, and a fallen one comes back at full health."], active=True),
           [perk("mender", "Mender", "Your tames heal 1 health a second once they've gone 5 seconds unhurt."),
@@ -562,6 +564,44 @@ def skill_tree_jar():
     return zipfile.ZipFile(jars[-1])
 
 
+# What a node takes, shown under its description on hover: Pufferfish's screen shows neither a skill's cost nor what
+# it's waiting on, so a click that does nothing gave no reason.
+REQUIREMENTS = {
+    f"text.{NS}.skill.cost": "Costs %s points",
+    f"text.{NS}.skill.cost_one": "Costs 1 point",
+    f"text.{NS}.skill.spent": "Needs %s points spent in this tree",
+    f"text.{NS}.skill.spent_one": "Needs 1 point spent in this tree",
+    f"text.{NS}.skill.after": "Needs %s first",
+}
+
+
+def spent_gate(placed, level, cost, spent):
+    """The points a node needs spent in its tree first, standing in for its level. Pufferfish can't gate on level: its
+    required_points is points left unspent, not points earned. A point comes with each level from level 2, so a node
+    at level L costing C needs L - 1 - C spent: with that spent and C still to spend, the player has earned L - 1 points,
+    so they're level L. It never asks for more than the nodes below its level cost in all (so the capstone and the last
+    stat rank can't each need the other first), and never less than the spent points it asks for itself (capstones)."""
+    below = sum(c for _, _, _, lv, _, _, c in placed if lv < level)
+    return min(max(spent, level - 1 - cost), below)
+
+
+def described(description_key, cost, spent=0, after_key=None):
+    """A node's description with what it takes under it, in gray: its cost, the points it needs spent in the tree, and
+    the node it hangs from."""
+    gray = lambda key, *args: {"translate": key, "with": list(args), "color": "gray"}
+    lines = [gray(f"text.{NS}.skill.cost_one") if cost == 1 else gray(f"text.{NS}.skill.cost", str(cost))]
+    if spent == 1:
+        lines.append(gray(f"text.{NS}.skill.spent_one"))
+    elif spent:
+        lines.append(gray(f"text.{NS}.skill.spent", str(spent)))
+    if after_key:
+        lines.append(gray(f"text.{NS}.skill.after", {"translate": after_key}))
+    parts = [description_key if isinstance(description_key, dict) else {"translate": description_key}, {"text": "\n"}]
+    for line in lines:
+        parts += [{"text": "\n"}, line]
+    return parts
+
+
 def write_classes(lang):
     jar = skill_tree_jar()
     base = "data/skill_tree_rpgs/puffish_skills/categories/class_skills/"
@@ -579,6 +619,7 @@ def write_classes(lang):
                "unlocked_by_default": False, "exclusive_root": False}
         cat.pop("spent_points_limit", None)
         write(folder / "category.json", cat)
+        # Their descriptions are the Skill Tree mod's own (built from its spells), so they don't get described()'s lines.
         write(folder / "definitions.json", {d: v for d, v in definitions.items() if d in used})
         write(folder / "skills.json", kept)
         write(folder / "connections.json", {kind: {direction: [pair for pair in pairs if all(s in kept for s in pair)]
@@ -586,6 +627,8 @@ def write_classes(lang):
         write(folder / "experience.json", experience)
 
 
+lang = {k: v for k, v in lang.items() if not k.startswith(f"text.{NS}.skill.")}
+lang.update(REQUIREMENTS)
 write_classes(lang)
 write(DATA / "config.json", {"version": 3, "categories": list(TREES) + list(CLASSES)})
 preview = {"groups": {}, "mastery": MASTERY, "capstone_spent": CAPSTONE_SPENT}
@@ -609,16 +652,16 @@ for key, (title, icon, sources, placed) in TREES.items():
     for node, column, row, level, parent, spent, cost in placed:
         k = node["key"]
         frame = "challenge" if spent else "goal" if node["active"] else "task"
+        gate = spent_gate(placed, level, cost, spent)
         definitions[k] = {
             "title": {"translate": f"skill.{NS}.{key}.{k}"},
-            "description": {"translate": f"skill.{NS}.{key}.{k}.description"},
+            "description": described(f"skill.{NS}.{key}.{k}.description", cost, gate, parent and f"skill.{NS}.{key}.{parent}"),
             "icon": icon_json(icon),
             "frame": {"type": "advancement", "data": {"frame": frame}},
             "rewards": node["rewards"],
             "cost": cost,
-            # A point comes with each level from level 2 (Pufferfish's level 1), so level L needs L - 1 points.
-            **({"required_points": level - 1} if level > 1 else {}),
-            **({"required_spent_points": spent} if spent else {}),
+            # Gated by points spent in the tree, standing in for the node's level (spent_gate).
+            **({"required_spent_points": gate} if gate else {}),
             **({"required_mods": node["mods"]} if node["mods"] else {}),
         }
         lang[f"skill.{NS}.{key}.{k}"] = node["title"]

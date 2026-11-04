@@ -1,0 +1,10 @@
+{
+  "type": "ddprofessions:companion_scroll",
+  "category": "misc",
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "irons_spellbooks"
+    }
+  ]
+}

@@ -3,9 +3,22 @@
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_training"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_training.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_training.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -34,9 +47,46 @@
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.flurry"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.flurry.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.flurry.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -58,15 +108,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "off_hand_guard": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.off_hand_guard"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.off_hand_guard.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.off_hand_guard.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -88,15 +175,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "twin_fury_1": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.twin_fury_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.twin_fury_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.twin_fury_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "3"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -118,15 +242,52 @@
       }
     ],
     "cost": 3,
-    "required_points": 9
+    "required_spent_points": 6
   },
   "twin_fury_2": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.twin_fury_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.twin_fury_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.twin_fury_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "5"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "14"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.twin_fury_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -148,15 +309,52 @@
       }
     ],
     "cost": 5,
-    "required_points": 19
+    "required_spent_points": 14
   },
   "twin_fury_3": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.twin_fury_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.twin_fury_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.twin_fury_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "8"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "26"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.twin_fury_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -178,15 +376,52 @@
       }
     ],
     "cost": 8,
-    "required_points": 34
+    "required_spent_points": 26
   },
   "dual_bleed": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_bleed"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_bleed.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_bleed.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.twin_fury_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -208,15 +443,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "parry": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.parry"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.parry.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.parry.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.twin_fury_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -238,15 +510,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "whirlwind": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.whirlwind"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.whirlwind.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.whirlwind.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "10"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "39"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.twin_fury_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -268,16 +577,40 @@
       }
     ],
     "cost": 10,
-    "required_points": 49,
-    "required_spent_points": 30
+    "required_spent_points": 39
   },
   "dual_wielding_quickness_1": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -300,16 +633,50 @@
         }
       }
     ],
-    "cost": 1,
-    "required_points": 1
+    "cost": 1
   },
   "dual_wielding_quickness_2": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -333,15 +700,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 7
+    "required_spent_points": 6
   },
   "dual_wielding_quickness_3": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -365,15 +767,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 14
+    "required_spent_points": 12
   },
   "dual_wielding_quickness_4": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -397,15 +834,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 29
+    "required_spent_points": 27
   },
   "dual_wielding_quickness_5": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_quickness_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -429,15 +901,40 @@
       }
     ],
     "cost": 1,
-    "required_points": 44
+    "required_spent_points": 37
   },
   "dual_wielding_power_1": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -460,16 +957,50 @@
         }
       }
     ],
-    "cost": 1,
-    "required_points": 1
+    "cost": 1
   },
   "dual_wielding_power_2": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -493,15 +1024,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 7
+    "required_spent_points": 6
   },
   "dual_wielding_power_3": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -525,15 +1091,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 14
+    "required_spent_points": 12
   },
   "dual_wielding_power_4": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -557,15 +1158,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 29
+    "required_spent_points": 27
   },
   "dual_wielding_power_5": {
     "title": {
       "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.dual_wielding.dual_wielding_power_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "texture",
       "data": {
@@ -589,6 +1225,6 @@
       }
     ],
     "cost": 1,
-    "required_points": 44
+    "required_spent_points": 37
   }
 }

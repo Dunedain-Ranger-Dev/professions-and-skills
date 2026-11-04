@@ -3,9 +3,22 @@
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_training"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_training.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_training.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -37,9 +50,46 @@
     "title": {
       "translate": "skill.ddprofessions.crossbows.quick_reload"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.quick_reload.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.quick_reload.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -61,15 +111,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "bolt_pierce": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.bolt_pierce"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.bolt_pierce.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.bolt_pierce.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -91,15 +178,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "rapid_fire_1": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.rapid_fire_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.rapid_fire_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.rapid_fire_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "3"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -121,15 +245,52 @@
       }
     ],
     "cost": 3,
-    "required_points": 9
+    "required_spent_points": 6
   },
   "rapid_fire_2": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.rapid_fire_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.rapid_fire_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.rapid_fire_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "5"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "14"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.rapid_fire_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -151,15 +312,52 @@
       }
     ],
     "cost": 5,
-    "required_points": 19
+    "required_spent_points": 14
   },
   "rapid_fire_3": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.rapid_fire_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.rapid_fire_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.rapid_fire_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "8"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "26"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.rapid_fire_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -181,15 +379,52 @@
       }
     ],
     "cost": 8,
-    "required_points": 34
+    "required_spent_points": 26
   },
   "explosive_bolts": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.explosive_bolts"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.explosive_bolts.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.explosive_bolts.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.rapid_fire_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -211,15 +446,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "pin": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.pin"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.pin.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.pin.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.rapid_fire_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -241,15 +513,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "siegebreaker": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.siegebreaker"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.siegebreaker.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.siegebreaker.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "10"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "39"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.rapid_fire_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -271,16 +580,40 @@
       }
     ],
     "cost": 10,
-    "required_points": 49,
-    "required_spent_points": 30
+    "required_spent_points": 39
   },
   "crossbows_power_1": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_power_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_power_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_power_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -304,7 +637,6 @@
       }
     ],
     "cost": 1,
-    "required_points": 1,
     "required_mods": [
       "ranged_weapon_api"
     ]
@@ -313,9 +645,44 @@
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_power_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_power_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_power_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_power_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -339,7 +706,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 7,
+    "required_spent_points": 6,
     "required_mods": [
       "ranged_weapon_api"
     ]
@@ -348,9 +715,44 @@
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_power_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_power_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_power_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_power_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -374,7 +776,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 14,
+    "required_spent_points": 12,
     "required_mods": [
       "ranged_weapon_api"
     ]
@@ -383,9 +785,44 @@
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_power_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_power_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_power_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_power_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -409,7 +846,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 29,
+    "required_spent_points": 27,
     "required_mods": [
       "ranged_weapon_api"
     ]
@@ -418,9 +855,44 @@
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_power_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_power_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_power_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_power_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -444,7 +916,7 @@
       }
     ],
     "cost": 1,
-    "required_points": 44,
+    "required_spent_points": 37,
     "required_mods": [
       "ranged_weapon_api"
     ]
@@ -453,9 +925,34 @@
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_mobility_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_mobility_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_mobility_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_training"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -478,16 +975,50 @@
         }
       }
     ],
-    "cost": 1,
-    "required_points": 1
+    "cost": 1
   },
   "crossbows_mobility_2": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_mobility_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_mobility_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_mobility_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_mobility_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -511,15 +1042,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 7
+    "required_spent_points": 6
   },
   "crossbows_mobility_3": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_mobility_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_mobility_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_mobility_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_mobility_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -543,15 +1109,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 14
+    "required_spent_points": 12
   },
   "crossbows_mobility_4": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_mobility_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_mobility_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_mobility_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_mobility_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -575,15 +1176,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 29
+    "required_spent_points": 27
   },
   "crossbows_mobility_5": {
     "title": {
       "translate": "skill.ddprofessions.crossbows.crossbows_mobility_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.crossbows.crossbows_mobility_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.crossbows.crossbows_mobility_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.crossbows.crossbows_mobility_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -607,6 +1243,6 @@
       }
     ],
     "cost": 1,
-    "required_points": 44
+    "required_spent_points": 37
   }
 }

@@ -3,9 +3,22 @@
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_step"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_step.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_step.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -34,9 +47,46 @@
     "title": {
       "translate": "skill.ddprofessions.light_armor.evasive"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.evasive.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.evasive.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_step"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -58,15 +108,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "silent_step": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.silent_step"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.silent_step.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.silent_step.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "2"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_step"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -88,15 +175,52 @@
       }
     ],
     "cost": 2,
-    "required_points": 4
+    "required_spent_points": 2
   },
   "agility_1": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.agility_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.agility_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.agility_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "3"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_step"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -118,15 +242,52 @@
       }
     ],
     "cost": 3,
-    "required_points": 9
+    "required_spent_points": 6
   },
   "agility_2": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.agility_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.agility_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.agility_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "5"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "14"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.agility_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -148,15 +309,52 @@
       }
     ],
     "cost": 5,
-    "required_points": 19
+    "required_spent_points": 14
   },
   "agility_3": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.agility_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.agility_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.agility_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "8"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "26"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.agility_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -178,15 +376,52 @@
       }
     ],
     "cost": 8,
-    "required_points": 34
+    "required_spent_points": 26
   },
   "light_footed": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_footed"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_footed.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_footed.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.agility_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -208,15 +443,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "second_wind": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.second_wind"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.second_wind.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.second_wind.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "4"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "19"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.agility_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -238,15 +510,52 @@
       }
     ],
     "cost": 4,
-    "required_points": 24
+    "required_spent_points": 19
   },
   "phantom": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.phantom"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.phantom.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.phantom.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost",
+        "with": [
+          "10"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "39"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.agility_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -268,16 +577,40 @@
       }
     ],
     "cost": 10,
-    "required_points": 49,
-    "required_spent_points": 30
+    "required_spent_points": 39
   },
   "light_fleetness_1": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_fleetness_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_fleetness_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_fleetness_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_step"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -300,16 +633,50 @@
         }
       }
     ],
-    "cost": 1,
-    "required_points": 1
+    "cost": 1
   },
   "light_fleetness_2": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_fleetness_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_fleetness_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_fleetness_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_fleetness_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -333,15 +700,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 7
+    "required_spent_points": 6
   },
   "light_fleetness_3": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_fleetness_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_fleetness_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_fleetness_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_fleetness_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -365,15 +767,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 14
+    "required_spent_points": 12
   },
   "light_fleetness_4": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_fleetness_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_fleetness_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_fleetness_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_fleetness_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -397,15 +834,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 29
+    "required_spent_points": 27
   },
   "light_fleetness_5": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_fleetness_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_fleetness_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_fleetness_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_fleetness_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -429,15 +901,40 @@
       }
     ],
     "cost": 1,
-    "required_points": 44
+    "required_spent_points": 37
   },
   "light_padding_1": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_padding_1"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_padding_1.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_padding_1.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_step"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -460,16 +957,50 @@
         }
       }
     ],
-    "cost": 1,
-    "required_points": 1
+    "cost": 1
   },
   "light_padding_2": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_padding_2"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_padding_2.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_padding_2.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "6"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_padding_1"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -493,15 +1024,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 7
+    "required_spent_points": 6
   },
   "light_padding_3": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_padding_3"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_padding_3.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_padding_3.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "12"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_padding_2"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -525,15 +1091,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 14
+    "required_spent_points": 12
   },
   "light_padding_4": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_padding_4"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_padding_4.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_padding_4.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "27"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_padding_3"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -557,15 +1158,50 @@
       }
     ],
     "cost": 1,
-    "required_points": 29
+    "required_spent_points": 27
   },
   "light_padding_5": {
     "title": {
       "translate": "skill.ddprofessions.light_armor.light_padding_5"
     },
-    "description": {
-      "translate": "skill.ddprofessions.light_armor.light_padding_5.description"
-    },
+    "description": [
+      {
+        "translate": "skill.ddprofessions.light_armor.light_padding_5.description"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.cost_one",
+        "with": [],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.spent",
+        "with": [
+          "37"
+        ],
+        "color": "gray"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "translate": "text.ddprofessions.skill.after",
+        "with": [
+          {
+            "translate": "skill.ddprofessions.light_armor.light_padding_4"
+          }
+        ],
+        "color": "gray"
+      }
+    ],
     "icon": {
       "type": "item",
       "data": {
@@ -589,6 +1225,6 @@
       }
     ],
     "cost": 1,
-    "required_points": 44
+    "required_spent_points": 37
   }
 }

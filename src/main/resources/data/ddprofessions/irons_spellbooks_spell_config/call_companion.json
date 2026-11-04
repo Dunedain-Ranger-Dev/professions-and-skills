@@ -1,0 +1,7 @@
+{
+  "school": "irons_spellbooks:nature",
+  "min_rarity": "common",
+  "max_level": 1,
+  "cooldown_in_seconds": 5.0,
+  "allow_crafting": false
+}
