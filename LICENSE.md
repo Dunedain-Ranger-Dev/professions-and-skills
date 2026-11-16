@@ -23,6 +23,10 @@ modified, or reused outside this project without written permission:
 - Structure files (`.nbt`), including dungeon rooms, tunnels, and caps
 - Logos, banners, and other artwork
 
+**Not covered:** textures made from Minecraft's own (every texture right now:
+recolors and cut-downs of vanilla textures, made by `tools/vanilla_textures.py`)
+remain Mojang's art under Mojang's terms, and this project claims no rights to them.
+
 **Exception:** you may redistribute the official, unmodified mod jar
 (including the assets inside it) as part of a modpack or server.
 
