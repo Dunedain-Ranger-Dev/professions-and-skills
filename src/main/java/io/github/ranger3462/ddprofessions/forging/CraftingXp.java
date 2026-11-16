@@ -5,6 +5,10 @@ import java.util.Optional;
 import io.github.ranger3462.ddprofessions.ProfessionsAndSkills;
 import io.github.ranger3462.ddprofessions.skill.CraftSkill;
 import io.github.ranger3462.ddprofessions.skill.CraftingSkills;
+import io.github.ranger3462.ddprofessions.skill.Perk;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -64,12 +68,15 @@ public final class CraftingXp {
     public static void onCrafted(PlayerEvent.ItemCraftedEvent event) {
         ItemStack crafted = event.getCrafting();
         int stars = Forging.stars(crafted);
+        onPerks(event.getEntity(), crafted);
         if (ForgedGear.isGear(crafted) || crafted.getItem() instanceof JewelryItem) {
             CraftingSkills.addXp(event.getEntity(), skillFor(crafted), GEAR_XP_PER_STAR * stars);
         } else if (Forging.isArmorPart(crafted)) {
             CraftingSkills.addXp(event.getEntity(), CraftSkill.ARMORSMITHING, PART_XP_PER_STAR * stars);
         } else if (Forging.isWeaponPart(crafted)) {
-            CraftingSkills.addXp(event.getEntity(), CraftSkill.WEAPONSMITHING, PART_XP_PER_STAR * stars);
+            // Keen Edge: blades and axe heads (the only weapon parts) give half as much again.
+            float keen = Perk.KEEN_EDGE.has(event.getEntity()) ? CraftPerks.KEEN_EDGE_XP : 1.0f;
+            CraftingSkills.addXp(event.getEntity(), CraftSkill.WEAPONSMITHING, Math.round(PART_XP_PER_STAR * stars * keen));
         } else if (crafted.is(Forging.HARDENED_LEATHER.get()) || crafted.is(Forging.LEATHER_BASE.get()) || crafted.is(Crafts.STRAPS.get())) {
             CraftingSkills.addXp(event.getEntity(), CraftSkill.LEATHERWORKING, MATERIAL_XP);
         } else if (crafted.is(Forging.GAMBESON_BASE.get()) || crafted.is(Crafts.BOWSTRING.get()) || crafted.is(Crafts.STAFF_WRAP.get())) {
@@ -87,6 +94,31 @@ public final class CraftingXp {
             CraftingSkills.addXp(event.getEntity(), CraftSkill.LEATHERWORKING, PART_XP_PER_STAR * stars);
         } else if (crafted.is(Crafts.STOCK.get())) {
             CraftingSkills.addXp(event.getEntity(), CraftSkill.WOODWORKING, MATERIAL_XP);
+        }
+    }
+
+    /**
+     * The crafting perks that act once a piece is made: a Masterwork roll is used up (and a lifted piece says so), and
+     * Padding hands back one of a gambeson base's cloth panels.
+     */
+    private static void onPerks(Player player, ItemStack crafted) {
+        if (player.level().isClientSide()) {
+            return;
+        }
+        Optional<Perk> masterwork = CraftPerks.masterworkPerk(crafted);
+        if (masterwork.isPresent() && masterwork.get().has(player) && crafted.has(Forging.STARS.get())) {
+            CraftPerks.usedMasterworkRoll(player);
+            if (Boolean.TRUE.equals(crafted.get(Forging.MASTERWORK.get()))) {
+                player.displayClientMessage(Component.translatable("message.ddprofessions.masterwork", crafted.getHoverName())
+                        .withStyle(ChatFormatting.GOLD), true);
+            }
+        }
+        if (crafted.is(Forging.GAMBESON_BASE.get()) && Perk.PADDING.has(player)) {
+            ItemStack panel = new ItemStack(Crafts.CLOTH_PANEL.get());
+            panel.set(Forging.STARS.get(), Forging.stars(crafted));
+            if (!player.getInventory().add(panel)) {
+                player.drop(panel, false);
+            }
         }
     }
 }

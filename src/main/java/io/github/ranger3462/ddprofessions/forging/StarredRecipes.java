@@ -53,6 +53,8 @@ public final class StarredRecipes {
             if (io.github.ranger3462.ddprofessions.beast.Beastmastery.capsStars(result)) {
                 earned = Math.min(earned, io.github.ranger3462.ddprofessions.beast.Beastmastery.starCap(crafter));
             }
+            // Masterwork and Balanced Blade.
+            earned = CraftPerks.onStarredResult(crafter, result, earned);
         }
         result.set(Forging.STARS.get(), earned);
         ForgedGear.applyStats(result);

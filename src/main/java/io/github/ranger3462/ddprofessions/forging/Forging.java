@@ -50,6 +50,15 @@ public final class Forging {
     /** A forged weapon's strapped grip (PROF-18): the ★ of the straps fitted to it, for a little attack speed. */
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> GRIP = ProfessionsRegistries.COMPONENTS.registerComponentType("grip",
             builder -> builder.persistent(Codec.intRange(1, MAX_STARS)).networkSynchronized(ByteBufCodecs.VAR_INT));
+    /** A forged weapon made by a smith with Balanced Blade: it swings a little faster ({@link ForgedGear#BALANCED_SPEED}). */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> BALANCED = ProfessionsRegistries.COMPONENTS.registerComponentType("balanced",
+            builder -> builder.persistent(Codec.BOOL).networkSynchronized(ByteBufCodecs.BOOL));
+    /** A piece that came out one ★ better than its materials, from a Masterwork perk. */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> MASTERWORK = ProfessionsRegistries.COMPONENTS.registerComponentType("masterwork",
+            builder -> builder.persistent(Codec.BOOL).networkSynchronized(ByteBufCodecs.BOOL));
+    /** The gem set in a piece of jewelry, by Gem Setter ({@link JewelryItem.Gem}). */
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<JewelryItem.Gem>> GEM = ProfessionsRegistries.COMPONENTS.registerComponentType("gem",
+            builder -> builder.persistent(JewelryItem.Gem.CODEC).networkSynchronized(JewelryItem.Gem.STREAM_CODEC));
     /** The game time hot metal started cooling. Missing until it first leaves the furnace. */
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Long>> HEATED_AT = ProfessionsRegistries.COMPONENTS.registerComponentType("heated_at",
             builder -> builder.persistent(Codec.LONG).networkSynchronized(ByteBufCodecs.VAR_LONG));
@@ -222,6 +231,8 @@ public final class Forging {
             SERIALIZERS.register("starred_smithing", StarredRecipes.SmithingSerializer::new);
     public static final DeferredHolder<RecipeSerializer<?>, net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer<StarredRecipes.Grip>> WEAPON_GRIP =
             SERIALIZERS.register("weapon_grip", () -> new net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer<>(StarredRecipes.Grip::new));
+    public static final DeferredHolder<RecipeSerializer<?>, net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer<GemSetting>> GEM_SETTING =
+            SERIALIZERS.register("gem_setting", () -> new net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer<>(GemSetting::new));
     public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<HeatingRecipe.Blasting>> HEATING_BLASTING =
             SERIALIZERS.register("heating_blasting", () -> HeatingRecipe.serializer(HeatingRecipe.Blasting::new, 50));
 
