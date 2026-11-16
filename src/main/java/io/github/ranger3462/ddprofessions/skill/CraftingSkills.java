@@ -43,6 +43,13 @@ public final class CraftingSkills {
             () -> AttachmentType.<Map<String, Integer>>builder(() -> new HashMap<>()).serialize(XP_CODEC.xmap(HashMap::new, map -> map))
                     .copyOnDeath().build());
 
+    /**
+     * How many Masterwork-eligible pieces the player has crafted: it picks their next Masterwork roll
+     * ({@code CraftPerks#masterworkRoll}), so the crafting grid shows the same result however often it's refilled.
+     */
+    public static final DeferredHolder<AttachmentType<?>, AttachmentType<Integer>> MASTERWORK_ROLLS = ATTACHMENTS.register("masterwork_rolls",
+            () -> AttachmentType.builder(() -> 0).serialize(Codec.INT).copyOnDeath().build());
+
     private CraftingSkills() {}
 
     public static void register(IEventBus modEventBus) {
@@ -85,6 +92,12 @@ public final class CraftingSkills {
         if (RaceTraits.race(player).orElse(null) == Race.GNOME) {
             amount = (int) Math.round(amount * RaceTraits.GNOME_CRAFTING_XP); // Gnomes have a knack for crafting.
         }
+        int studies = studiesFor(skill).rank(player);
+        if (studies > 0) {
+            // +5% a rank of the skill's Studies. Small amounts round up by chance, so even 1 XP strikes gain on average.
+            float scaled = amount * (1.0f + STUDIES_BONUS * studies);
+            amount = (int) scaled + (player.getRandom().nextFloat() < scaled - (int) scaled ? 1 : 0);
+        }
         int before = level(player, skill);
         setXp(player, skill, xp(player, skill) + amount);
         int after = level(player, skill);
@@ -93,6 +106,21 @@ public final class CraftingSkills {
                     .withStyle(ChatFormatting.GOLD));
             serverPlayer.level().playSound(null, serverPlayer.blockPosition(), SoundEvents.PLAYER_LEVELUP, SoundSource.PLAYERS, 0.6f, 1.2f);
         }
+    }
+
+    /** Extra XP a rank of a skill's Studies column gives. */
+    public static final float STUDIES_BONUS = 0.05f;
+
+    /** The Studies column in a skill's tree. */
+    public static Perk studiesFor(CraftSkill skill) {
+        return switch (skill) {
+            case WEAPONSMITHING -> Perk.WEAPON_STUDIES;
+            case ARMORSMITHING -> Perk.ARMOR_STUDIES;
+            case LEATHERWORKING -> Perk.TANNING_STUDIES;
+            case WEAVING -> Perk.WEAVING_STUDIES;
+            case WOODWORKING -> Perk.WOODWORKING_STUDIES;
+            case GOLDSMITHING -> Perk.GOLDSMITH_STUDIES;
+        };
     }
 
     public static void setXp(Player player, CraftSkill skill, int xp) {

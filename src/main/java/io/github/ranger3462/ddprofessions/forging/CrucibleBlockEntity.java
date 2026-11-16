@@ -2,6 +2,7 @@ package io.github.ranger3462.ddprofessions.forging;
 
 import java.util.Optional;
 
+import io.github.ranger3462.ddprofessions.skill.Perk;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
@@ -67,6 +68,16 @@ public class CrucibleBlockEntity extends BlockEntity implements Container, MenuP
         }
     };
 
+    /** Whether the last goldsmith to open it has Assayer, so it refines faster ({@link CraftPerks#FASTER}). */
+    private boolean assayer;
+
+    public void setAssayer(boolean assayer) {
+        if (this.assayer != assayer) {
+            this.assayer = assayer;
+            setChanged();
+        }
+    }
+
     public CrucibleBlockEntity(BlockPos pos, BlockState state) {
         super(Crafts.CRUCIBLE_ENTITY.get(), pos, state);
     }
@@ -101,6 +112,9 @@ public class CrucibleBlockEntity extends BlockEntity implements Container, MenuP
                 return false;
             }
             total = ticksFor(saltStars, state.getBlock() == Crafts.GREAT_CRUCIBLE.get());
+            if (assayer) {
+                total = Math.max(1, Math.round(total * CraftPerks.FASTER));
+            }
         }
         if (!outputFits(saltStars)) {
             return false;
@@ -208,6 +222,8 @@ public class CrucibleBlockEntity extends BlockEntity implements Container, MenuP
 
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+        // Assayer: the crucible works at the pace of the last goldsmith to tend it.
+        setAssayer(Perk.ASSAYER.has(player));
         return new CrucibleMenu(id, inventory, this, data);
     }
 
@@ -221,6 +237,7 @@ public class CrucibleBlockEntity extends BlockEntity implements Container, MenuP
         tag.putInt("salt_left", saltLeft);
         tag.putInt("progress", progress);
         tag.putInt("total", total);
+        tag.putBoolean("assayer", assayer);
     }
 
     @Override
@@ -232,6 +249,7 @@ public class CrucibleBlockEntity extends BlockEntity implements Container, MenuP
         saltLeft = tag.getInt("salt_left");
         progress = tag.getInt("progress");
         total = tag.getInt("total");
+        assayer = tag.getBoolean("assayer");
     }
 
     /** Runs the crucible until it stops working. For tests. */

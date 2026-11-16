@@ -24,7 +24,13 @@ public final class GoldCurios {
                 @Override
                 public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
                     JewelryItem item = (JewelryItem) stack.getItem();
-                    return ImmutableMultimap.of(item.kind.attribute, new AttributeModifier(id, item.bonus(stack), AttributeModifier.Operation.ADD_VALUE));
+                    ImmutableMultimap.Builder<Holder<Attribute>, AttributeModifier> modifiers = ImmutableMultimap.builder();
+                    modifiers.put(item.kind.attribute, new AttributeModifier(id, item.bonus(stack), AttributeModifier.Operation.ADD_VALUE));
+                    JewelryItem.Gem gem = stack.get(Forging.GEM.get());
+                    if (gem != null) { // Gem Setter's gem: a second modifier, with its own id.
+                        modifiers.put(gem.attribute, new AttributeModifier(id.withSuffix("_gem"), gem.amount, gem.operation));
+                    }
+                    return modifiers.build();
                 }
             });
         }

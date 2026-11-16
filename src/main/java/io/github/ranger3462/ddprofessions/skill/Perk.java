@@ -11,23 +11,43 @@ public enum Perk {
     // Weaponsmithing (the anvil)
     STEADY_HAND("steady_hand", 3),
     SURE_STRIKES("sure_strikes", 2),
+    KEEN_EDGE("keen_edge", 1),
+    BALANCED_BLADE("balanced_blade", 1),
+    MASTERWORK_WEAPON("masterwork_weapon", 1),
+    WEAPON_STUDIES("weapon_studies", 5),
     // Armorsmithing (the grindstone, and the metal)
     STEADY_GRIND("steady_grind", 3),
     SLOW_COOLING("slow_cooling", 2),
     THRIFTY("thrifty", 2),
+    MASTERWORK_ARMOR("masterwork_armor", 1),
+    ARMOR_STUDIES("armor_studies", 5),
     // Leatherworking
     STEADY_SCRAPER("steady_scraper", 3),
     CAREFUL_TANNER("careful_tanner", 2),
     WATER_SAVER("water_saver", 2),
+    SUPPLE_HIDES("supple_hides", 1),
+    TANNING_STUDIES("tanning_studies", 5),
     // Weaving
     STEADY_NEEDLE("steady_needle", 3),
     CAREFUL_WEAVER("careful_weaver", 2),
+    QUICK_FINGERS("quick_fingers", 1),
+    PADDING("padding", 1),
+    FINE_WEAVE("fine_weave", 1),
+    WEAVING_STUDIES("weaving_studies", 5),
     // Woodworking
     STEADY_KNIFE("steady_knife", 3),
     CAREFUL_CARVER("careful_carver", 2),
+    SEASONER("seasoner", 1),
+    FINE_SPLIT("fine_split", 1),
+    MASTER_BOWYER("master_bowyer", 1),
+    WOODWORKING_STUDIES("woodworking_studies", 5),
     // Goldsmithing
     STEADY_CHASE("steady_chase", 3),
     CAREFUL_GOLDSMITH("careful_goldsmith", 2),
+    ASSAYER("assayer", 1),
+    GEM_SETTER("gem_setter", 1),
+    MASTERWORK_JEWELRY("masterwork_jewelry", 1),
+    GOLDSMITH_STUDIES("goldsmith_studies", 5),
     // Mining
     VEIN_MINER("vein_miner", 3),
     PROSPECTOR("prospector", 1),

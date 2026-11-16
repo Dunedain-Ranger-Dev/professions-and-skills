@@ -1,6 +1,7 @@
 # Skill trees: first pass (PROF-1, PROF-15, PROF-11)
 
-A draft for review: how every skill tree should look and play. Nothing here is built yet.
+How every skill tree looks and plays. The trees are in the game, but most gathering, combat and magic perks only
+grant their tag so far: no code acts on them yet. The crafting and Beastmastery perks are built.
 
 **The trees are generated.** `tools/skill_trees.py` writes every tree under
 `src/main/resources/data/ddprofessions/puffish_skills/` (and the class trees, from the Skill Tree jar in Gradle's
@@ -124,26 +125,47 @@ ranks each at levels 2, 8, 15, 30 and 45, for 1 point each. A tree takes 49 poin
 
 ## Crafting
 
-The level still sets the best ★ you can forge. Today's perks move onto the shared shape, with level gates.
+The level sets the best ★ you can make. Each crafting tree has the shared shape, and every perk in these six trees is
+built (each has a game test in `CraftPerkTests` or the older forging tests). Each tree's right-hand stat column is
+**Studies I–V**: +5% of that skill's XP a rank. A 25% bonus piece and a 10% Masterwork are rolled per piece.
 
-**Forging** (Mastery: +sweet spot, cap +5%)
-- Root: Apprentice Smith (no bonus; the tree's start).
-- L5: Thrifty I (crack and salvage returns) | Slow Cooling I.
-- L10/20/35: **Steady Hand I–III**: +2% sweet spot each.
-- L25: Thrifty II | Slow Cooling II.
-- L30/40: **Sure Strikes I–II** on the spine under them (25% and 50% less cracking).
-- L50 capstone: **Masterwork**: a perfect forging (no misses) has a 10% chance to come out one ★ higher, up to what
-  the forge allows.
+Masterwork rolls are fixed for each player until they craft a piece the perk applies to, so the crafting grid shows
+the real result and refilling it can't reroll. The extra ★ never goes past what the crafter's skill allows. A lifted
+piece is marked "Masterwork" on its tooltip.
 
-**Leatherworking** (Mastery: +patch width, cap +5%)
-- Root: Apprentice Tanner. L5: Water Saver I | Careful Tanner I. L10/20/35: Steady Scraper I–III.
-- L25: Water Saver II | Careful Tanner II. L50 capstone: **Supple Hides**: 25% chance of a second refined leather.
+**Weaponsmithing** (the anvil)
+- L5: Sure Strikes I | **Keen Edge**: blades and axe heads give 50% more Weaponsmithing XP.
+- L10/20/35: Steady Hand I–III. L25: Sure Strikes II | **Balanced Blade**: forged swords and axes you make swing
+  0.1 faster (marked "Balanced").
+- L50: **Masterwork**: a forged sword or axe has a 10% chance to come out one ★ higher.
 
-**Weaving** (Mastery: +loom room, cap +5%)
-- Root: Apprentice Weaver. L5: Careful Weaver I | Quick Fingers (a perfect first stitch finishes the cloth in two
-  stitches instead of three). L10/20/35: Steady Needle I–III.
-- L25: Careful Weaver II | Padding (padded cloth takes one less woven cloth). L50 capstone: **Fine Weave**: 25%
-  chance of a second cloth.
+**Armorsmithing** (the grindstone, and the metal)
+- L5: Thrifty I | Slow Cooling I. L10/20/35: Steady Grind I–III. L25: Thrifty II | Slow Cooling II.
+- L50: **Masterwork**: plate armor has a 10% chance to come out one ★ higher.
+
+**Leatherworking**
+- L5: Water Saver I | Careful Tanner I. L10/20/35: Steady Scraper I–III. L25: Water Saver II | Careful Tanner II.
+- L50: **Supple Hides**: each hide taken out of a tanning vat has a 25% chance of a second refined leather.
+
+**Weaving**
+- L5: Careful Weaver I | **Quick Fingers**: a perfect first stitch finishes the cloth at once.
+- L10/20/35: Steady Needle I–III. L25: Careful Weaver II | **Padding**: crafting a gambeson base hands back one of its
+  two cloth panels.
+- L50: **Fine Weave**: weaving has a 25% chance of a third cloth panel.
+
+**Woodworking**
+- L5: Careful Carver I | **Seasoner**: billets cure 25% faster in a finishing vat.
+- L10/20/35: Steady Knife I–III. L25: Careful Carver II | **Fine Split**: turning a billet has a 25% chance of a
+  third stave.
+- L50: **Master Bowyer**: bows and crossbows from parts have a 10% chance to come out one ★ higher.
+
+**Goldsmithing**
+- L5: Careful Goldsmith I | **Assayer**: a crucible refines 25% faster. It goes at the pace of the last goldsmith to
+  open it, so hopper-fed crucibles keep it.
+- L10/20/35: Steady Chase I–III. L25: Careful Goldsmith II | **Gem Setter**: a ring or amulet and a gem at a crafting
+  table set the gem, one a piece: a diamond (+1 armor toughness), an emerald (+1 luck) or an amethyst shard (+5%
+  speed). Jewelcrafting's own gems can join the list later.
+- L50: **Masterwork**: jewelry and gilded gear have a 10% chance to come out one ★ higher.
 
 ## Combat styles
 

@@ -7,6 +7,7 @@ import java.util.function.Supplier;
 
 import com.mojang.serialization.MapCodec;
 import io.github.ranger3462.ddprofessions.skill.CraftingSkills;
+import io.github.ranger3462.ddprofessions.skill.Perk;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.cauldron.CauldronInteraction;
@@ -218,7 +219,9 @@ public class SoakingVatBlock extends BaseEntityBlock {
         int count = Math.min(stack.getCount(), block.type.capacity);
         List<ItemStack> batch = List.of(stack.copyWithCount(count));
         stack.shrink(count);
-        long ready = level.getGameTime() + Math.round(soakTicks(vat.liquorStars()) * block.type.timeScale);
+        // Seasoner: billets cure faster for a woodworker with the perk.
+        float seasoner = soak.profession() == Profession.WOODWORKING && Perk.SEASONER.has(player) ? CraftPerks.FASTER : 1.0f;
+        long ready = level.getGameTime() + Math.round(soakTicks(vat.liquorStars()) * block.type.timeScale * seasoner);
         vat.start(batch, ready);
         level.setBlockAndUpdate(pos, state.setValue(LEVEL, state.getValue(LEVEL) - 1).setValue(SOAKING, true));
         level.playSound(null, pos, SoundEvents.GENERIC_SPLASH, SoundSource.BLOCKS, 0.6f, 1.0f);
@@ -251,7 +254,14 @@ public class SoakingVatBlock extends BaseEntityBlock {
                 Block.popResource(level, pos.above(), piece);
                 continue;
             }
-            ItemStack out = new ItemStack(soak.get().output().get(), piece.getCount());
+            int count = piece.getCount();
+            if (soak.get().profession() == Profession.LEATHERWORKING) {
+                // Supple Hides: each hide has a chance of a second refined leather.
+                for (int i = 0; i < piece.getCount(); i++) {
+                    count += CraftPerks.bonusPiece(player, Perk.SUPPLE_HIDES, level.getRandom()) ? 1 : 0;
+                }
+            }
+            ItemStack out = new ItemStack(soak.get().output().get(), count);
             out.set(Forging.STARS.get(), stars);
             if (!player.getInventory().add(out)) {
                 player.drop(out, false);
