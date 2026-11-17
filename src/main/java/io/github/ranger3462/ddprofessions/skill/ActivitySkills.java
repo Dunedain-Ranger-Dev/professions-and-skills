@@ -144,6 +144,32 @@ public final class ActivitySkills {
         return !stack.isEmpty() && !(stack.getItem() instanceof ShieldItem) && styleFor(stack).filter(style -> !style.equals(UNARMED)).isPresent();
     }
 
+    /** Whether a player has a weapon in each hand. */
+    public static boolean dualWielding(LivingEntity entity) {
+        return isWeapon(entity.getMainHandItem()) && isWeapon(entity.getOffhandItem());
+    }
+
+    /** Whether the main hand's weapon trains this style (an empty hand is Unarmed). */
+    public static boolean wields(LivingEntity entity, String style) {
+        return styleFor(entity.getMainHandItem()).filter(style::equals).isPresent();
+    }
+
+    /** How many armor pieces of this weight an entity wears. */
+    public static int wornCount(LivingEntity entity, ArmorWeight weight) {
+        int count = 0;
+        for (EquipmentSlot slot : new EquipmentSlot[] { EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET }) {
+            if (weightOf(entity.getItemBySlot(slot)).filter(weight::equals).isPresent()) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    /** Whether the entity is mostly wearing this weight of armor ({@link #wornWeight}). */
+    public static boolean wears(LivingEntity entity, ArmorWeight weight) {
+        return wornWeight(entity).filter(weight::equals).isPresent();
+    }
+
     /** The weight of an armor piece, or empty if it isn't armor. */
     public static Optional<ArmorWeight> weightOf(ItemStack stack) {
         if (!(stack.getItem() instanceof ArmorItem armor)) {

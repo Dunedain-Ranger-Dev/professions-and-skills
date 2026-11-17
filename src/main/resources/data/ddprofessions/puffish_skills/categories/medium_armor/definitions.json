@@ -410,13 +410,13 @@
     "cost": 8,
     "required_spent_points": 26
   },
-  "rally": {
+  "battle_rally": {
     "title": {
-      "translate": "skill.ddprofessions.medium_armor.rally"
+      "translate": "skill.ddprofessions.medium_armor.battle_rally"
     },
     "description": [
       {
-        "translate": "skill.ddprofessions.medium_armor.rally.description"
+        "translate": "skill.ddprofessions.medium_armor.battle_rally.description"
       },
       {
         "text": "\n"
@@ -470,7 +470,7 @@
       {
         "type": "puffish_skills:tag",
         "data": {
-          "tag": "ddprofessions.perk.rally"
+          "tag": "ddprofessions.perk.battle_rally"
         }
       }
     ],
