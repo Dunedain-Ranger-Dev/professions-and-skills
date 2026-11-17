@@ -2,9 +2,17 @@ package io.github.ranger3462.ddprofessions.integration.irons;
 
 import java.util.Set;
 
+import java.util.Optional;
+
 import io.github.ranger3462.ddprofessions.skill.ActivitySkills;
+import io.github.ranger3462.ddprofessions.skill.ActivitySkills.ArmorWeight;
+import io.github.ranger3462.ddprofessions.skill.MagicPerks;
 import io.github.ranger3462.ddprofessions.skill.MagicSchool;
+import io.github.ranger3462.ddprofessions.skill.Perk;
+import io.redspace.ironsspellbooks.api.events.SpellCooldownAddedEvent;
+import io.redspace.ironsspellbooks.api.events.SpellHealEvent;
 import io.redspace.ironsspellbooks.api.events.SpellOnCastEvent;
+import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.damage.SpellDamageSource;
@@ -14,6 +22,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingHealEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 
 /**
  * Iron's Spells training the magic school trees (PROF-11). Only loaded when Iron's Spells is installed. Each spell
@@ -39,6 +48,18 @@ public final class IronsMagic {
     public static void register() {
         NeoForge.EVENT_BUS.addListener(IronsMagic::onCast);
         NeoForge.EVENT_BUS.addListener(IronsMagic::onDamage);
+        // The magic school perks (MagicPerks).
+        MagicPerks.addSchoolOf(source -> source instanceof SpellDamageSource spell
+                ? MagicSchool.byId(spell.spell().getSchoolType().getId().toString()) : Optional.empty());
+        NeoForge.EVENT_BUS.addListener((SpellCooldownAddedEvent.Pre event) -> MagicSchool.byId(event.getSpell().getSchoolType().getId().toString())
+                .ifPresent(school -> event.setEffectiveCooldown(MagicPerks.cooldown(event.getEntity(), school, event.getEffectiveCooldown()))));
+        NeoForge.EVENT_BUS.addListener((SpellHealEvent event) -> {
+            if (event.getEntity() instanceof ServerPlayer caster) {
+                MagicSchool.byId(event.getSchoolType().getId().toString()).ifPresent(school ->
+                        MagicPerks.onHeal(caster, event.getTargetEntity(), event.getHealAmount(), school));
+            }
+        });
+        NeoForge.EVENT_BUS.addListener(IronsMagic::manaShield);
         NeoForge.EVENT_BUS.addListener((LivingHealEvent event) -> {
             if (!event.getEntity().level().isClientSide()) {
                 MagicSchool.onHealed(event.getEntity(), event.getAmount());
@@ -52,6 +73,10 @@ public final class IronsMagic {
         }
         AbstractSpell spell = SpellRegistry.getSpell(event.getSpellId());
         var school = MagicSchool.byId(event.getSchoolType().getId().toString());
+        school.ifPresent(magic -> {
+            event.setManaCost(MagicPerks.manaCost(player, magic, event.getManaCost()));
+            MagicPerks.onCast(player, magic);
+        });
         if (school.isEmpty() || dealsDamage(spell, event.getSpellLevel(), player)) {
             return; // Damage spells train on their hits instead.
         }
@@ -79,6 +104,21 @@ public final class IronsMagic {
             }
         }
         return false;
+    }
+
+    /** Mana Shield (Mage Armor): in mage armor, a quarter of the damage taken comes out of mana, 2 mana a point. */
+    public static final float MANA_SHIELD = 0.25f, MANA_PER_POINT = 2;
+
+    private static void manaShield(LivingIncomingDamageEvent event) {
+        if (!(event.getEntity() instanceof ServerPlayer player) || !Perk.MANA_SHIELD.has(player) || !ActivitySkills.wears(player, ArmorWeight.MAGE)) {
+            return;
+        }
+        MagicData magic = MagicData.getPlayerMagicData(player);
+        float shielded = Math.min(event.getAmount() * MANA_SHIELD, magic.getMana() / MANA_PER_POINT);
+        if (shielded > 0) {
+            magic.addMana(-shielded * MANA_PER_POINT);
+            event.setAmount(event.getAmount() - shielded);
+        }
     }
 
     /** A player's spell damage trains its school. */

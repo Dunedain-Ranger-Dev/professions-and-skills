@@ -176,14 +176,19 @@
     },
     "rewards": [
       {
-        "type": "puffish_skills:tag",
+        "type": "puffish_skills:attribute",
         "data": {
-          "tag": "ddprofessions.perk.focus"
+          "attribute": "irons_spellbooks:cooldown_reduction",
+          "operation": "addition",
+          "value": 0.05
         }
       }
     ],
     "cost": 2,
-    "required_spent_points": 2
+    "required_spent_points": 2,
+    "required_mods": [
+      "irons_spellbooks"
+    ]
   },
   "arcane_weave_1": {
     "title": {

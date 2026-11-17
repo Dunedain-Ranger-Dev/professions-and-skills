@@ -1,7 +1,9 @@
 # Skill trees: first pass (PROF-1, PROF-15, PROF-11)
 
-How every skill tree looks and plays. The trees are in the game, but most gathering, combat and magic perks only
-grant their tag so far: no code acts on them yet. The crafting and Beastmastery perks are built.
+How every skill tree looks and plays. Every node in every tree is built: each perk tag is in `skill/Perk.java` and
+some code acts on it, and the generator's preview marks any tag missing from Perk.java as still to build. Each
+perk's in-game description says what it really does; where the first pass below promised something different, the
+description won (see "Built").
 
 **The trees are generated.** `tools/skill_trees.py` writes every tree under
 `src/main/resources/data/ddprofessions/puffish_skills/` (and the class trees, from the Skill Tree jar in Gradle's
@@ -84,28 +86,34 @@ ranks each at levels 2, 8, 15, 30 and 45, for 1 point each. A tree takes 49 poin
 
 - **Feedback:** the ability shows on the HUD next to the skill XP popups: active time left, then cooldown left.
 
+**As built** (`skill/Abilities.java`): Earthmover, Harvest Moon and every combat signature are timed this way. Each
+starts when you sneak and do the skill's thing (dig, harvest a ripe crop, strike, loose an arrow or bolt, raise a
+shield). Messages on the action bar say when it starts, wears off and is ready again; there's no HUD timer yet.
+Mastery doesn't lengthen it yet. Vein Miner and Tree Feller are older and not timed: sneaking with them always takes
+the whole vein or tree.
+
 ## Gathering
 
 **Mining** (Mastery: +mining speed, cap +50%)
 - Root: Quick Pick, +5% mining speed.
 - L5: Prospector (10% chance of a second ore drop) | Stonemason (+15% speed on stone and deepslate).
 - L10/20/35: **Vein Miner I–III** (active): mine a whole vein per block.
-- L25: Sturdy Pick (15% chance a block costs no durability) | Deep Sight (ores within 6 blocks glow briefly when Vein
-  Miner starts).
-- L50 capstone: **Motherlode**: Prospector's chance doubles while Vein Miner is active.
+- L25: Sturdy Pick (15% chance a block costs no durability) | Deep Sight (ores within 6 blocks sparkle for 5 seconds
+  when Vein Miner takes a vein).
+- L50 capstone: **Motherlode**: Prospector's chance doubles for ore Vein Miner takes.
 
 **Woodcutting** (Mastery: +ability duration, cap +100%)
 - Root: Sure Swing, +5% breaking speed on wood.
 - L5: Forester (fell a tree's base: saplings replant) | Timber (+15% speed on logs).
 - L10/20/35: **Tree Feller I–III** (active): fell a whole tree per log, natural trees only.
 - L25: Sturdy Axe (15% no-durability chance) | Bark Collector (10% chance of a second log).
-- L50 capstone: **Heartwood**: Tree Feller uses half the durability.
+- L50 capstone: **Heartwood**: logs Tree Feller takes cost the axe half the durability.
 
 **Excavation** (Mastery: +treasure chance, cap +5%)
 - Root: Digger, +5% speed on shovel blocks.
 - L5: Treasure Sense (1% finds from dirt and sand: flint, clay, bones, rare gems) | Swift Shovel (+15% speed).
 - L10/20/35: **Earthmover I–III** (active): each shovel block clears a 3×3 face.
-- L25: Sturdy Shovel | Sifter (gravel always drops flint; sand sometimes drops glass shards).
+- L25: Sturdy Shovel | Sifter (gravel always drops flint, unless mined with Silk Touch).
 - L50 capstone: **Buried Riches**: Treasure Sense chance triples while Earthmover is active.
 
 **Farming** (Mastery: +extra-crop chance, cap +30%)
@@ -119,9 +127,10 @@ ranks each at levels 2, 8, 15, 30 and 45, for 1 point each. A tree takes 49 poin
 **Fishing** (Mastery: +luck of the sea, cap +3)
 - Root: Patient, +0.5 luck.
 - L5: Quick Bite (fish bite faster) | Angler (+0.5 luck).
-- L10/20/35: **Treasure Hunter I–III**: more and better treasure (enchanted books, dungeon ore).
+- L10/20/35: **Treasure Hunter I–III**: a 10/20/30% chance each catch brings up an extra roll of the treasure table.
 - L25: Double Catch (10% chance of two fish) | Shake (pull a random drop off a mob with the rod).
-- L50 capstone: **Master Angler**: rare dungeon keys and relic shards from fishing.
+- L50 capstone: **Master Angler**: a 2% chance of a rare find from the item tag `ddprofessions:master_angler_finds`
+  (a trial key, a nautilus shell or a heart of the sea; the pack can add dungeon keys).
 
 ## Crafting
 
@@ -202,6 +211,29 @@ Each school (Fire, Frost, Lightning, Arcane, Holy, Earth, Water, Air, Necromancy
 L5 two choices (cooldown reduction, mana cost); signature **School Adept I–III** (+school spell power and a school
 effect: burning, chill, chain, and so on); L25 two refinements; capstone a school-specific effect (Fire: Ignite spreads;
 Frost: Shatter on frozen targets; Holy: overheal turns into a shield). Mastery: +school spell power, cap +25%.
+
+## Built
+
+The gathering, combat, armor and magic perks are in `skill/`: `FieldPerks` (gathering, beyond `GatheringPerks`'
+chains), `CombatPerks` (combat styles, Dual Wielding, Blocking and armor), `PerkStats` (bonuses that hold only while
+something does: a polearm in hand, two weapons, a shield, heavy armor), `MagicPerks` (the schools, fed by the Iron's
+Spells and Spell Engine integrations) and `Abilities` (the timed abilities). `SkillPerkTests` tests a sample of them.
+Where the first pass above couldn't be built as it was, the perk changed and its description says so:
+
+- **No off hand in vanilla.** Twin Fury doubles every other hit while dual wielding (Better Combat swings the hands in
+  turn), and Rend works on any hit while dual wielding.
+- **Iron Grip** had nothing to stop (mobs don't disarm players), so it weakens what you hit instead.
+- **Focus** couldn't stop casts being interrupted (neither spell mod does), so it's 5% cooldown reduction for Iron's
+  Spells, as an attribute.
+- **Water and Air** have no Iron's school, so their Lore is +3% spell power instead of cheaper mana (Spell Engine has no
+  mana).
+- **Overload** doubles every tenth arcane spell hit, rather than casting twice. **Flux** (cheaper arcane spells) and
+  **Mana Shield** only work with Iron's Spells, which has mana.
+- **Aegis** gives Absorption when a heal goes past full health. **Stoneskin** gives Resistance.
+- **Medium Armor's Rally** had the same tag as Beastmastery's Rally, so taking one gave both. It's `battle_rally` now:
+  a player who took the old one may need to take it again.
+- **Disarm and Wrestle** knock a mob's weapon away; it drops only as often as the mob would drop it anyway (8.5%), so
+  it can't farm dungeon weapons.
 
 ## Beastmastery
 

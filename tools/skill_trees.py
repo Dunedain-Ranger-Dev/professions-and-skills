@@ -23,6 +23,7 @@ Rewards are attribute bonuses, or player tags our own code checks for (skill/Per
 ddprofessions.perk.<key>, or <key>_<rank> for a ranked perk).
 """
 import json
+import re
 import shutil
 import zipfile
 from pathlib import Path
@@ -43,11 +44,8 @@ CAPSTONE_SPENT = 30
 ROOT_COST, CHOICE_COST, SIGNATURE_COSTS, REFINEMENT_COST, CAPSTONE_COST, STAT_COST = 1, 2, [3, 5, 8], 4, 10, 1
 # The stat columns' ranks: the level each needs.
 STAT_LEVELS = [2, 8, 15, 30, 45]
-# Perk tags our code acts on already (skill/Perk.java); the preview marks the rest as still to build.
-IMPLEMENTED = {"steady_hand", "steady_grind", "steady_chase", "careful_goldsmith", "slow_cooling", "thrifty", "sure_strikes", "steady_scraper", "careful_tanner", "water_saver",
-               "steady_needle", "careful_weaver", "steady_knife", "careful_carver", "vein_miner", "prospector", "tree_feller", "forester",
-               "bountiful", "replanter", "animal_friend", "pack_leader", "thick_hide", "companion_bond", "mender", "rally", "alpha",
-               "pet_vitality", "pet_ferocity"}
+# Perk tags our code acts on (skill/Perk.java's keys); the preview marks any others as still to build.
+IMPLEMENTED = set(re.findall(r'^\s+[A-Z_]+\("([a-z_]+)", \d+\)', Path("src/main/java/io/github/ranger3462/ddprofessions/skill/Perk.java").read_text(), re.M))
 
 
 def best_of(terms, floor="0"):
@@ -228,8 +226,8 @@ add("Gathering", "mining", "Mining", "minecraft:iron_pickaxe",
           ranks("vein_miner", "Vein Miner", [f"Sneak and mine ore to start: for {s} seconds, every ore you mine takes its whole vein. "
                                              f"Then a {c} minute cooldown." for s, c in ((10, 4), (15, 3), (20, 2))], active=True),
           [perk("sturdy_pick", "Sturdy Pick", "A 15% chance mining costs your pickaxe no durability."),
-           perk("deep_sight", "Deep Sight", "When Vein Miner starts, ores within 6 blocks glow for a few seconds.")],
-          perk("motherlode", "Motherlode", "Prospector's chance doubles while Vein Miner is active.")),
+           perk("deep_sight", "Deep Sight", "When Vein Miner takes a vein, ores within 6 blocks sparkle for a few seconds.")],
+          perk("motherlode", "Motherlode", "Prospector's chance doubles for ore Vein Miner takes.")),
     "Mining speed, up to +50%")
 
 add("Gathering", "woodcutting", "Woodcutting", "minecraft:iron_axe", [mine({"#minecraft:logs": 4})],
@@ -240,7 +238,7 @@ add("Gathering", "woodcutting", "Woodcutting", "minecraft:iron_axe", [mine({"#mi
                                                f"Then a {c} minute cooldown. Only natural trees." for s, c in ((10, 4), (15, 3), (20, 2))], active=True),
           [perk("sturdy_axe", "Sturdy Axe", "A 15% chance chopping costs your axe no durability."),
            perk("bark_collector", "Bark Collector", "A 10% chance of a second log.")],
-          perk("heartwood", "Heartwood", "Tree Feller uses half the durability.")),
+          perk("heartwood", "Heartwood", "Logs Tree Feller takes cost your axe half the durability.")),
     "Tree Feller's duration, up to +100%")
 
 add("Gathering", "excavation", "Excavation", "minecraft:iron_shovel", [mine({"#minecraft:mineable/shovel": 1})],
@@ -261,21 +259,21 @@ add("Gathering", "farming", "Farming", "minecraft:iron_hoe", [mine({"#minecraft:
           ranks("harvest_moon", "Harvest Moon", [f"Sneak and harvest a ripe crop to start: for {s} seconds, harvesting a ripe crop "
                                                  f"also harvests the ripe crops around it ({a}). Then a {c} minute cooldown."
                                                  for s, a, c in ((10, "3x3", 4), (15, "5x5", 3), (20, "7x7", 2))], active=True),
-          [perk("fertile_ground", "Fertile Ground", "Crops near you grow faster."),
+          [perk("fertile_ground", "Fertile Ground", "Crops within 4 blocks of you grow faster."),
            n("hardy", "Hardy", "+2 max health.", [attribute("minecraft:generic.max_health", 2, "addition")])],
-          perk("golden_harvest", "Golden Harvest", "Ripe harvests now and then give a golden carrot or golden apple.")),
+          perk("golden_harvest", "Golden Harvest", "Ripe harvests have a 2% chance of a golden carrot and a 0.5% chance of a golden apple.")),
     "Bountiful's chance, up to +30%")
 
 add("Gathering", "fishing", "Fishing", "minecraft:fishing_rod",
     [fish({"minecraft:salmon": 5, "minecraft:pufferfish": 8, "minecraft:tropical_fish": 15}, 2)],
     shape(n("patient", "Patient", "+0.5 luck.", [attribute("minecraft:generic.luck", 0.5, "addition")]),
-          [perk("quick_bite", "Quick Bite", "Fish bite sooner."),
+          [perk("quick_bite", "Quick Bite", "Fish bite sooner, as with a level of Lure (it stacks)."),
            n("angler", "Angler", "+0.5 luck.", [attribute("minecraft:generic.luck", 0.5, "addition")])],
-          ranks("treasure_hunter", "Treasure Hunter", ["More treasure from fishing.", "Even more treasure, and better books.",
-                                                       "Treasure can include dungeon ore."]),
+          ranks("treasure_hunter", "Treasure Hunter", ["A 10% chance each catch brings up an extra treasure.",
+                                                       "A 20% chance of an extra treasure.", "A 30% chance of an extra treasure."]),
           [perk("double_catch", "Double Catch", "A 10% chance of catching two fish."),
-           perk("shake", "Shake", "Hooking a mob with your rod pulls one of its drops off it.")],
-          perk("master_angler", "Master Angler", "Rare dungeon keys and relic shards from fishing.")),
+           perk("shake", "Shake", "Hooking a mob with your rod pulls one of its drops off it (once a mob).")],
+          perk("master_angler", "Master Angler", "A 2% chance a catch brings up something rare: a trial key, a nautilus shell or a heart of the sea.")),
     "Luck of the sea, up to +3")
 
 # --- Crafting ---
@@ -360,50 +358,50 @@ def style(key, title, icon, root, choices, signature, refinements, capstone):
 
 
 style("one_handed", "One-Handed", "minecraft:iron_sword", ("One-Handed Training", "+3% melee damage.", MELEE, []),
-      [("riposte", "Riposte", "Striking right after a block deals +30% damage."), ("footwork", "Footwork", "+3% movement speed with a one-handed weapon.")],
-      ("bladestorm", "Bladestorm", "Sneak and strike to start: your hits sweep everything around you."),
-      [("bleed", "Bleed", "Hits have a 15% chance to make the target bleed."), ("disarm", "Disarm", "A 5% chance to knock a mob's weapon out of its hands.")],
+      [("riposte", "Riposte", "+30% damage on hits within 2 seconds of blocking with a shield."), ("footwork", "Footwork", "+3% movement speed with a one-handed weapon.")],
+      ("bladestorm", "Bladestorm", "Sneak and strike to start: your hits also strike every enemy within 3 blocks for half damage."),
+      [("bleed", "Bleed", "Hits have a 15% chance to make the target bleed: 1 damage a second for 4 seconds."), ("disarm", "Disarm", "A 5% chance to knock a mob's weapon out of its hands.")],
       ("duelist", "Duelist", "+25% damage when no other enemy is within 8 blocks."))
 style("two_handed", "Two-Handed", "minecraft:netherite_axe", ("Two-Handed Training", "+3% melee damage.", MELEE, []),
-      [("cleave", "Cleave", "Wider sweeps."), ("crushing_blow", "Crushing Blow", "Hits ignore 10% of the target's armor.")],
-      ("skull_splitter", "Skull Splitter", "Sneak and strike to start: every hit splashes onto nearby enemies."),
-      [("stagger", "Stagger", "Hits slow the target briefly."), ("momentum", "Momentum", "Each hit in a row deals a little more, up to +15%.")],
+      [("cleave", "Cleave", "Hits also strike the nearest other enemy within 2 blocks for 30% damage."), ("crushing_blow", "Crushing Blow", "Hits ignore 10% of the target's armor.")],
+      ("skull_splitter", "Skull Splitter", "Sneak and strike to start: every hit also deals half damage to enemies within 2.5 blocks of the target."),
+      [("stagger", "Stagger", "Hits slow the target for 1 second."), ("momentum", "Momentum", "Each hit within 3 seconds of the last deals 3% more, up to +15%.")],
       ("executioner", "Executioner", "+50% damage to enemies under 25% health."))
 style("polearms", "Polearms", "minecraft:trident", ("Polearm Training", "+3% melee damage.", MELEE, []),
       [("reach", "Reach", "+0.5 attack reach with a polearm."), ("brace", "Brace", "+10% knockback resistance with a polearm.")],
-      ("impale", "Impale", "Sneak and strike to start: your hits pierce through to the enemy behind."),
-      [("sweep", "Sweep", "Hits push enemies back."), ("keep_away", "Keep Away", "+20% damage to enemies at the edge of your reach.")],
+      ("impale", "Impale", "Sneak and strike to start: your hits also strike the enemy just behind the target for 60% damage."),
+      [("sweep", "Sweep", "Hits knock enemies back further."), ("keep_away", "Keep Away", "+20% damage to enemies more than 3 blocks away.")],
       ("phalanx", "Phalanx", "+2 armor while holding a polearm."))
 style("daggers", "Daggers", "rogues:iron_dagger", ("Dagger Training", "+3% melee damage.", MELEE, []),
       [("backstab", "Backstab", "+30% damage from behind."), ("quick_hands", "Quick Hands", "+5% attack speed with a dagger.")],
-      ("shadow_flurry", "Shadow Flurry", "Sneak and strike to start: much faster attacks."),
-      [("poison_edge", "Poison Edge", "Hits have a 15% chance to poison."), ("vanish", "Vanish", "A kill turns you invisible for 3 seconds.")],
-      ("assassinate", "Assassinate", "Your first hit on an enemy that hasn't seen you is a critical hit."))
+      ("shadow_flurry", "Shadow Flurry", "Sneak and strike to start: +50% attack speed with a dagger."),
+      [("poison_edge", "Poison Edge", "Hits have a 15% chance to poison the target for 3 seconds."), ("vanish", "Vanish", "A kill turns you invisible for 3 seconds.")],
+      ("assassinate", "Assassinate", "+50% damage on your first hit on an enemy that isn't already after you."))
 style("unarmed", "Unarmed", "minecraft:leather", ("Unarmed Training", "+3% melee damage.", MELEE, []),
-      [("iron_fist", "Iron Fist", "+1 unarmed damage."), ("deflect", "Deflect", "A 10% chance to deflect arrows.")],
+      [("iron_fist", "Iron Fist", "+1 unarmed damage."), ("deflect", "Deflect", "A 10% chance to deflect an arrow while unarmed.")],
       ("berserk", "Berserk", "Sneak and punch to start: +50% unarmed damage, and you break dirt and sand by hand instantly."),
-      [("disarm_unarmed", "Wrestle", "A 10% chance to knock a mob's weapon away."), ("iron_grip", "Iron Grip", "Mobs can't knock your weapon away.")],
+      [("disarm_unarmed", "Wrestle", "A 10% chance to knock a mob's weapon away."), ("iron_grip", "Iron Grip", "Hits have a 15% chance to weaken the target for 3 seconds.")],
       ("martial_master", "Martial Master", "Unarmed hits ignore armor."))
 style("archery", "Archery", "minecraft:bow", ("Archery Training", "+3% ranged damage.", *RANGED),
-      [("steady_aim", "Steady Aim", "Less arrow spread."), ("retrieval", "Retrieval", "A 30% chance to get your arrow back from a kill.")],
-      ("volley", "Volley", "Sneak and loose to start: every shot fires two extra arrows."),
-      [("daze", "Daze", "Hits have a 10% chance to daze the target."), ("piercing", "Piercing", "Arrows pass through one enemy.")],
-      ("deadeye", "Deadeye", "Fully drawn shots have a 20% chance to crit."))
+      [("steady_aim", "Steady Aim", "Arrows fly truer: half the spread."), ("retrieval", "Retrieval", "A 30% chance to get your arrow back from a kill.")],
+      ("volley", "Volley", "Sneak and loose to start: every shot fires two extra arrows (which can't be picked up)."),
+      [("daze", "Daze", "Hits have a 10% chance to slow and weaken the target for 2 seconds."), ("piercing", "Piercing", "Arrows pass through one enemy.")],
+      ("deadeye", "Deadeye", "Fully drawn shots have a 20% chance to deal double damage."))
 style("crossbows", "Crossbows", "minecraft:crossbow", ("Crossbow Training", "+3% ranged damage.", *RANGED),
-      [("quick_reload", "Quick Reload", "Faster loading."), ("bolt_pierce", "Bolt Pierce", "Bolts pass through one enemy.")],
+      [("quick_reload", "Quick Reload", "Crossbows load 50% faster."), ("bolt_pierce", "Bolt Pierce", "Bolts pass through one enemy.")],
       ("rapid_fire", "Rapid Fire", "Sneak and fire to start: crossbows load instantly."),
-      [("explosive_bolts", "Explosive Bolts", "A 5% chance a bolt bursts on hit."), ("pin", "Pin", "Hits root the target briefly.")],
-      ("siegebreaker", "Siegebreaker", "+50% damage to shielded or armored enemies."))
+      [("explosive_bolts", "Explosive Bolts", "A 5% chance a bolt bursts on hit (it hurts, but breaks no blocks)."), ("pin", "Pin", "Hits root the target for 1 second.")],
+      ("siegebreaker", "Siegebreaker", "+50% damage to enemies that are blocking or have 10 or more armor."))
 style("dual_wielding", "Dual Wielding", "texture:ddprofessions:textures/gui/skill_icons/dual_wielding.png",
       ("Ambidextrous", "+2% attack speed.", [attribute("minecraft:generic.attack_speed", 0.02)], []),
       [("flurry", "Flurry", "+3% attack speed while dual wielding."), ("off_hand_guard", "Off-Hand Guard", "+1 armor while dual wielding.")],
-      ("twin_fury", "Twin Fury", "Sneak and strike to start: off-hand hits deal double."),
-      [("dual_bleed", "Rend", "Off-hand hits have a 15% chance to make the target bleed."), ("parry", "Parry", "A 10% chance to parry a melee hit.")],
-      ("whirlwind", "Whirlwind", "Every fifth hit strikes all enemies around you."))
+      ("twin_fury", "Twin Fury", "Sneak and strike to start: every other hit while dual wielding deals double."),
+      [("dual_bleed", "Rend", "Hits while dual wielding have a 15% chance to make the target bleed."), ("parry", "Parry", "A 10% chance to parry a melee hit while dual wielding.")],
+      ("whirlwind", "Whirlwind", "Every fifth hit while dual wielding also strikes every enemy within 3 blocks for half damage."))
 style("blocking", "Blocking", "minecraft:shield",
       ("Braced", "+5% knockback resistance.", [attribute("minecraft:generic.knockback_resistance", 0.05, "addition")], []),
-      [("bulwark", "Bulwark", "+1 armor while holding a shield."), ("quick_guard", "Quick Guard", "Your shield comes up faster.")],
-      ("shield_wall", "Shield Wall", "Sneak and block to start: your shield stops all damage from the front, explosions too."),
+      [("bulwark", "Bulwark", "+1 armor while holding a shield."), ("quick_guard", "Quick Guard", "Your shield blocks as soon as you raise it.")],
+      ("shield_wall", "Shield Wall", "Sneak and raise your shield to start: it stops hits from every side, not just the front."),
       [("shield_bash", "Shield Bash", "Blocking a hit knocks the attacker back."), ("reflect", "Reflect", "Blocked arrows fly back at the shooter.")],
       ("unbreakable", "Unbreakable", "Your shield takes half the durability damage."))
 
@@ -416,55 +414,55 @@ def armor(key, title, icon, root, choices, signature, refinements, capstone, mas
 
 armor("light_armor", "Light Armor", "minecraft:leather_chestplate",
       n("light_step", "Light Step", "+2% movement speed.", [attribute("minecraft:generic.movement_speed", 0.02)]),
-      [perk("evasive", "Evasive", "A 5% chance to dodge an attack in light armor."), perk("silent_step", "Silent Step", "Mobs notice you from less far away.")],
+      [perk("evasive", "Evasive", "A 5% chance to dodge an attack in light armor."), perk("silent_step", "Silent Step", "In light armor, mobs notice you from 30% less far away.")],
       ranks("agility", "Agility", ["+3% dodge chance in light armor."] * 3),
-      [perk("light_footed", "Light Footed", "No fall damage from under 6 blocks."), perk("second_wind", "Second Wind", "Dropping under 30% health gives a burst of speed.")],
-      perk("phantom", "Phantom", "Dodging an attack gives a burst of speed."), "Movement speed, up to +15%")
+      [perk("light_footed", "Light Footed", "In light armor, no fall damage from under 6 blocks."), perk("second_wind", "Second Wind", "In light armor, dropping under 30% health gives Speed II for 5 seconds (once a minute).")],
+      perk("phantom", "Phantom", "Dodging an attack gives Speed II for 3 seconds."), "Movement speed, up to +15%")
 armor("medium_armor", "Medium Armor", "minecraft:chainmail_chestplate",
       n("fitted_mail", "Fitted Mail", "+1 armor.", [attribute("minecraft:generic.armor", 1, "addition")]),
       [n("balanced", "Balanced", "+1% movement speed.", [attribute("minecraft:generic.movement_speed", 0.01)]),
        perk("steady_footing", "Steady Footing", "+10% knockback resistance in medium armor.")],
       ranks("adaptable", "Adaptable", ["+1 armor and +1% movement speed."] * 3,
             rewards=[[attribute("minecraft:generic.armor", 1, "addition"), attribute("minecraft:generic.movement_speed", 0.01)]] * 3),
-      [perk("rally", "Rally", "Killing an enemy heals you a little."), perk("brace_mail", "Mail Brace", "Arrows deal 15% less damage to you.")],
-      perk("vanguard", "Vanguard", "+10% damage for a few seconds after taking a hit."), "Armor and speed, up to +3 and +5%")
+      [perk("battle_rally", "Rally", "Killing an enemy in medium armor heals you 2 health."), perk("brace_mail", "Mail Brace", "In medium armor, arrows deal 15% less damage to you.")],
+      perk("vanguard", "Vanguard", "In medium armor, +10% damage for 5 seconds after taking a hit."), "Armor and speed, up to +3 and +5%")
 armor("heavy_armor", "Heavy Armor", "minecraft:iron_chestplate",
       n("iron_skin", "Iron Skin", "+1 armor toughness.", [attribute("minecraft:generic.armor_toughness", 1, "addition")]),
       [n("immovable", "Immovable", "+5% knockback resistance.", [attribute("minecraft:generic.knockback_resistance", 0.05, "addition")]),
        perk("plated", "Plated", "+1 armor per heavy piece worn.")],
       ranks("juggernaut", "Juggernaut", ["3% less damage taken in heavy armor."] * 3),
-      [perk("unshaken", "Unshaken", "Immune to slowness in heavy armor."), perk("heavy_bulwark", "Bulwark", "Blocking with a shield in heavy armor takes no shield durability.")],
-      perk("fortress", "Fortress", "Heavy armor no longer slows you."), "Armor, up to +4")
+      [perk("unshaken", "Unshaken", "Immune to slowness in heavy armor."), perk("heavy_bulwark", "Bulwark", "Blocking with a shield in heavy armor costs the shield no durability.")],
+      perk("fortress", "Fortress", "Forged heavy armor no longer slows you."), "Armor, up to +4")
 armor("mage_armor", "Mage Armor", "minecraft:purple_wool",
       n("woven_wards", "Woven Wards", "+0.5 spell power.", [attribute("spell_power:generic", 0.5, "addition")], ["spell_power"]),
       [n("mana_weave", "Mana Weave", "+10 max mana for Iron's Spells.", [attribute("irons_spellbooks:max_mana", 10, "addition")], ["irons_spellbooks"]),
-       perk("focus", "Focus", "Getting hit doesn't interrupt your casting.")],
+       n("focus", "Focus", "Spells cool down 5% faster for Iron's Spells.", [attribute("irons_spellbooks:cooldown_reduction", 0.05, "addition")], ["irons_spellbooks"])],
       ranks("arcane_weave", "Arcane Weave", ["+0.5 spell power in mage armor."] * 3,
             rewards=[[attribute("spell_power:generic", 0.5, "addition")]] * 3, mods=["spell_power"]),
-      [perk("mana_shield", "Mana Shield", "Some damage is taken from your mana instead of your health."),
+      [perk("mana_shield", "Mana Shield", "In mage armor, a quarter of the damage you take comes out of your mana instead (2 mana a point, Iron's Spells)."),
        n("deep_reserves", "Deep Reserves", "+5% mana regeneration for Iron's Spells.", [attribute("irons_spellbooks:mana_regen", 0.05)], ["irons_spellbooks"])],
-      perk("archmages_robe", "Archmage's Robe", "+10% spell power while wearing a full set of mage armor."), "Spell power, up to +2")
+      perk("archmages_robe", "Archmage's Robe", "+1 spell power, and +10% Iron's spell power, while wearing four pieces of mage armor."), "Spell power, up to +2")
 
 # --- Magic schools ---
 # (key, title, icon, Spell Power school, Iron's Spells school or None, school effect, capstone)
 SCHOOLS = [
-    ("fire_magic", "Fire", "minecraft:blaze_powder", "fire", "fire", ("Kindling", "Fire spells burn longer."),
-     ("Wildfire", "Burning enemies spread their flames to those around them.")),
-    ("frost_magic", "Frost", "minecraft:blue_ice", "frost", "ice", ("Deep Chill", "Frost spells slow for longer."),
-     ("Shatter", "Frozen enemies take double damage from your next hit.")),
-    ("lightning_magic", "Lightning", "minecraft:lightning_rod", "lightning", "lightning", ("Arc", "Lightning spells jump to one more enemy."),
-     ("Storm Caller", "Hits now and then call down lightning.")),
-    ("arcane_magic", "Arcane", "minecraft:amethyst_shard", "arcane", "ender", ("Flux", "Arcane spells cost 10% less mana."),
-     ("Overload", "Every tenth arcane spell is cast twice.")),
-    ("holy_magic", "Holy", "minecraft:golden_apple", "healing", "holy", ("Blessing", "Your heals also cure one bad effect."),
-     ("Aegis", "Healing beyond full health becomes a shield.")),
-    ("earth_magic", "Earth", "minecraft:moss_block", "earth", "nature", ("Rooted", "Earth spells root enemies briefly."),
-     ("Stoneskin", "Casting an earth spell gives you +4 armor for 5 seconds.")),
-    ("water_magic", "Water", "minecraft:heart_of_the_sea", "water", None, ("Tidal", "Water spells push enemies back."),
-     ("Riptide", "Water spells heal you a little for each enemy hit.")),
-    ("air_magic", "Air", "minecraft:feather", "air", None, ("Tailwind", "Casting an air spell gives you a burst of speed."),
-     ("Cyclone", "Air spells lift enemies off the ground.")),
-    ("necromancy", "Necromancy", "minecraft:wither_skeleton_skull", "soul", "eldritch", ("Siphon", "Necromancy spells heal you for some of their damage."),
+    ("fire_magic", "Fire", "minecraft:blaze_powder", "fire", "fire", ("Kindling", "Fire spells set what they hit alight for 3 more seconds."),
+     ("Wildfire", "Fire spells hitting a burning enemy set enemies within 3 blocks of it alight.")),
+    ("frost_magic", "Frost", "minecraft:blue_ice", "frost", "ice", ("Deep Chill", "Frost spells also slow what they hit for 3 seconds."),
+     ("Shatter", "An enemy hit by your frost spell takes double damage from your next hit within 5 seconds.")),
+    ("lightning_magic", "Lightning", "minecraft:lightning_rod", "lightning", "lightning", ("Arc", "Lightning spells arc to the nearest other enemy within 4 blocks for half damage."),
+     ("Storm Caller", "Lightning spell hits have a 10% chance to call down lightning.")),
+    ("arcane_magic", "Arcane", "minecraft:amethyst_shard", "arcane", "ender", ("Flux", "Arcane spells cost 10% less mana (Iron's Spells)."),
+     ("Overload", "Every tenth hit of your arcane spells deals double damage.")),
+    ("holy_magic", "Holy", "minecraft:golden_apple", "healing", "holy", ("Blessing", "Your healing spells also cure one harmful effect."),
+     ("Aegis", "When your healing spells heal past full health, they also give Absorption for 30 seconds.")),
+    ("earth_magic", "Earth", "minecraft:moss_block", "earth", "nature", ("Rooted", "Earth spells root what they hit for 1.5 seconds."),
+     ("Stoneskin", "Casting an earth spell gives you Resistance for 5 seconds.")),
+    ("water_magic", "Water", "minecraft:heart_of_the_sea", "water", None, ("Tidal", "Water spells knock what they hit back."),
+     ("Riptide", "Each hit of your water spells heals you 1 health.")),
+    ("air_magic", "Air", "minecraft:feather", "air", None, ("Tailwind", "Casting an air spell gives you Speed II for 3 seconds."),
+     ("Cyclone", "Air spells lift what they hit off the ground for a moment.")),
+    ("necromancy", "Necromancy", "minecraft:wither_skeleton_skull", "soul", "eldritch", ("Siphon", "Necromancy spells heal you for 10% of their damage."),
      ("Lich Form", "Below 20% health, your necromancy spells deal double damage.")),
 ]
 for key, school, icon, spell_power, irons, effect, capstone in SCHOOLS:
@@ -476,7 +474,8 @@ for key, school, icon, spell_power, irons, effect, capstone in SCHOOLS:
                         ["irons_spellbooks"]))
     lore = (n(f"{s}_lore", f"{school} Lore" if key != "necromancy" else "Eldritch Lore", f"+3% {irons} spell power for Iron's Spells.",
               [attribute(f"irons_spellbooks:{irons}_spell_power", 0.03)], ["irons_spellbooks"]) if irons
-            else perk(f"{s}_efficiency", "Efficient Casting", f"{school} spells cost 10% less mana."))
+            else n(f"{s}_lore", f"{school} Lore", f"+3% {school.lower()} spell power.", [attribute(f"spell_power:{spell_power}", 0.03, "multiply_base")],
+                   ["spell_power"]))
     add("Magic", key, title, icon, [],
         shape(n(f"{s}_initiate", f"{school} Initiate", f"+0.5 {s if key != 'necromancy' else 'soul'} spell power.",
                 [attribute(f"spell_power:{spell_power}", 0.5, "addition")], ["spell_power"]),

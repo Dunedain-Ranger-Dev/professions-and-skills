@@ -11,8 +11,8 @@
     "y": 34,
     "root": false
   },
-  "water_efficiency": {
-    "definition": "water_efficiency",
+  "water_lore": {
+    "definition": "water_lore",
     "x": 34,
     "y": 34,
     "root": false

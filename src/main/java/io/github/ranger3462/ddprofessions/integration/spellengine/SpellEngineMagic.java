@@ -1,6 +1,9 @@
 package io.github.ranger3462.ddprofessions.integration.spellengine;
 
+import java.util.Optional;
+
 import io.github.ranger3462.ddprofessions.skill.ActivitySkills;
+import io.github.ranger3462.ddprofessions.skill.MagicPerks;
 import io.github.ranger3462.ddprofessions.skill.MagicSchool;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.neoforge.common.NeoForge;
@@ -8,6 +11,7 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.spell_engine.api.spell.Spell;
 import net.spell_engine.api.spell.event.SpellEvents;
 import net.spell_engine.internals.casting.SpellCast;
+import net.spell_engine.internals.casting.SpellCaster;
 import net.spell_power.api.SpellSchools;
 
 /**
@@ -30,12 +34,23 @@ public final class SpellEngineMagic {
                 return;
             }
             Spell spell = args.spell().value();
+            if (spell.school != null && args.action() != SpellCast.Action.CHANNEL) {
+                MagicSchool.byId(spell.school.id.toString()).ifPresent(school -> {
+                    MagicPerks.onCast(player, school);
+                    quickCasting(player, args.spell(), school);
+                });
+            }
             if (spell.school == null || has(spell, Spell.Impact.Action.Type.DAMAGE) || has(spell, Spell.Impact.Action.Type.HEAL)) {
                 return; // Damage and healing spells train on what they do instead.
             }
             String id = args.spell().unwrapKey().map(key -> key.location().toString()).orElse(spell.school.id.toString());
             MagicSchool.byId(spell.school.id.toString()).ifPresent(school ->
                     school.awardCast(player, id, args.action() == SpellCast.Action.CHANNEL ? 1 : MagicSchool.CAST_XP));
+        });
+        SpellEvents.HEAL.register(args -> {
+            if (args.caster() instanceof ServerPlayer caster && args.spell() != null && args.spell().value().school != null && args.target() != null) {
+                MagicSchool.byId(args.spell().value().school.id.toString()).ifPresent(school -> MagicPerks.onHeal(caster, args.target(), args.amount(), school));
+            }
         });
         SpellEvents.HEAL.register(args -> {
             if (args.caster() instanceof ServerPlayer player && args.spell() != null && args.spell().value().school != null && args.target() != null) {
@@ -47,6 +62,33 @@ public final class SpellEngineMagic {
             }
         });
         NeoForge.EVENT_BUS.addListener(SpellEngineMagic::onDamage);
+        MagicPerks.addSchoolOf(source -> {
+            var type = source.typeHolder().unwrapKey();
+            if (type.isPresent()) {
+                for (var school : SpellSchools.all()) {
+                    if (type.get().equals(school.damageType)) {
+                        return MagicSchool.byId(school.id.toString());
+                    }
+                }
+            }
+            return Optional.empty();
+        });
+    }
+
+    /** Quick Casting: once the cast has set the spell's cooldown (a tick later), shortens it. */
+    private static void quickCasting(ServerPlayer player, net.minecraft.core.Holder<Spell> spell, MagicSchool school) {
+        if (!MagicPerks.quickCasting(school).has(player) || !(player instanceof SpellCaster.Player caster)) {
+            return;
+        }
+        player.getServer().tell(new net.minecraft.server.TickTask(player.getServer().getTickCount() + 1, () -> {
+            var cooldowns = caster.getCooldownManager();
+            if (cooldowns.isCoolingDown(spell)) {
+                int full = cooldowns.getCooldownDuration(spell);
+                int left = Math.round(full * cooldowns.getCooldownProgress(spell, 0)); // The part still to run, as vanilla item cooldowns count it.
+                cooldowns.setDurationLeft(spell, MagicPerks.cooldown(player, school, left));
+                cooldowns.pushSync();
+            }
+        }));
     }
 
     /** Whether any of a spell's impacts is this kind of action. */
