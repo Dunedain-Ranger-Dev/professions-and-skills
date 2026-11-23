@@ -35,8 +35,8 @@
     "y": 170,
     "root": false
   },
-  "rally": {
-    "definition": "rally",
+  "battle_rally": {
+    "definition": "battle_rally",
     "x": -34,
     "y": 136,
     "root": false

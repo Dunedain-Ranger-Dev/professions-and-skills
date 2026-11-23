@@ -97,6 +97,10 @@ public final class GatheringPerks {
             return;
         }
         chain.remove(event.getPos());
+        if (!tree) {
+            FieldPerks.deepSight(player, level, event.getPos());
+        }
+        boolean heartwood = tree && Perk.HEARTWOOD.has(player);
         chaining = true;
         try {
             for (BlockPos pos : chain) {
@@ -104,7 +108,11 @@ public final class GatheringPerks {
                 if (tool.isDamageableItem() && tool.getMaxDamage() - tool.getDamageValue() <= 1) {
                     break; // Stop before the tool breaks.
                 }
+                int wear = tool.getDamageValue();
                 player.gameMode.destroyBlock(pos);
+                if (heartwood && player.getMainHandItem() == tool && tool.getDamageValue() > wear && level.getRandom().nextBoolean()) {
+                    tool.setDamageValue(wear); // Heartwood: half the logs cost no durability.
+                }
             }
         } finally {
             chaining = false;
@@ -180,8 +188,8 @@ public final class GatheringPerks {
         BlockState state = event.getState();
         BlockPos pos = event.getPos();
         List<ItemEntity> drops = event.getDrops();
-        if (state.is(Tags.Blocks.ORES) && Perk.PROSPECTOR.has(player) && !droppedItself(drops, state)
-                && level.getRandom().nextFloat() < PROSPECTOR_CHANCE) {
+        float prospector = PROSPECTOR_CHANCE * (chaining && Perk.MOTHERLODE.has(player) ? 2 : 1); // Motherlode: double in a vein
+        if (state.is(Tags.Blocks.ORES) && Perk.PROSPECTOR.has(player) && !droppedItself(drops, state) && level.getRandom().nextFloat() < prospector) {
             extra(level, drops, drops.getFirst().getItem());
         }
         if (state.getBlock() instanceof CropBlock crop && crop.isMaxAge(state)) {

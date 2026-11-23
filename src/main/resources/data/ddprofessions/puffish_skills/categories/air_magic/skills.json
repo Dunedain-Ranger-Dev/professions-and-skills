@@ -11,8 +11,8 @@
     "y": 34,
     "root": false
   },
-  "air_efficiency": {
-    "definition": "air_efficiency",
+  "air_lore": {
+    "definition": "air_lore",
     "x": 34,
     "y": 34,
     "root": false
