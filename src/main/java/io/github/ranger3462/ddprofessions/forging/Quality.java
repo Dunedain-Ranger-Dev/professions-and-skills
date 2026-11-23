@@ -108,5 +108,12 @@ public final class Quality {
         if (!lines.isEmpty() && applies(event.getItemStack()) && !(event.getItemStack().getItem() instanceof StarredItem)) {
             lines.set(0, lines.get(0).copy().append(" ").append(StarredItem.starsText(Forging.stars(event.getItemStack()))));
         }
+        // The crafting perks' marks, on any item that has them.
+        if (!lines.isEmpty() && Boolean.TRUE.equals(event.getItemStack().get(Forging.MASTERWORK.get()))) {
+            lines.add(1, Component.translatable("tooltip.ddprofessions.masterwork").withStyle(net.minecraft.ChatFormatting.GOLD));
+        }
+        if (!lines.isEmpty() && Boolean.TRUE.equals(event.getItemStack().get(Forging.BALANCED.get()))) {
+            lines.add(1, Component.translatable("tooltip.ddprofessions.balanced").withStyle(net.minecraft.ChatFormatting.GRAY));
+        }
     }
 }

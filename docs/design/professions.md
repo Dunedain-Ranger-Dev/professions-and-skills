@@ -22,8 +22,7 @@ are fine. **Farmer's Delight** joins the pack for its bark, straw, canvas, knive
   rooms; Emberroot from kobold dungeons and Arcane Dust from elemental dungeons, tier 2 and up, as mob drops or chest
   loot; phase 6) and the
   dryads' woods and finishes (phase 7); dyeing at the Dye Works; real art for the new blocks and items (placeholders and
-  vanilla models for now); RPG staves, wands and shields from parts (phase 5); the Woodworking tree's Seasoner, Fine
-  Split and Master Bowyer perks; forged gear for more weapon and armor classes, and variant recipes for specific looks.
+  vanilla models for now); RPG staves, wands and shields from parts (phase 5); forged gear for more weapon and armor classes, and variant recipes for specific looks.
 
 ## Goals
 

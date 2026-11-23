@@ -288,8 +288,8 @@ add("Crafting", "weaponsmithing", "Weaponsmithing", "ddprofessions:forged_sword"
            perk("keen_edge", "Keen Edge", "Blades and axe heads you make give 50% more Weaponsmithing XP.")],
           ranks("steady_hand", "Steady Hand", ["+2% sweet spot on the anvil."] * 3),
           [perk("sure_strikes_2", "Sure Strikes II", "50% less chance a strike cracks the piece."),
-           perk("balanced_blade", "Balanced Blade", "Forged weapons you make swing a little faster.")],
-          perk("masterwork_weapon", "Masterwork", "A forged weapon has a 10% chance to come out one ★ higher, up to what your skill allows.")),
+           perk("balanced_blade", "Balanced Blade", "Forged swords and axes you make swing a little faster (+0.1 attack speed).")],
+          perk("masterwork_weapon", "Masterwork", "A forged sword or axe has a 10% chance to come out one ★ higher, up to what your skill allows.")),
     "Sweet spot on the anvil, up to +5%")
 
 add("Crafting", "armorsmithing", "Armorsmithing", "ddprofessions:plate_chestplate", None,
@@ -309,37 +309,37 @@ add("Crafting", "leatherworking", "Leatherworking", "minecraft:leather", None,
           ranks("steady_scraper", "Steady Scraper", ["+2% room on each patch at the tanning rack."] * 3),
           [perk("water_saver_2", "Water Saver II", "Boiling leather has a 50% chance not to use water."),
            perk("careful_tanner_2", "Careful Tanner II", "50% less chance a miss tears the hide.")],
-          perk("supple_hides", "Supple Hides", "A 25% chance of a second refined leather.")),
+          perk("supple_hides", "Supple Hides", "Each hide you take out of a tanning vat has a 25% chance of a second refined leather.")),
     "Patch width, up to +5%")
 
 add("Crafting", "weaving", "Weaving", "minecraft:string", None,
     shape(n("apprentice_weaver", "Apprentice Weaver", "Your first step as a weaver."),
           [perk("careful_weaver_1", "Careful Weaver I", "25% less chance a miss snaps the thread."),
-           perk("quick_fingers", "Quick Fingers", "A perfect first stitch finishes the cloth in two stitches instead of three.")],
+           perk("quick_fingers", "Quick Fingers", "A perfect first stitch finishes the cloth at once.")],
           ranks("steady_needle", "Steady Needle", ["+2% room for each stitch at the loom."] * 3),
           [perk("careful_weaver_2", "Careful Weaver II", "50% less chance a miss snaps the thread."),
-           perk("padding", "Padding", "Padded cloth takes one less woven cloth.")],
-          perk("fine_weave", "Fine Weave", "A 25% chance of a second cloth.")),
+           perk("padding", "Padding", "Crafting a gambeson base hands back one of its two cloth panels.")],
+          perk("fine_weave", "Fine Weave", "Weaving has a 25% chance of a third cloth panel.")),
     "Loom room, up to +5%")
 
 add("Crafting", "woodworking", "Woodworking", "minecraft:fletching_table", None,
     shape(n("apprentice_woodworker", "Apprentice Woodworker", "Your first step as a woodworker. Your level sets the best ★ you can make."),
           [perk("careful_carver_1", "Careful Carver I", "25% less chance a miss splits the wood."),
-           perk("seasoner", "Seasoner", "Billets season 25% faster.")],
+           perk("seasoner", "Seasoner", "Billets cure 25% faster in a finishing vat.")],
           ranks("steady_knife", "Steady Knife", ["+2% room on the grain and at the lathe."] * 3),
           [perk("careful_carver_2", "Careful Carver II", "50% less chance a miss splits the wood."),
-           perk("fine_split", "Fine Split", "Splitting a billet sometimes gives a third stave.")],
-          perk("master_bowyer", "Master Bowyer", "Bows and crossbows you make have a 10% chance to come out one ★ higher, up to what the workshop allows.")),
+           perk("fine_split", "Fine Split", "Turning a billet has a 25% chance of a third stave.")],
+          perk("master_bowyer", "Master Bowyer", "Bows and crossbows you make have a 10% chance to come out one ★ higher, up to what your skill allows.")),
     "Room on the grain, up to +5%")
 
 add("Crafting", "goldsmithing", "Goldsmithing", "ddprofessions:gold_ring", None,
     shape(n("apprentice_goldsmith", "Apprentice Goldsmith", "Your first step as a goldsmith. Your level sets the best ★ you can make."),
           [perk("careful_goldsmith_1", "Careful Goldsmith I", "25% less chance a miss spoils the gold."),
-           perk("assayer", "Assayer", "Gold refines 25% faster in a crucible.")],
+           perk("assayer", "Assayer", "A crucible you tend refines gold 25% faster.")],
           ranks("steady_chase", "Steady Chase", ["+2% sweet spot at the Jeweler's Bench."] * 3),
           [perk("careful_goldsmith_2", "Careful Goldsmith II", "50% less chance a miss spoils the gold."),
-           perk("gem_setter", "Gem Setter", "Jewelry can take a cut gem (with Jewelcrafting's gems, later).")],
-          perk("masterwork_jewelry", "Masterwork", "Jewelry you make has a 10% chance to come out one ★ higher, up to what your skill allows.")),
+           perk("gem_setter", "Gem Setter", "Set a diamond, emerald or amethyst shard in a ring or amulet at a crafting table: +1 armor toughness, +1 luck or +5% speed.")],
+          perk("masterwork_jewelry", "Masterwork", "Jewelry and gilded gear you make have a 10% chance to come out one ★ higher, up to what your skill allows.")),
     "Sweet spot at the bench, up to +5%")
 
 # --- Combat styles ---

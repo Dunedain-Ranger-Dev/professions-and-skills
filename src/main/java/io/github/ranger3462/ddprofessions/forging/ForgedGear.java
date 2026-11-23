@@ -77,6 +77,8 @@ public final class ForgedGear {
     public static java.util.function.Function<ItemStack, List<String>> spellSchools = stack -> List.of();
     /** A strapped grip's attack speed per ★ of its straps. */
     public static final double GRIP_SPEED_PER_STAR = 0.04;
+    /** The attack speed a Balanced Blade smith's weapons have over others' ({@link Forging#BALANCED}). */
+    public static final double BALANCED_SPEED = 0.1;
     /** Heavy armor slows you this much per piece (a full set: 5%). */
     public static final double HEAVY_SLOW = -0.0125;
 
@@ -301,10 +303,16 @@ public final class ForgedGear {
         }
     }
 
-    /** The attack speed a weapon's strapped grip adds: by its straps' ★. */
+    /** The attack speed a weapon's strapped grip adds (by its straps' ★), and its balance (Balanced Blade). */
     static double gripSpeed(ItemStack stack) {
         Integer grip = stack.get(Forging.GRIP.get());
-        return grip == null ? 0.0 : Math.round(grip * GRIP_SPEED_PER_STAR * 100.0) / 100.0;
+        double balanced = Boolean.TRUE.equals(stack.get(Forging.BALANCED.get())) ? BALANCED_SPEED : 0.0;
+        return (grip == null ? 0.0 : Math.round(grip * GRIP_SPEED_PER_STAR * 100.0) / 100.0) + balanced;
+    }
+
+    /** Whether Balanced Blade applies to a crafted piece: a forged sword or axe. */
+    public static boolean takesBalance(ItemStack stack) {
+        return stack.getItem() instanceof Sword || stack.getItem() instanceof Axe;
     }
 
     private static void gripText(ItemStack stack, List<Component> tooltip) {

@@ -12,6 +12,7 @@ import java.util.function.Supplier;
 import io.github.ranger3462.ddprofessions.ProfessionsAndSkills;
 import io.github.ranger3462.ddprofessions.skill.CraftSkill;
 import io.github.ranger3462.ddprofessions.skill.CraftingSkills;
+import io.github.ranger3462.ddprofessions.skill.Perk;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -595,6 +596,9 @@ public final class ForgeActions {
                 level.sendParticles(ParticleTypes.WAX_OFF, pos.getX() + 0.5, pos.getY() + 1.1, pos.getZ() + 0.5, 10, 0.2, 0.1, 0.2, 0.1);
                 tell(player, Component.translatable(countsTwice ? "message.ddprofessions.forge.critical" : "message.ddprofessions.forge.perfect")
                         .withStyle(ChatFormatting.GOLD));
+                if (kind == TimingBar.Kind.WEAVE && session.done == 2 && Perk.QUICK_FINGERS.has(player)) {
+                    session.done = session.needed; // Quick Fingers: a perfect first stitch finishes the cloth.
+                }
             }
             case GREEN -> {
                 session.done++;
@@ -676,7 +680,8 @@ public final class ForgeActions {
         switch (session.kind) {
             case WEAVE -> {
                 held.shrink(WEAVE_STRING);
-                made(player, level, session, new ItemStack(Crafts.CLOTH_PANEL.get(), 2), 5, SoundEvents.UI_LOOM_TAKE_RESULT, "message.ddprofessions.weave.done");
+                int panels = 2 + (CraftPerks.bonusPiece(player, Perk.FINE_WEAVE, level.getRandom()) ? 1 : 0);
+                made(player, level, session, new ItemStack(Crafts.CLOTH_PANEL.get(), panels), 5, SoundEvents.UI_LOOM_TAKE_RESULT, "message.ddprofessions.weave.done");
             }
             case CUT -> {
                 takeRackPiece(level, session.station);
@@ -684,7 +689,8 @@ public final class ForgeActions {
             }
             case TURN -> {
                 held.shrink(1);
-                made(player, level, session, new ItemStack(Crafts.STAVE.get(), 2), 5, SoundEvents.AXE_STRIP, "message.ddprofessions.turn.done");
+                int staves = 2 + (CraftPerks.bonusPiece(player, Perk.FINE_SPLIT, level.getRandom()) ? 1 : 0);
+                made(player, level, session, new ItemStack(Crafts.STAVE.get(), staves), 5, SoundEvents.AXE_STRIP, "message.ddprofessions.turn.done");
             }
             case CHASE -> {
                 held.shrink(1);
