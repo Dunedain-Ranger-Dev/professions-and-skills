@@ -92,6 +92,7 @@ public class ActivitySkillTests {
             return;
         }
         ServerPlayer player = FakePlayerFactory.get(helper.getLevel(), new GameProfile(UUID.randomUUID(), "swordsman"));
+        TestArena.noCrits(player);
         player.setItemInHand(InteractionHand.MAIN_HAND, new ItemStack(Items.IRON_SWORD));
         player.setItemInHand(InteractionHand.OFF_HAND, new ItemStack(Items.IRON_SWORD));
         Pig pig = EntityType.PIG.create(helper.getLevel());

@@ -60,6 +60,10 @@ public final class Crafts {
     /** Dungeon herbs for the better liquors. Found in dungeons (PROF-10 phase 6). */
     public static final DeferredItem<Item> BARROWMOSS = ProfessionsRegistries.ITEMS.registerSimpleItem("barrowmoss", new Item.Properties());
     public static final DeferredItem<Item> EMBERROOT = ProfessionsRegistries.ITEMS.registerSimpleItem("emberroot", new Item.Properties());
+    /** Barrowmoss growing in an undead dungeon (DD-109): breaking it gives Barrowmoss. */
+    public static final DeferredBlock<BarrowmossPatchBlock> BARROWMOSS_PATCH = ProfessionsRegistries.BLOCKS.registerBlock("barrowmoss_patch",
+            BarrowmossPatchBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.GLOW_LICHEN).lightLevel(state -> 0).mapColor(MapColor.COLOR_GREEN));
+    public static final DeferredItem<BlockItem> BARROWMOSS_PATCH_ITEM = ProfessionsRegistries.ITEMS.registerSimpleBlockItem(BARROWMOSS_PATCH);
 
     // --- Weaving ---
 
@@ -210,7 +214,7 @@ public final class Crafts {
     /** The professions' items, for the creative tab. */
     public static java.util.List<DeferredItem<? extends Item>> creativeItems() {
         return java.util.List.of(SHAPING_RACK_ITEM, TANNING_BARREL_ITEM, FLESHING_BEAM_ITEM, SCRAPED_HIDE, LEATHER_PANEL, STRAPS, BARK_LIQUOR,
-                TANNIN_LIQUOR, ELDER_LIQUOR, BARROWMOSS, EMBERROOT, SPINNING_WHEEL_ITEM, GREAT_LOOM_ITEM, DYE_WORKS_ITEM, YARN, SIZED_YARN,
+                TANNIN_LIQUOR, ELDER_LIQUOR, BARROWMOSS, BARROWMOSS_PATCH_ITEM, EMBERROOT, SPINNING_WHEEL_ITEM, GREAT_LOOM_ITEM, DYE_WORKS_ITEM, YARN, SIZED_YARN,
                 WHEAT_SIZING, SILK_SIZING, ARCANE_SIZING, ARCANE_DUST, CLOTH_PANEL, BOWSTRING, STAFF_WRAP, WOOD_LATHE_ITEM,
                 TREADLE_LATHE_ITEM, BOWYERS_BENCH_ITEM, SEASONED_BILLET, CURED_BILLET, STAVE, STOCK, HAFT, STAFF_SHAFT, WAND_CORE, BOW_LIMBS,
                 LINSEED_OIL, HEARTWOOD_RESIN, SYLVAN_SAP, CRUCIBLE_ITEM, GREAT_CRUCIBLE_ITEM, JEWELERS_BENCH_ITEM, JEWELERS_LOUPE_ITEM, BONE_ASH,
