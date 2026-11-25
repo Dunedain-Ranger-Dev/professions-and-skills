@@ -21,6 +21,12 @@ final class TestArena {
     private static final int DISTANCE = 4096;
     /** How far apart two slots' arenas are. */
     private static final int SLOT_SPACING = 256;
+    /**
+     * This mod's row of arenas, this far south of the world's centre. Dungeon Delving's arenas (and its slots) sit on
+     * the row through the centre, and with the whole pack both mods' tests run in one world: on the same row, our slot
+     * 0 was its slot 0, so the Duelist's pig had the Barrow King for company and clearing one box discarded the other.
+     */
+    private static final int ROW = 4096;
     /** How far a box's walls are from its middle; it stays inside one chunk. */
     static final int BOX_RADIUS = 7;
 
@@ -28,7 +34,7 @@ final class TestArena {
 
     /** The middle of a slot's chunk, far from the test grid, {@code height} blocks above the test. Every test needs its own slot. */
     static BlockPos away(GameTestHelper helper, int slot, int height) {
-        ChunkPos chunk = new ChunkPos(new BlockPos(-DISTANCE - slot * SLOT_SPACING, 0, 0));
+        ChunkPos chunk = new ChunkPos(new BlockPos(-DISTANCE - slot * SLOT_SPACING, 0, ROW));
         return new BlockPos(chunk.getMiddleBlockX(), helper.absolutePos(BlockPos.ZERO).getY() + height, chunk.getMiddleBlockZ());
     }
 
