@@ -1,9 +1,12 @@
 package io.github.ranger3462.ddprofessions.gametest;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.gametest.framework.GameTestHelper;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -69,5 +72,11 @@ final class TestArena {
             level.setBlock(block, Blocks.AIR.defaultBlockState(), Block.UPDATE_CLIENTS);
         }
         unload(level, pos);
+    }
+
+    /** No luck in a test: Apothic Attributes (in the dev runtime) gives players a 5% chance to crit for 1.5x damage. */
+    static void noCrits(Player player) {
+        BuiltInRegistries.ATTRIBUTE.getHolder(ResourceLocation.fromNamespaceAndPath("apothic_attributes", "crit_chance"))
+                .map(player::getAttribute).ifPresent(crit -> crit.setBaseValue(0));
     }
 }

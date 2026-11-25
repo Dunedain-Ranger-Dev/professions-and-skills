@@ -11,6 +11,7 @@
   "attribute.ddprofessions.strength.description": "Each point over 10: +2% melee damage, +1% knockback resistance.",
   "attribute.ddprofessions.wisdom": "Wisdom",
   "attribute.ddprofessions.wisdom.description": "Each point over 10: +0.25 healing and holy spell power, +2% mana regen.",
+  "block.ddprofessions.barrowmoss_patch": "Barrowmoss Patch",
   "block.ddprofessions.bellows": "Bellows",
   "block.ddprofessions.borax_deposit": "Borax Deposit",
   "block.ddprofessions.bowyers_bench": "Bowyer's Bench",

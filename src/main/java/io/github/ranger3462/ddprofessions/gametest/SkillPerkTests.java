@@ -14,10 +14,8 @@ import io.github.ranger3462.ddprofessions.skill.MagicSchool;
 import io.github.ranger3462.ddprofessions.skill.Perk;
 import io.github.ranger3462.ddprofessions.skill.PerkStats;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -264,9 +262,7 @@ public class SkillPerkTests {
         ServerPlayer player = FakePlayerFactory.get(helper.getLevel(), new GameProfile(UUID.randomUUID(), name));
         BlockPos pos = at.equals(BlockPos.ZERO) ? helper.absolutePos(BlockPos.ZERO).above(100) : at;
         player.moveTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);
-        // Apothic Attributes (in the dev runtime) gives players a 5% chance to crit for 1.5x: no luck in tests.
-        BuiltInRegistries.ATTRIBUTE.getHolder(ResourceLocation.fromNamespaceAndPath("apothic_attributes", "crit_chance"))
-                .map(player::getAttribute).ifPresent(crit -> crit.setBaseValue(0));
+        TestArena.noCrits(player);
         return player;
     }
 }

@@ -114,6 +114,7 @@ RECOLORS = {
     "item/borax": ("item/quartz", 0xE2E8EB, None),
     # Herbs.
     "item/barrowmoss": ("item/kelp", 0x506E46, None),
+    "block/barrowmoss_patch": ("block/glow_lichen", 0x5E7A50, None),
     "item/emberroot": ("item/nether_wart", 0xBE501E, None),
     # Metal parts.
     "item/axe_head": ("item/iron_axe", 0xADB3C1, grey),

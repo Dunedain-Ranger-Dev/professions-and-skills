@@ -18,9 +18,12 @@ are fine. **Farmer's Delight** joins the pack for its bark, straw, canvas, knive
   spinning, sewing and carving minigames, fulling, bending and the Chopping Block are gone.
 - **Silk** for Silk Sizing is Critters and Companions' (`ddprofessions:silk` tag): from silk cocoons and jumping spiders.
   Without Critters and Companions there's no Silk Sizing, and cloth tops out at ★3 until Arcane Sizing.
-- **Not yet:** sources for the dungeon materials (Dungeon Delving's drops: Barrowmoss from undead dungeons' overgrown
-  rooms; Emberroot from kobold dungeons and Arcane Dust from elemental dungeons, tier 2 and up, as mob drops or chest
-  loot; phase 6) and the
+- **Dungeon materials** (Dungeon Delving, DD-109), all from tier 2 and up, more the deeper the dungeon:
+  - **Barrowmoss** grows as Barrowmoss Patches (`ddprofessions:barrowmoss_patch`, like glow lichen) on the walls of
+    some rooms in undead dungeons. Breaking one gives 1–2 Barrowmoss; bone meal doesn't spread it.
+  - **Emberroot** drops from mobs in kobold dungeons, and **Arcane Dust** from spellcasting mobs
+    (`dungeondelving:faction_casters`), when a player kills them: 4/6/8% at tiers 2/3/4.
+- **Not yet:** the
   dryads' woods and finishes (phase 7); dyeing at the Dye Works; real art for the new blocks and items (placeholders and
   vanilla models for now); RPG staves, wands and shields from parts (phase 5); forged gear for more weapon and armor classes, and variant recipes for specific looks.
 

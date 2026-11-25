@@ -50,6 +50,19 @@ public class ProfessionTests {
     private static final String ANY_TEMPLATE = "test/empty";
 
     @GameTest(template = ANY_TEMPLATE)
+    public static void barrowmossPatchGivesBarrowmoss(GameTestHelper helper) {
+        ServerLevel level = helper.getLevel();
+        BlockPos pos = helper.absolutePos(new BlockPos(1, 2, 1));
+        var state = Crafts.BARROWMOSS_PATCH.get().defaultBlockState();
+        List<ItemStack> drops = Block.getDrops(state, level, pos, null);
+        helper.assertTrue(drops.size() == 1 && drops.get(0).is(Crafts.BARROWMOSS.get()) && drops.get(0).getCount() >= 1,
+                "breaking a patch gives Barrowmoss, not the patch: " + drops);
+        helper.assertFalse(Crafts.BARROWMOSS_PATCH.get().isValidBonemealTarget(level, pos, state), "bone meal can't spread it");
+        helper.assertTrue(state.getLightEmission(level, pos) == 0, "it doesn't glow like lichen");
+        helper.succeed();
+    }
+
+    @GameTest(template = ANY_TEMPLATE)
     public static void theMinigamesWorkOutTheSameEverywhere(GameTestHelper helper) {
         helper.assertTrue(TimingBar.cut(20, 40) == 0.5f && TimingBar.cut(80, 40) == 1.0f, "the blade moves steadily while held, and stops at the end");
         helper.assertTrue(TimingBar.turn(18, 36) == 0.25f, "the chisel bites faster the deeper it goes");
